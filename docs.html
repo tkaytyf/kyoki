@@ -114,6 +114,7 @@
               <a href="#temproles">Temp roles</a>
               <a href="#reactions">Reactions</a>
               <a href="#topgg">Top.gg</a>
+              <a href="#info">Info</a>
               <a href="#utility">Utility</a>
               <a href="#boosts">Boosts</a>
               <a href="#automation">Automation</a>
@@ -122,6 +123,9 @@
               <a href="#games">Games</a>
               <a href="#applications">Applications</a>
               <a href="#social">Social</a>
+              <a href="#messaging">Messaging</a>
+              <a href="#text">Text</a>
+              <a href="#tools">Tools</a>
             </nav>
           </aside>
           <div class="docs-content">
@@ -309,7 +313,7 @@
               </ul>
             </article>
 
-            <article class="docs-guide" id="prefix" data-search="prefix setprefix reset mention default comma setup wizard quicksetup">
+            <article class="docs-guide" id="prefix" data-search="prefix setprefix reset mention default comma setup wizard quicksetup server botnick verification afkchannel">
               <header class="docs-guide-head">
               <div class="docs-module-art">
                 <picture>
@@ -323,6 +327,8 @@
               <p><code class="cmd">,prefix</code> shows the current prefix. <code class="cmd">,prefix !</code> changes it (Manage Server). <code class="cmd">,prefix reset</code> puts it back to a comma. Alias: <code class="cmd">,setprefix</code>.</p>
               <h3>Setup wizard</h3>
               <p>Administrators can run <code class="cmd">,setup</code> for a 5-step button wizard that covers logs, welcome, VoiceMaster, tickets and automod. It shows a summary first. Aliases: <code class="cmd">,wizard</code>, <code class="cmd">,quicksetup</code>.</p>
+              <h3>Server settings</h3>
+              <p>Manage Server (and sometimes Manage Channels) for these. <code class="cmd">,server name</code>, <code class="cmd">icon</code>, <code class="cmd">banner</code>, <code class="cmd">splash</code>, and <code class="cmd">description</code> change this server’s profile. <code class="cmd">,server afkchannel</code> and <code class="cmd">,server afktimeout</code> set the AFK voice channel. <code class="cmd">,server verification</code>, <code class="cmd">contentfilter</code>, <code class="cmd">notifications</code>, and <code class="cmd">systemchannel</code> cover safety and system messages. <code class="cmd">,botnick</code> changes kyōki’s nickname here (empty resets it).</p>
             </article>
 
             <article class="docs-guide" id="embeds" data-search="embeds embed send json color hex timestamp content fences ce createembed welcome goodbye ticket autoresponder">
@@ -383,7 +389,7 @@
                 <li><code class="cmd">,ticket support @role</code> sets who can see and claim tickets. Aliases: <code class="cmd">role</code>, <code class="cmd">staff</code>.</li>
                 <li><code class="cmd">,ticket log #channel</code> is where transcripts go (it defaults to the <code class="cmd">,log</code> channel). Aliases: <code class="cmd">logs</code>, <code class="cmd">transcripts</code>.</li>
               </ol>
-              <p>Inside a ticket, staff can <code class="cmd">,ticket claim</code>, <code class="cmd">,ticket close</code> (close saves a .txt transcript), <code class="cmd">,ticket add @user</code>, <code class="cmd">,ticket remove @user</code>, and <code class="cmd">,ticket rename &lt;name&gt;</code>.</p>
+              <p>Inside a ticket, staff can <code class="cmd">,ticket claim</code>, <code class="cmd">,ticket unclaim</code> (release a ticket you claimed), <code class="cmd">,ticket close</code> (close saves a .txt transcript), <code class="cmd">,ticket transcript</code> (save a transcript without closing), <code class="cmd">,ticket add @user</code>, <code class="cmd">,ticket remove @user</code>, and <code class="cmd">,ticket rename &lt;name&gt;</code>. <code class="cmd">,ticket list</code> lists every open ticket. <code class="cmd">,ticket open</code> opens a ticket for a member.</p>
               <h3>Forms</h3>
               <p>You can ask up to five questions before a ticket opens. <code class="cmd">,ticket form add [long:] [optional:] &lt;question&gt; [| hint]</code> adds one (45 characters). <code class="cmd">,ticket form remove</code>, <code class="cmd">,ticket form clear</code>, <code class="cmd">,ticket form title</code>, and <code class="cmd">,ticket form preview</code> manage the form. Alias: <code class="cmd">,ticket forms</code>.</p>
             </article>
@@ -411,6 +417,7 @@
                 <li>Create and edit: <code class="cmd">,role create &lt;name&gt; [#hex]</code>, <code class="cmd">,role delete</code> (asks to confirm), <code class="cmd">,role rename</code>, <code class="cmd">,role color</code>, <code class="cmd">,role hoist</code>, <code class="cmd">,role mentionable</code>, and <code class="cmd">,role icon</code> (boost level 2; emoji, url, attachment, or remove).</li>
                 <li>Mass jobs (background): <code class="cmd">,role all [add | remove] &lt;role&gt;</code> for every member, <code class="cmd">,role humans</code> for humans, <code class="cmd">,role bots</code> for bots, and <code class="cmd">,role in [add | remove] &lt;has role&gt; &lt;role&gt;</code> for everyone in another role. <code class="cmd">,role status</code> shows progress; <code class="cmd">,role cancel</code> stops the running job.</li>
               </ul>
+              <p>Permission tools (Manage Roles; you can only grant permissions you have): <code class="cmd">,role compare</code> compares two roles’ permissions, <code class="cmd">,role copy</code> duplicates a role’s permissions, color and hoist, <code class="cmd">,role grant</code> and <code class="cmd">,role revoke</code> add or remove permissions, and <code class="cmd">,role position</code> moves a role up or down.</p>
               <h3>Nicknames</h3>
               <p>Manage Nicknames, except <code class="cmd">,nick resetall</code>, which needs Manage Server, asks to confirm, and runs as a background job.</p>
               <ul>
@@ -515,7 +522,7 @@
               <p>You need Manage Server. <code class="cmd">,starboard #channel [threshold] [emoji]</code> reposts popular messages there. <code class="cmd">,starboard off</code> turns it off. Aliases: <code class="cmd">,sb</code>, <code class="cmd">,star</code>.</p>
               <ul>
                 <li><code class="cmd">,starboard channel</code>, <code class="cmd">threshold</code> (1–100), and <code class="cmd">emoji</code> change those settings. <code class="cmd">,starboard settings</code> shows them.</li>
-                <li><code class="cmd">,starboard ignore &lt;channel&gt;</code> toggles a channel that can’t be starred. <code class="cmd">,starboard selfstar &lt;on | off&gt;</code> controls whether authors’ own stars count.</li>
+                <li><code class="cmd">,starboard ignore &lt;channel&gt;</code> toggles a channel that can’t be starred. <code class="cmd">,starboard selfstar &lt;on | off&gt;</code> controls whether authors’ own stars count. <code class="cmd">,starboard random</code> shows a random starboard post. <code class="cmd">,starboard stats</code> shows settings and how many posts made it.</li>
               </ul>
             </article>
 
@@ -594,7 +601,7 @@
 
             <article class="docs-guide" id="fun" data-search="fun 8ball meme cat dog hug pat slap ship rate fact gif interactions">
               <header class="docs-guide-head"><h2>Fun</h2></header>
-              <p>No special permission. <code class="cmd">,8ball</code>, <code class="cmd">,choose</code>, <code class="cmd">,rate</code>, <code class="cmd">,ship</code>, <code class="cmd">,fact</code>, <code class="cmd">,cat</code>, <code class="cmd">,dog</code>, and <code class="cmd">,meme</code> (a random meme from Reddit, no NSFW). Reaction GIFs like <code class="cmd">,hug</code> and <code class="cmd">,pat</code> can target a member and count how many times it’s happened; <code class="cmd">,interactions</code> shows those counts. Full syntax is on the <a href="commands.html#fun">commands page</a>.</p>
+              <p>No special permission. <code class="cmd">,8ball</code>, <code class="cmd">,choose</code>, <code class="cmd">,rate</code>, <code class="cmd">,ship</code>, <code class="cmd">,fact</code>, <code class="cmd">,cat</code>, <code class="cmd">,dog</code>, and <code class="cmd">,meme</code> (a random meme from Reddit, no NSFW). <code class="cmd">,quirk</code> gives you (or someone) a quirk — a superpower — for today. Reaction GIFs like <code class="cmd">,hug</code> and <code class="cmd">,pat</code> can target a member and count how many times it’s happened; <code class="cmd">,interactions</code> shows those counts. Full syntax is on the <a href="commands.html#fun">commands page</a>.</p>
             </article>
 
             <article class="docs-guide" id="lookup" data-search="lookup botinfo calc define weather wiki urban color invite uptime membercount">
@@ -715,9 +722,10 @@
                 <h2>Channels</h2>
               </header>
               <ul>
-                <li><code class="cmd">,channel [channel]</code> shows channel info. Subcommands: <code class="cmd">create</code> (text, voice, stage, forum, category, or announcement), <code class="cmd">delete</code> (asks to confirm), <code class="cmd">rename</code>, <code class="cmd">nsfw</code>, <code class="cmd">clone</code> (copy with permissions), <code class="cmd">sync</code> (permissions with the category), and <code class="cmd">move</code> into a category.</li>
+                <li><code class="cmd">,channel [channel]</code> shows channel info. Subcommands: <code class="cmd">create</code> (text, voice, stage, forum, category, or announcement), <code class="cmd">delete</code> (asks to confirm), <code class="cmd">rename</code>, <code class="cmd">nsfw</code>, <code class="cmd">clone</code> (copy with permissions), <code class="cmd">sync</code> (permissions with the category), <code class="cmd">move</code> into a category, and <code class="cmd">position</code>.</li>
+                <li>Permission overwrites (Manage Channels / Manage Roles): <code class="cmd">,channel allow</code> and <code class="cmd">,channel deny</code> set a role or member’s permissions here, <code class="cmd">,channel neutral</code> resets them to inherit, and <code class="cmd">,channel clearperms</code> removes an overwrite completely. <code class="cmd">,category</code> lists or manages categories (<code class="cmd">create</code>, <code class="cmd">delete</code>, <code class="cmd">rename</code>, <code class="cmd">position</code>, <code class="cmd">sync</code>).</li>
                 <li><code class="cmd">,pin</code> and <code class="cmd">,unpin</code> pin or unpin a message (reply or link). You need Manage Messages.</li>
-                <li><code class="cmd">,thread</code> manages threads: <code class="cmd">lock</code>, <code class="cmd">unlock</code>, <code class="cmd">archive</code>, <code class="cmd">rename</code>, <code class="cmd">add</code>, <code class="cmd">remove</code>, and <code class="cmd">list</code> (active threads you can see).</li>
+                <li><code class="cmd">,thread</code> manages threads: <code class="cmd">create</code>, <code class="cmd">delete</code>, <code class="cmd">lock</code>, <code class="cmd">unlock</code>, <code class="cmd">archive</code>, <code class="cmd">rename</code>, <code class="cmd">slowmode</code>, <code class="cmd">add</code>, <code class="cmd">remove</code>, and <code class="cmd">list</code> (active threads you can see).</li>
               </ul>
             </article>
 
@@ -739,8 +747,8 @@
               </header>
               <p>No special permission, except <code class="cmd">,games reset</code>, which needs Manage Server and asks to confirm. <code class="cmd">,games</code> lists every game. <code class="cmd">,games stats</code> and <code class="cmd">,games leaderboard</code> show wins.</p>
               <ul>
-                <li>Versus a member (or kyōki, for tic tac toe): <code class="cmd">,tictactoe</code>, <code class="cmd">,connect4</code>, and <code class="cmd">,rpsduel</code> (picks stay secret).</li>
-                <li>Solo or first-to-win in the channel: <code class="cmd">,2048</code>, <code class="cmd">,hangman</code>, <code class="cmd">,memory</code>, <code class="cmd">,minesweeper</code>, <code class="cmd">,guessnumber</code>, <code class="cmd">,quickmath</code>, <code class="cmd">,reaction</code>, <code class="cmd">,riddle</code>, <code class="cmd">,scramble</code>, <code class="cmd">,trivia</code>, <code class="cmd">,typerace</code> (no copy-paste), <code class="cmd">,flags</code>, and <code class="cmd">,wordle</code> (6 tries, a 5-letter word).</li>
+                <li>Versus a member (or kyōki, for tic tac toe): <code class="cmd">,tictactoe</code>, <code class="cmd">,connect4</code>, and <code class="cmd">,rpsduel</code> (picks stay secret). Against kyōki: <code class="cmd">,highcard</code> and <code class="cmd">,rpsls</code> (rock paper scissors lizard Spock).</li>
+                <li>Solo or first-to-win in the channel: <code class="cmd">,2048</code>, <code class="cmd">,hangman</code>, <code class="cmd">,memory</code>, <code class="cmd">,minesweeper</code>, <code class="cmd">,guessnumber</code>, <code class="cmd">,quickmath</code>, <code class="cmd">,reaction</code>, <code class="cmd">,riddle</code>, <code class="cmd">,scramble</code>, <code class="cmd">,trivia</code>, <code class="cmd">,typerace</code> (no copy-paste), <code class="cmd">,flags</code>, <code class="cmd">,capital</code> (name the capital city first), <code class="cmd">,emojiquiz</code> (guess the movie, show or game from emojis), and <code class="cmd">,wordle</code> (6 tries, a 5-letter word).</li>
               </ul>
               <p>Full syntax is on the <a href="commands.html#games">commands page</a>.</p>
             </article>
@@ -767,6 +775,47 @@
               </ul>
             </article>
 
+
+            <article class="docs-guide" id="messaging" data-search="messaging say edit unsay reply react unreact source msginfo pins echo botedit">
+              <header class="docs-guide-head">
+                <h2>Messaging</h2>
+              </header>
+              <p>Post and edit plain text as kyōki itself (no embed, no webhook). You need Manage Messages for <code class="cmd">,say</code>, <code class="cmd">,edit</code>, and the other send/edit commands.</p>
+              <ul>
+                <li><code class="cmd">,say [channel] &lt;text&gt;</code> posts the text as kyōki, then deletes your command. Alias: <code class="cmd">,echo</code>. <code class="cmd">@everyone</code> and <code class="cmd">@here</code> (and role pings) only go through if you have Mention Everyone in that channel.</li>
+                <li><code class="cmd">,edit &lt;message link or id&gt; &lt;new text&gt;</code> edits one of kyōki’s own plain-text messages. It only works on kyōki’s own messages. Alias: <code class="cmd">,editsay</code>.</li>
+                <li><code class="cmd">,reply</code> replies to any message as kyōki. <code class="cmd">,unsay</code> deletes one of kyōki’s messages. <code class="cmd">,react</code> and <code class="cmd">,unreact</code> add or remove kyōki’s reactions. <code class="cmd">,source</code>, <code class="cmd">,msginfo</code>, and <code class="cmd">,pins</code> inspect messages and don’t need Manage Messages.</li>
+              </ul>
+            </article>
+
+            <article class="docs-guide" id="text" data-search="text tools acronym binary morse rot13 zalgo owo upper lower leet slugify wordcount">
+              <header class="docs-guide-head">
+                <h2>Text</h2>
+              </header>
+              <p>No special permission. 36 text tools: case and style (<code class="cmd">,upper</code>, <code class="cmd">,lower</code>, <code class="cmd">,smallcaps</code>, <code class="cmd">,cursive</code>, and others), encode and decode (<code class="cmd">,binary</code>, <code class="cmd">,morse</code>, <code class="cmd">,rot13</code>, <code class="cmd">,caesar</code>, hex and URL), and helpers like <code class="cmd">,wordcount</code>, <code class="cmd">,anagram</code>, <code class="cmd">,slugify</code>, and <code class="cmd">,zalgo</code>. Full syntax is on the <a href="commands.html#text">commands page</a>.</p>
+            </article>
+
+            <article class="docs-guide" id="tools" data-search="tools utility calculator units uuid snowflake password regex roman calendar tip average prime">
+              <header class="docs-guide-head">
+                <h2>Tools</h2>
+              </header>
+              <p>No special permission. 28 utility tools, including <code class="cmd">,units</code>, <code class="cmd">,base</code>, <code class="cmd">,roman</code>, <code class="cmd">,percent</code>, <code class="cmd">,average</code>, <code class="cmd">,prime</code>, <code class="cmd">,calendar</code>, <code class="cmd">,datediff</code>, <code class="cmd">,snowflake</code> (when a Discord ID was created), <code class="cmd">,jsonformat</code>, <code class="cmd">,regextest</code>, <code class="cmd">,uuid</code>, and <code class="cmd">,tip</code>. <code class="cmd">,password</code> DMs you a strong random password (it is never posted in chat). Full syntax is on the <a href="commands.html#tools">commands page</a>.</p>
+            </article>
+
+
+            <article class="docs-guide" id="info" data-search="info help ping perms whohas adminroles channelperms auditlog accountage badges staff timezone">
+              <header class="docs-guide-head">
+              <div class="docs-module-art">
+                <picture>
+                  <source srcset="assets/modules/info.webp" type="image/webp">
+                  <img src="assets/modules/info.jpg" alt="" width="1200" height="675" loading="lazy" decoding="async">
+                </picture>
+              </div>
+                <h2>Info</h2>
+              </header>
+              <p>Permission and member lookups (no special permission for most of these): <code class="cmd">,perms</code>, <code class="cmd">,whohas</code> (which roles and members have a permission), <code class="cmd">,adminroles</code>, and <code class="cmd">,channelperms</code>. Also <code class="cmd">,help</code>, <code class="cmd">,ping</code>, <code class="cmd">,auditlog</code>, <code class="cmd">,accountage</code>, <code class="cmd">,badges</code>, <code class="cmd">,staff</code>, and <code class="cmd">,timezone</code>. Full syntax is on the <a href="commands.html#info">commands page</a>.</p>
+            </article>
+
             <article class="docs-guide" id="utility" data-search="utility userinfo serverinfo avatar banner roleinfo snipe editsnipe clearsnipe afk remind ping help slash info">
               <header class="docs-guide-head">
               <div class="docs-module-art">
@@ -778,11 +827,12 @@
                 <h2>Utility</h2>
               </header>
               <ul>
-                <li><code class="cmd">,userinfo</code>, <code class="cmd">,serverinfo</code>, <code class="cmd">,avatar</code>, <code class="cmd">,banner</code>, and <code class="cmd">,roleinfo</code> look up a member, the server, an avatar, a banner, or a role. Nickname commands now live under <a href="#roles">Roles</a>. <code class="cmd">,names</code> shows someone’s past usernames, display names and nicknames.</li>
+                <li><code class="cmd">,userinfo</code>, <code class="cmd">,serverinfo</code>, <code class="cmd">,avatar</code>, <code class="cmd">,banner</code>, and <code class="cmd">,roleinfo</code> look up a member, the server, an avatar, a banner, or a role. Nickname commands now live under <a href="#roles">Roles</a>. <code class="cmd">,names</code> shows someone’s past usernames, display names and nicknames. <code class="cmd">,bookmark</code> DMs you a copy of a message (reply or link).</li>
                 <li><code class="cmd">,snipe</code> / <code class="cmd">,editsnipe</code> show recently deleted or pre-edit messages. <code class="cmd">,reactionsnipe</code> shows the last removed reaction. <code class="cmd">,clearsnipe</code> (Manage Messages) clears snipes in the channel.</li>
                 <li><code class="cmd">,afk [reason]</code> sets a status that replies when you’re pinged. <code class="cmd">,afk list</code> shows who’s AFK; <code class="cmd">,afk ignore</code> (Manage Server) toggles a channel where AFK is ignored.</li>
                 <li><code class="cmd">,remind &lt;duration&gt; &lt;text&gt;</code>, <code class="cmd">,remind list</code>, <code class="cmd">,remind edit</code>, <code class="cmd">,remind delete</code>, <code class="cmd">,remind clear</code>, and <code class="cmd">,remind every</code> (a reminder that repeats, 10m to 30d).</li>
                 <li><code class="cmd">,todo</code> is your to-do list: <code class="cmd">add</code>, <code class="cmd">done</code>, <code class="cmd">undo</code>, <code class="cmd">edit</code>, <code class="cmd">remove</code>, and <code class="cmd">clear</code>.</li>
+                <li><code class="cmd">,pomodoro [work] [break]</code> is a focus timer that pings you when work time and the break end. <code class="cmd">,pomodoro stop</code> cancels it.</li>
                 <li><code class="cmd">,timestamp [when]</code> makes Discord timestamps that show in everyone’s own timezone. <code class="cmd">,countdown &lt;when&gt; [title]</code> (Manage Messages) posts a live countdown that announces when it ends.</li>
                 <li><code class="cmd">,highlight add &lt;word&gt;</code> DMs you when someone says a word (your message is deleted so it stays private). <code class="cmd">list</code>, <code class="cmd">remove</code>, <code class="cmd">clear</code>, and <code class="cmd">ignore</code> manage highlights.</li>
                 <li><code class="cmd">,ping</code> and <code class="cmd">,help</code> (including <code class="cmd">/help</code>) are listed under Info on the <a href="commands.html#info">commands page</a>.</li>

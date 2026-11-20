@@ -10,7 +10,8 @@
   var countEl = document.getElementById("command-count");
   var items = [];
   var category = "all";
-  var total = 861;
+  var total = 1011;
+  function fmtCount(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
   var rafPending = 0;
   var moduleIds = {};
 
@@ -123,9 +124,9 @@
     if (empty) empty.hidden = visible !== 0;
     if (countEl) {
       if (category === "all" && !tokens.length) {
-        countEl.textContent = total + " commands";
+        countEl.textContent = fmtCount(total) + " commands";
       } else {
-        countEl.textContent = "Showing " + visible + " of " + total;
+        countEl.textContent = "Showing " + visible + " of " + fmtCount(total);
       }
     }
   }

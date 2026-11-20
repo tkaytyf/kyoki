@@ -17,6 +17,7 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/ban.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/baninfo.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/banlist.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/clearreactions.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/clearwarns.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/hardban.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/hardban-list.html</loc></url>
@@ -38,6 +39,7 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/lockdown-ignore.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/lockdown-ignored.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/massban.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/movemessage.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/muterole.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/muterole-create.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/muterole-set.html</loc></url>
@@ -65,6 +67,7 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/purge-stickers.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/purge-user.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/purge-webhooks.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/removereaction.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/report.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/report-channel.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/restore.html</loc></url>
@@ -99,6 +102,7 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/warnpunish-add.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/warnpunish-list.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/warnpunish-remove.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/warntop.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/balance.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/beg.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/blackjack.html</loc></url>
@@ -174,6 +178,7 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/withdraw.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/work.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/8ball.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/advice.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/base64.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/base64-decode.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/base64-encode.html</loc></url>
@@ -185,8 +190,13 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/charinfo.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/choose.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/clap.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/compliment.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/cookie.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/cookies.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/cowsay.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/cry.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/cuddle.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/dadjoke.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/dance.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/dare.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/dog.html</loc></url>
@@ -194,11 +204,15 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/facepalm.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/fact.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/fight.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/fortune.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/handhold.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/hash.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/highfive.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/hug.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/icebreaker.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/inspire.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/interactions.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/joke.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/kiss.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/laugh.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/meme.html</loc></url>
@@ -210,6 +224,7 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/poke.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/pout.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/punch.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/quirk.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/rate.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/reverse.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/ship.html</loc></url>
@@ -218,6 +233,7 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/sleep.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/smile.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/think.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/thisorthat.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/thumbsup.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/tickle.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/truth.html</loc></url>
@@ -245,18 +261,23 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/role-bots.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/role-cancel.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/role-color.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/role-compare.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/role-copy.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/role-create.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/role-delete.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/role-grant.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/role-hoist.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/role-humans.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/role-icon.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/role-in.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/role-info.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/role-mentionable.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/role-position.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/role-queue.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/role-queue-clear.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/role-remove.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/role-rename.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/role-revoke.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/role-status.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/rolemenu.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/rolemenu-add.html</loc></url>
@@ -310,6 +331,45 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/xp-reset.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/xp-set.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/xp-setlevel.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/afk.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/afk-clear.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/afk-ignore.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/afk-list.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/avatar.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/banner.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/bookmark.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/clearsnipe.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/countdown.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/editsnipe.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/highlight.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/highlight-add.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/highlight-clear.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/highlight-ignore.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/highlight-list.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/highlight-remove.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/names.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/names-clear.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/pomodoro.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/pomodoro-stop.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/reactionsnipe.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/remind.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/remind-clear.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/remind-delete.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/remind-edit.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/remind-every.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/remind-list.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/roleinfo.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/serverinfo.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/snipe.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/timestamp.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/todo.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/todo-add.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/todo-clear.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/todo-done.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/todo-edit.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/todo-remove.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/todo-undo.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/userinfo.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/filter.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/filter-action.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/filter-attachments.html</loc></url>
@@ -348,42 +408,107 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/filter-words-list.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/filter-words-remove.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/filter-zalgo.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/afk.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/afk-clear.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/afk-ignore.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/afk-list.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/avatar.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/banner.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/clearsnipe.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/countdown.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/editsnipe.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/highlight.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/highlight-add.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/highlight-clear.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/highlight-ignore.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/highlight-list.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/highlight-remove.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/names.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/names-clear.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/reactionsnipe.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/remind.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/remind-clear.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/remind-delete.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/remind-edit.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/remind-every.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/remind-list.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/roleinfo.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/serverinfo.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/snipe.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/timestamp.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/todo.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/todo-add.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/todo-clear.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/todo-done.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/todo-edit.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/todo-remove.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/todo-undo.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/userinfo.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/acronym.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/anagram.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/binary.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/bubble.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/caesar.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/cursive.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/dedupe.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/doublestruck.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/fromhex.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/gothic.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/leet.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/lorem.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/lower.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/monospace.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/morse.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/nato.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/owo.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/palindrome.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/rot13.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/shufflelines.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/slugify.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/smallcaps.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/sortlines.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/spoiler.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/swapcase.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/titlecase.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/tohex.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/unbinary.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/unmorse.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/upper.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/upsidedown.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/urldecode.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/urlencode.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/wordcount.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/wordfreq.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/zalgo.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/accountage.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/adminroles.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/auditlog.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/badges.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/bots.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/channellist.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/channelperms.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/emptyroles.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/features.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/help.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/joinpos.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/newaccounts.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/newmembers.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/norole.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/oldest.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/perms.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ping.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/profile.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/profile-bio.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/profile-color.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/quote.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/roles.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/serveravatar.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/servercard.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/serverstats.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/splash.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/staff.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/timezone.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/timezone-convert.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/timezone-list.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/timezone-remove.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/timezone-set.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/whohas.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/category.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/category-create.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/category-delete.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/category-position.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/category-rename.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/category-sync.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/channel.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/channel-allow.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/channel-clearperms.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/channel-clone.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/channel-create.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/channel-delete.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/channel-deny.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/channel-move.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/channel-neutral.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/channel-nsfw.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/channel-position.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/channel-rename.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/channel-sync.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/pin.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/thread.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/thread-add.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/thread-archive.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/thread-create.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/thread-delete.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/thread-list.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/thread-lock.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/thread-remove.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/thread-rename.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/thread-slowmode.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/thread-unlock.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/unpin.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/anime.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/botinfo.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/calc.html</loc></url>
@@ -414,6 +539,91 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/weather.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/wiki.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/xkcd.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-bitrate.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-create.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-deafenall.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-drag.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-kickall.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-limit.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-lock.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-muteall.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-region.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-rename.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-slowmode.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-unlock.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-unmuteall.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-videoquality.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-interface.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-limit.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-name.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-permit.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-reject.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-reset.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-setup.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-style.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-transfer.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicerole.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicerole-add.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicerole-list.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicerole-remove.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/age.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/average.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/base.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/calendar.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/datediff.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/daysuntil.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/epoch.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/factor.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/jsonformat.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/password.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/percent.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/prime.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/random.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/randomcolor.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/randommember.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/regextest.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/roman.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/snowflake.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/stopwatch.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/stopwatch-lap.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/stopwatch-start.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/stopwatch-stop.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/teams.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/textdiff.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/tip.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/units.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/uuid.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/weekday.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/botnick.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/command.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/command-disable.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/command-disabled.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/command-enable.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/goodbye.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ignore.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ignore-clear.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ignore-list.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/prefix.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/server.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/server-afkchannel.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/server-afktimeout.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/server-banner.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/server-contentfilter.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/server-description.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/server-icon.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/server-name.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/server-notifications.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/server-splash.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/server-systemchannel.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/server-verification.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/setup.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/welcome.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/welcome-card.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/welcome-card-off.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/welcome-card-on.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/welcome-card-test.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/boost.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/boost-channel.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/boost-message.html</loc></url>
@@ -441,32 +651,53 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/vanity-off.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/vanity-role.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/vanity-set.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-bitrate.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-deafenall.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-drag.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-kickall.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-limit.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-lock.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-muteall.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-region.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-rename.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-unlock.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-unmuteall.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-interface.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-limit.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-name.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-permit.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-reject.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-reset.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-setup.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-style.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-transfer.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicerole.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicerole-add.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicerole-list.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicerole-remove.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/2048.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/capital.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/connect4.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/emojiquiz.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/flags.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/games.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/games-leaderboard.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/games-reset.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/games-stats.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/guessnumber.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/hangman.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/highcard.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/memory.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/minesweeper.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/quickmath.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/reaction.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/riddle.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/rpsduel.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/rpsls.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/scramble.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/tictactoe.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/trivia.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/typerace.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/wordle.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke-admins.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke-audit.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke-history.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke-modules.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke-off.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke-on.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke-punish.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke-reset.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke-threshold.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke-whitelist.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/antiraid.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/antiraid-action.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/antiraid-age.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/antiraid-allow.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/antiraid-avatar.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/antiraid-end.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/antiraid-invites.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/antiraid-joins.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/antiraid-off.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/antiraid-on.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/antiraid-unpause.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/securityscan.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/autorole.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/autorole-add.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/autorole-delay.html</loc></url>
@@ -490,90 +721,25 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/pingonjoin-add.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/pingonjoin-list.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/pingonjoin-remove.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke-admins.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke-audit.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke-history.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke-modules.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke-off.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke-on.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke-punish.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke-reset.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke-threshold.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke-whitelist.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/antiraid.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/antiraid-action.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/antiraid-age.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/antiraid-allow.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/antiraid-avatar.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/antiraid-end.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/antiraid-invites.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/antiraid-joins.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/antiraid-off.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/antiraid-on.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/antiraid-unpause.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/bots.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/help.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/joinpos.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/newmembers.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/oldest.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/perms.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/ping.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/profile.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/profile-bio.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/profile-color.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/quote.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/roles.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/servercard.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/serverstats.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/splash.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/staff.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/timezone.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/timezone-convert.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/timezone-list.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/timezone-remove.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/timezone-set.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/command.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/command-disable.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/command-disabled.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/command-enable.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/goodbye.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/ignore.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/ignore-clear.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/ignore-list.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/prefix.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/server.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/server-banner.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/server-description.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/server-icon.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/server-name.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/server-splash.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/setup.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/welcome.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/welcome-card.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/welcome-card-off.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/welcome-card-on.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/welcome-card-test.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/2048.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/connect4.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/flags.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/games.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/games-leaderboard.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/games-reset.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/games-stats.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/guessnumber.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/hangman.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/memory.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/minesweeper.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/quickmath.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/reaction.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/riddle.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/rpsduel.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/scramble.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/tictactoe.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/trivia.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/typerace.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/wordle.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-add.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-claim.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-close.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-form.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-form-add.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-form-clear.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-form-preview.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-form-remove.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-form-title.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-list.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-log.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-open.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-remove.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-rename.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-setup.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-support.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-transcript.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-unclaim.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/application.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/application-accept.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/application-channel.html</loc></url>
@@ -592,24 +758,24 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/application-role.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/application-view.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/apply.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/channel.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/channel-clone.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/channel-create.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/channel-delete.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/channel-move.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/channel-nsfw.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/channel-rename.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/channel-sync.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/pin.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/thread.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/thread-add.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/thread-archive.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/thread-list.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/thread-lock.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/thread-remove.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/thread-rename.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/thread-unlock.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/unpin.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/emoji.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/emoji-add.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/emoji-enlarge.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/emoji-info.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/emoji-list.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/emoji-lock.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/emoji-remove.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/emoji-rename.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/emoji-search.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/emoji-unlock.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/steal.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/sticker.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/sticker-add.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/sticker-info.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/sticker-list.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/sticker-remove.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/sticker-rename.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/sticker-steal.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/case.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/case-delete.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/case-export.html</loc></url>
@@ -625,36 +791,6 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/notes-add.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/notes-clear.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/notes-remove.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/emoji.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/emoji-add.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/emoji-enlarge.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/emoji-info.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/emoji-list.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/emoji-remove.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/emoji-rename.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/steal.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/sticker.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/sticker-add.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/sticker-info.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/sticker-list.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/sticker-remove.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/sticker-rename.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/sticker-steal.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-add.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-claim.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-close.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-form.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-form-add.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-form-clear.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-form-preview.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-form-remove.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-form-title.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-log.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-remove.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-rename.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-setup.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-support.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/roblox.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/roblox-avatar.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/roblox-bind.html</loc></url>
@@ -750,6 +886,16 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/invites-remove.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/invites-reset.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/invites-status.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/starboard.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/starboard-channel.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/starboard-emoji.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/starboard-ignore.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/starboard-off.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/starboard-random.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/starboard-selfstar.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/starboard-settings.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/starboard-stats.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/starboard-threshold.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/tag.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/tag-add.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/tag-claim.html</loc></url>
@@ -778,6 +924,15 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/bumpreminder-role.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/bumpreminder-status.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/bumpreminder-thanks.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/edit.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/msginfo.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/pins.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/react.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/reply.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/say.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/source.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/unreact.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/unsay.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/log.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/log-categories.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/log-ignore.html</loc></url>
@@ -803,14 +958,6 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/giveaway-require.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/giveaway-reroll.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/giveaway-start.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/starboard.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/starboard-channel.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/starboard-emoji.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/starboard-ignore.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/starboard-off.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/starboard-selfstar.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/starboard-settings.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/starboard-threshold.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/sticky.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/sticky-add.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/sticky-clear.html</loc></url>
@@ -834,6 +981,12 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/reactionrole-remove.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/reactionrole-reset.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/reactionrole-unique.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/autoresponder.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/autoresponder-add.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/autoresponder-clear.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/autoresponder-edit.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/autoresponder-list.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/autoresponder-remove.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/counter.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/counter-add.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/counter-list.html</loc></url>
@@ -857,6 +1010,11 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/partner.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/reputation.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/reputation-leaderboard.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/poll.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/poll-end.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/poll-list.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/poll-results.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/quickpoll.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/reactiontrigger.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/reactiontrigger-add.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/reactiontrigger-clear.html</loc></url>
@@ -867,12 +1025,4 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/temprole-extend.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/temprole-list.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/temprole-remove.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/autoresponder.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/autoresponder-add.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/autoresponder-list.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/autoresponder-remove.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/poll.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/poll-end.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/poll-list.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/poll-results.html</loc></url>
 </urlset>

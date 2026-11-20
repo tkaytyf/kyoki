@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("kyoki-theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+        else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) document.documentElement.setAttribute("data-theme", "light");
+      } catch (e) {}
+    })();
+  </script>
+  <title>,channel deny — Commands — kyōki</title>
+  <meta name="description" content="Deny permissions for a role or member in this channel Syntax: ,channel deny &lt;role or member&gt; &lt;permissions&gt;.">
+  <meta name="theme-color" content="#0B0C0E">
+  <link rel="canonical" href="https://tkaytyf.github.io/kyoki/commands/channel-deny.html">
+  <meta property="og:site_name" content="kyōki">
+  <meta property="og:title" content=",channel deny — Commands — kyōki">
+  <meta property="og:description" content="Deny permissions for a role or member in this channel Syntax: ,channel deny &lt;role or member&gt; &lt;permissions&gt;.">
+  <meta property="og:image" content="https://tkaytyf.github.io/kyoki/assets/og-image.png">
+  <meta property="og:url" content="https://tkaytyf.github.io/kyoki/commands/channel-deny.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content=",channel deny — Commands — kyōki">
+  <meta name="twitter:description" content="Deny permissions for a role or member in this channel Syntax: ,channel deny &lt;role or member&gt; &lt;permissions&gt;.">
+  <meta name="twitter:image" content="https://tkaytyf.github.io/kyoki/assets/og-image.png">
+  <link rel="icon" href="../assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/icon-512.png">
+  <link rel="manifest" href="../site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800&family=Yuji+Boku&family=Zen+Antique&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site">
+    <header class="site-header">
+      <div class="nav-inner">
+        <a class="brand" href="../index.html">
+          <span class="brand-mark" role="img" aria-label="kyōki logo"><img class="logo-static" src="../assets/logo.png" alt="" width="40" height="40"><picture class="logo-anim"><source srcset="../assets/logo.png" media="(prefers-reduced-motion: reduce)"><source srcset="../assets/kyoki-logo-animated.webp" type="image/webp"><img src="../assets/kyoki-logo-animated.gif" alt="" width="40" height="40"></picture></span>
+          <span class="brand-name">kyōki</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+          <span class="menu-bars" aria-hidden="true"></span>
+        </button>
+        <nav id="site-menu" class="site-nav" aria-label="Primary">
+          <ul class="nav-links">
+            <li><a href="../index.html#features">Features</a></li><li><a href="../commands.html" aria-current="page">Commands</a></li><li><a href="../status.html">Status</a></li><li><a href="../docs.html">Docs</a></li><li><a href="../embed.html">Embed</a></li><li><a href="../changelog.html">Changelog</a></li><li><a href="../dashboard.html">Dashboard</a></li><li><a href="https://discord.gg/j6WTTyKDeM" target="_blank" rel="noopener">Support</a></li>
+          </ul>
+          <a class="btn btn-discord" href="https://discord.com/oauth2/authorize?client_id=1573348245726298224&amp;scope=bot+applications.commands&amp;permissions=9914278866167" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.11.11 0 0 0-.12.06c-.17.3-.37.7-.5 1.01a14.7 14.7 0 0 0-4.76 0c-.14-.32-.34-.71-.51-1.01A.12.12 0 0 0 9 4c-1.5.26-2.94.71-4.27 1.33A.1.1 0 0 0 4.64 5.4C1.87 9.54 1.1 13.56 1.48 17.53a.12.12 0 0 0 .05.08c1.8 1.32 3.54 2.12 5.25 2.65a.12.12 0 0 0 .13-.04c.4-.55.76-1.13 1.07-1.74a.11.11 0 0 0-.06-.16 10.1 10.1 0 0 1-1.45-.7.11.11 0 0 1-.01-.18c.1-.07.19-.15.28-.23a.11.11 0 0 1 .11-.02c3.05 1.39 6.36 1.39 9.37 0a.11.11 0 0 1 .12.02c.09.08.18.16.28.23a.11.11 0 0 1 0 .18 9.5 9.5 0 0 1-1.45.7.11.11 0 0 0-.06.16c.32.61.68 1.19 1.07 1.74a.12.12 0 0 0 .13.04c1.72-.53 3.46-1.33 5.26-2.65a.12.12 0 0 0 .05-.08c.44-4.58-.74-8.57-3.13-12.13a.1.1 0 0 0-.05-.07ZM8.52 14.85c-.92 0-1.67-.85-1.67-1.89s.74-1.89 1.67-1.89 1.69.85 1.67 1.89-.74 1.89-1.67 1.89Zm6.97 0c-.92 0-1.67-.85-1.67-1.89s.74-1.89 1.67-1.89 1.69.85 1.67 1.89-.75 1.89-1.67 1.89Z"/></svg>Add kyōki</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="page-main command-page">
+      <div class="container">
+        <div class="page-head">
+          <div>
+            <p class="legal-date"><a href="../commands.html#channels">Channels</a></p>
+            <h1 class="section-title"><code class="cmd">,channel deny</code></h1>
+            <p class="section-lead">Deny permissions for a role or member in this channel</p>
+          </div>
+        </div>
+        <div class="command-panel">
+          <p class="command-name"><code>,channel deny</code>
+            <button type="button" class="cmd-copy" data-copy=",channel deny &lt;role or member&gt; &lt;permissions&gt;" aria-label="Copy syntax">Copy</button>
+          </p>
+          <div class="command-fields">
+            <p class="command-field"><span class="field-label">Syntax</span><code>,channel deny &lt;role or member&gt; &lt;permissions&gt;</code></p>
+            <p class="command-field"><span class="field-label">Permission</span><code>Manage Channels + Manage Roles</code></p>
+            <p class="command-field"><span class="field-label">Aliases</span><code>block, revoke</code></p>
+          </div>
+        </div>
+        <h2>Related commands</h2>
+          <ul class="related-list">
+            <li><a href="channel.html"><code class="cmd">,channel</code><small>Channel info, or manage channels</small></a></li>
+            <li><a href="channel-allow.html"><code class="cmd">,channel allow</code><small>Allow permissions for a role or member in this channel</small></a></li>
+            <li><a href="channel-clearperms.html"><code class="cmd">,channel clearperms</code><small>Remove a role or member&#x27;s overwrite here completely</small></a></li>
+            <li><a href="channel-clone.html"><code class="cmd">,channel clone</code><small>Copy a channel with its permissions</small></a></li>
+            <li><a href="channel-create.html"><code class="cmd">,channel create</code><small>Create a channel here (same category)</small></a></li>
+            <li><a href="channel-delete.html"><code class="cmd">,channel delete</code><small>Delete a channel (asks to confirm)</small></a></li>
+            <li><a href="channel-move.html"><code class="cmd">,channel move</code><small>Move a channel into a category</small></a></li>
+            <li><a href="channel-neutral.html"><code class="cmd">,channel neutral</code><small>Reset permissions to inherit (the / setting)</small></a></li>
+          </ul>
+        <p class="legal-note"><a href="../commands.html">All 1,011 commands</a></p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="../index.html">
+              <span class="brand-mark is-static" role="img" aria-label="kyōki logo"><img class="logo-static" src="../assets/logo.png" alt="" width="40" height="40"></span>
+              <span class="brand-name">kyōki</span>
+            </a>
+            <p>An all-in-one Discord bot for moderation, welcomes, button roles, logging, and voice.</p>
+          </div>
+          <div class="footer-col">
+            <h3>Product</h3>
+            <a href="../commands.html">Commands</a>
+            <a href="../status.html">Status</a>
+            <a href="../embed.html">Embed builder</a>
+            <a href="../dashboard.html">Dashboard</a>
+            <a href="../demo.html">Demo</a>
+            <a href="../setup.html">Setup</a>
+          </div>
+          <div class="footer-col">
+            <h3>Resources</h3>
+            <a href="../docs.html">Docs</a>
+            <a href="../changelog.html">Changelog</a>
+            <a href="../press.html">Press</a>
+            <a href="https://discord.gg/j6WTTyKDeM" target="_blank" rel="noopener">Support</a>
+            <a href="../invite/">Invite</a>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>kyōki is not affiliated with Discord.</p>
+          <p class="footer-links"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../press.html">Press</a></p>
+          <p>© 2026 kyōki</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="../script.js"></script>
+  <script src="../command-page.js"></script>
+</body>
+</html>

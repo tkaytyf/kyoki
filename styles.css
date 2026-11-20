@@ -3301,3 +3301,10 @@ p code.cmd,
   .vm-panel-btn { padding: 0.45rem 0.1rem; }
   .vm-panel-grid img { width: 1.25rem; height: 1.25rem; }
 }
+
+/* Keep comma-formatted counts like 1,011 on one line */
+#command-total,
+#command-count,
+.count-nowrap {
+  white-space: nowrap;
+}
