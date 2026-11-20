@@ -4,21 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>kyōki — an all-in-one Discord bot</title>
-  <meta name="description" content="kyōki (狂気) is an all-in-one Discord bot for moderation, welcome messages, button roles, and logging. Commands use a comma prefix.">
+  <meta name="description" content="kyōki (狂気) is an all-in-one Discord bot with 225 commands for moderation, welcomes, roles, logging, tickets, and voice. The default prefix is a comma.">
   <meta name="theme-color" content="#0B0C0E">
-  <meta property="og:title" content="kyōki">
-  <meta property="og:description" content="kyōki (狂気) is an all-in-one Discord bot for moderation, welcome messages, button roles, and logging. Commands use a comma prefix.">
+  <link rel="canonical" href="https://tkaytyf.github.io/kyoki/">
+  <meta property="og:site_name" content="kyōki">
+  <meta property="og:title" content="kyōki — an all-in-one Discord bot">
+  <meta property="og:description" content="kyōki (狂気) is an all-in-one Discord bot with 225 commands for moderation, welcomes, roles, logging, tickets, and voice. The default prefix is a comma.">
   <meta property="og:image" content="https://tkaytyf.github.io/kyoki/assets/og-image.png">
   <meta property="og:url" content="https://tkaytyf.github.io/kyoki/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="kyōki">
-  <meta name="twitter:description" content="kyōki (狂気) is an all-in-one Discord bot for moderation, welcome messages, button roles, and logging. Commands use a comma prefix.">
+  <meta name="twitter:title" content="kyōki — an all-in-one Discord bot">
+  <meta name="twitter:description" content="kyōki (狂気) is an all-in-one Discord bot with 225 commands for moderation, welcomes, roles, logging, tickets, and voice. The default prefix is a comma.">
   <meta name="twitter:image" content="https://tkaytyf.github.io/kyoki/assets/og-image.png">
   <link rel="icon" href="assets/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800&family=Yuji+Boku&family=Zen+Antique&display=swap" rel="stylesheet">
@@ -101,7 +106,7 @@
             <article class="bento-card mod" data-reveal>
               <div class="bento-copy">
                 <img class="feature-icon" src="assets/icon-moderation.png" alt="" width="56" height="56">
-                <h3>Moderation</h3>
+<h3>Moderation</h3>
                 <p>Kick, ban, timeout, warns, purge, locks, and slowmode — each command checks the right permission.</p>
               </div>
                             <div class="bento-mock">
@@ -146,12 +151,16 @@
                   </div>
                 </div>
               </div>
+              <figure class="feature-shot">
+                <img src="assets/mockups/ban.png" alt="Example of ,ban @spammer raiding and kyōki confirming the ban" width="1200" height="330" loading="lazy" decoding="async">
+              </figure>
+
             </article>
 
             <article class="bento-card welcome" data-reveal style="--reveal-delay: 80ms">
               <div class="bento-copy">
                 <img class="feature-icon" src="assets/icon-welcome.png" alt="" width="56" height="56">
-                <h3>Welcome messages</h3>
+<h3>Welcome messages</h3>
                 <p>Greet people when they join — and say goodbye when they leave — in a channel you choose. Use {user}, {server}, {name}, and {count} in the message.</p>
               </div>
                             <div class="bento-mock">
@@ -183,7 +192,7 @@
             <article class="bento-card roles" data-reveal style="--reveal-delay: 120ms">
               <div class="bento-copy">
                 <img class="feature-icon" src="assets/icon-roles.png" alt="" width="56" height="56">
-                <h3>Button roles</h3>
+<h3>Button roles</h3>
                 <p>Post a button message so members can pick their own roles.</p>
               </div>
                             <div class="bento-mock">
@@ -208,7 +217,7 @@
             <article class="bento-card logging" data-reveal style="--reveal-delay: 160ms">
               <div class="bento-copy">
                 <img class="feature-icon" src="assets/icon-logging.png" alt="" width="56" height="56">
-                <h3>Logging</h3>
+<h3>Logging</h3>
                 <p>Send server logs to a channel you choose.</p>
               </div>
                             <div class="bento-mock">
@@ -241,7 +250,7 @@
             <article class="bento-card security" data-reveal style="--reveal-delay: 180ms">
               <div class="bento-copy">
                 <img class="feature-icon" src="assets/icon-antinuke.png" alt="" width="56" height="56">
-                <h3>Security</h3>
+<h3>Security</h3>
                 <p>Antinuke stops rogue admins from tearing the server down. Antiraid can kick or ban mass joins and brand-new accounts. Both are off by default — antinuke is owner-only, antiraid needs Manage Server.</p>
               </div>
               <div class="bento-mock">
@@ -258,23 +267,18 @@
             <article class="bento-card tickets" data-reveal style="--reveal-delay: 200ms">
               <div class="bento-copy">
                 <img class="feature-icon" src="assets/icon-tickets.png" alt="" width="56" height="56">
-                <h3>Tickets</h3>
+<h3>Tickets</h3>
                 <p>Post an Open Ticket panel, set a support role, and let staff claim or close tickets. Closing a ticket saves a .txt transcript.</p>
               </div>
-              <div class="bento-mock">
-                <div class="illust" aria-hidden="true">
-                  <div class="illust-bg"></div>
-                  <div class="floor-glow"></div>
-                  <div class="glow-tile tile-sq" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:7.5rem;height:7.5rem;display:grid;place-items:center;background:transparent;box-shadow:none;">
-                    <img src="assets/icon-tickets.png" alt="" width="96" height="96" style="width:5.5rem;height:5.5rem;border-radius:1.25rem;">
-                  </div>
-                </div>
-              </div>
+              <figure class="feature-shot">
+                <img src="assets/mockups/ticket-panel.png" alt="Example ticket panel with an Open Ticket button" width="1200" height="520" loading="lazy" decoding="async">
+                <figcaption>Example panel</figcaption>
+              </figure>
             </article>
 
             <article class="bento-card voice" data-reveal style="--reveal-delay: 220ms">
               <div class="bento-copy">
-                <h3>Voice channels</h3>
+<h3>Voice channels</h3>
                 <p>Set up Join-to-Create channels with <code class="cmd">,voicemaster setup</code>. The VoiceMaster panel lets channel owners lock, ghost, claim, and more. Temporary channels delete themselves when empty.</p>
               </div>
               <div class="bento-mock">
@@ -315,6 +319,10 @@
                   </div>
                 </div>
               </div>
+              <figure class="feature-shot">
+                <img src="assets/mockups/voicemaster.png" alt="Example of ,voicemaster limit 5 and kyōki confirming the channel limit" width="1200" height="330" loading="lazy" decoding="async">
+              </figure>
+
             </article>
           </div>
         </div>
@@ -414,12 +422,14 @@
             <h3>Resources</h3>
             <a href="docs.html">Docs</a>
             <a href="changelog.html">Changelog</a>
+            <a href="press.html">Press</a>
             <span class="soon">Support <small>coming soon</small></span>
-            <a href="https://discord.com/oauth2/authorize?client_id=1573348245726298224&amp;scope=bot+applications.commands&amp;permissions=1099798015063" target="_blank" rel="noopener">Invite</a>
+            <a href="invite/">Invite</a>
           </div>
         </div>
         <div class="footer-legal">
           <p>kyōki is not affiliated with Discord.</p>
+          <p class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="press.html">Press</a></p>
           <p>© 2026 kyōki</p>
         </div>
       </div>

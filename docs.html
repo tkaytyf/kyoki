@@ -4,21 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Docs — kyōki</title>
-  <meta name="description" content="Set up kyōki’s real commands: moderation, automod, cases, roles, sticky messages, reaction roles, security, tickets, embeds, voice, and the rest of the list.">
+  <meta name="description" content="Setup guides for kyōki’s real commands: moderation, automod, cases, roles, sticky messages, reaction roles, security, tickets, embeds, and voice.">
   <meta name="theme-color" content="#0B0C0E">
+  <link rel="canonical" href="https://tkaytyf.github.io/kyoki/docs.html">
+  <meta property="og:site_name" content="kyōki">
   <meta property="og:title" content="Docs — kyōki">
-  <meta property="og:description" content="Set up kyōki’s real commands: moderation, automod, cases, roles, sticky messages, reaction roles, security, tickets, embeds, voice, and the rest of the list.">
+  <meta property="og:description" content="Setup guides for kyōki’s real commands: moderation, automod, cases, roles, sticky messages, reaction roles, security, tickets, embeds, and voice.">
   <meta property="og:image" content="https://tkaytyf.github.io/kyoki/assets/og-image.png">
   <meta property="og:url" content="https://tkaytyf.github.io/kyoki/docs.html">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Docs — kyōki">
-  <meta name="twitter:description" content="Set up kyōki’s real commands: moderation, automod, cases, roles, sticky messages, reaction roles, security, tickets, embeds, voice, and the rest of the list.">
+  <meta name="twitter:description" content="Setup guides for kyōki’s real commands: moderation, automod, cases, roles, sticky messages, reaction roles, security, tickets, embeds, and voice.">
   <meta name="twitter:image" content="https://tkaytyf.github.io/kyoki/assets/og-image.png">
   <link rel="icon" href="assets/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800&family=Yuji+Boku&family=Zen+Antique&display=swap" rel="stylesheet">
@@ -85,8 +90,23 @@
             <p class="docs-empty" hidden>No guides match that search.</p>
 
             <article class="docs-guide" id="moderation" data-search="moderation kick ban unban baninfo banlist hardban massban tempban timeout untimeout timeouts warn warnings clearwarns delwarn purge lock unlock lockdown hide unhide slowmode topic nuke mute muterole rolemute imute iunmute rmute strip restore softban vcdeafen vckick vcmove vcmute slash /ban /kick /timeout /purge /warn">
-              <h2><img class="feature-icon-sm" src="assets/icon-moderation.png" alt=""> Moderation</h2>
+              <header class="docs-guide-head">
+              <div class="docs-module-art">
+                <picture>
+                  <source srcset="assets/modules/moderation.webp" type="image/webp">
+                  <img src="assets/modules/moderation.jpg" alt="" width="1200" height="675" loading="lazy" decoding="async">
+                </picture>
+              </div>
+                <h2><img class="feature-icon-sm" src="assets/icon-moderation.png" alt=""> Moderation</h2>
+              </header>
               <p>Each command checks a permission. Slash versions — <code class="cmd">/ban</code>, <code class="cmd">/kick</code>, <code class="cmd">/timeout</code>, <code class="cmd">/purge</code>, and <code class="cmd">/warn</code> — exist alongside the prefix commands. On slash timeout, a duration of 0 removes a timeout.</p>
+              <figure class="docs-shot">
+                <img src="assets/mockups/ban.png" alt="Example of ,ban @spammer raiding and kyōki confirming the ban" width="1200" height="330" loading="lazy" decoding="async">
+              </figure>
+              <figure class="docs-shot">
+                <img src="assets/mockups/help-card.png" alt="Example of ,help ban showing permission, syntax, and an example" width="1200" height="700" loading="lazy" decoding="async">
+              </figure>
+
               <h3>Bans, kicks, and timeouts</h3>
               <ul>
                 <li><code class="cmd">,kick &lt;member&gt; [reason]</code> — Kick Members.</li>
@@ -121,7 +141,15 @@
             </article>
 
             <article class="docs-guide" id="jail" data-search="jail unjail roles lock channel moderate members">
-              <h2><img class="feature-icon-sm" src="assets/icon-moderation.png" alt=""> Jail</h2>
+              <header class="docs-guide-head">
+              <div class="docs-module-art">
+                <picture>
+                  <source srcset="assets/modules/moderation.webp" type="image/webp">
+                  <img src="assets/modules/moderation.jpg" alt="" width="1200" height="675" loading="lazy" decoding="async">
+                </picture>
+              </div>
+                <h2><img class="feature-icon-sm" src="assets/icon-moderation.png" alt=""> Jail</h2>
+              </header>
               <p>You need Moderate Members.</p>
               <ul>
                 <li><code class="cmd">,jail &lt;member&gt; [reason]</code> locks the member in a jail channel and saves their roles.</li>
@@ -130,7 +158,15 @@
             </article>
 
             <article class="docs-guide" id="cases" data-search="cases case delete export list reason cases clear mod delwarn history modstats notes add remove staff">
-              <h2><img class="feature-icon-sm" src="assets/icon-moderation.png" alt=""> Cases</h2>
+              <header class="docs-guide-head">
+              <div class="docs-module-art">
+                <picture>
+                  <source srcset="assets/modules/cases.webp" type="image/webp">
+                  <img src="assets/modules/cases.jpg" alt="" width="1200" height="675" loading="lazy" decoding="async">
+                </picture>
+              </div>
+                <h2><img class="feature-icon-sm" src="assets/icon-moderation.png" alt=""> Cases</h2>
+              </header>
               <p>Moderation cases, history, and private staff notes. Most commands need Moderate Members; deleting or clearing cases and notes needs Manage Server. Changing a case’s reason needs Moderate Members for your own cases, or Manage Server.</p>
               <ul>
                 <li><code class="cmd">,case &lt;number&gt;</code> views a case. <code class="cmd">,case list</code> shows every case, newest first. <code class="cmd">,case reason &lt;number&gt; &lt;reason&gt;</code> changes a reason. <code class="cmd">,case delete &lt;number&gt;</code> deletes one. <code class="cmd">,case export</code> downloads every case as a spreadsheet file.</li>
@@ -142,7 +178,15 @@
             </article>
 
             <article class="docs-guide" id="automod" data-search="automod filter action caps emoji exempt invites links log massmention newlines repeat reset spam status test timeout whitelist words zalgo am">
-              <h2>Automod</h2>
+              <header class="docs-guide-head">
+              <div class="docs-module-art">
+                <picture>
+                  <source srcset="assets/modules/automod.webp" type="image/webp">
+                  <img src="assets/modules/automod.jpg" alt="" width="1200" height="675" loading="lazy" decoding="async">
+                </picture>
+              </div>
+                <h2>Automod</h2>
+              </header>
               <p>Auto-moderation filters. You need Manage Server. Alias: <code class="cmd">,automod</code> or <code class="cmd">,am</code>. A filter always deletes a matching message; <code class="cmd">,filter action</code> also sets whether offenders are warned, timed out, or kicked.</p>
               <ul>
                 <li>Turn a filter on or off: <code class="cmd">,filter caps</code> (optional percent and min letters), <code class="cmd">emoji</code> (limit), <code class="cmd">invites</code>, <code class="cmd">links</code>, <code class="cmd">massmention</code> (limit), <code class="cmd">newlines</code> (max lines), <code class="cmd">repeat</code> (times), <code class="cmd">spam</code> (messages and seconds), and <code class="cmd">zalgo</code>.</li>
@@ -154,7 +198,15 @@
             </article>
 
             <article class="docs-guide" id="security" data-search="security antinuke antiraid an raid whitelist threshold punish joins age action off by default server owner">
-              <h2><img class="feature-icon-sm" src="assets/icon-antinuke.png" alt=""> Security</h2>
+              <header class="docs-guide-head">
+              <div class="docs-module-art">
+                <picture>
+                  <source srcset="assets/modules/security.webp" type="image/webp">
+                  <img src="assets/modules/security.jpg" alt="" width="1200" height="675" loading="lazy" decoding="async">
+                </picture>
+              </div>
+                <h2><img class="feature-icon-sm" src="assets/icon-antinuke.png" alt=""> Security</h2>
+              </header>
               <p>Antinuke and antiraid are <strong>off by default</strong>. Nothing in this module runs until you turn it on.</p>
               <h3>Antinuke</h3>
               <p>Server owner only. Alias: <code class="cmd">,an</code>. Stops rogue admins from nuking the server.</p>
@@ -176,7 +228,15 @@
             </article>
 
             <article class="docs-guide" id="welcome" data-search="welcome goodbye join leave message test delete {user} {name} {server} {count} {avatar}">
-              <h2><img class="feature-icon-sm" src="assets/icon-welcome.png" alt=""> Welcome &amp; Goodbye</h2>
+              <header class="docs-guide-head">
+              <div class="docs-module-art">
+                <picture>
+                  <source srcset="assets/modules/config.webp" type="image/webp">
+                  <img src="assets/modules/config.jpg" alt="" width="1200" height="675" loading="lazy" decoding="async">
+                </picture>
+              </div>
+                <h2><img class="feature-icon-sm" src="assets/icon-welcome.png" alt=""> Welcome &amp; Goodbye</h2>
+              </header>
               <p>You need Manage Server. Text (and embed JSON) can use <code class="cmd">{user}</code>, <code class="cmd">{name}</code>, <code class="cmd">{server}</code>, <code class="cmd">{count}</code>, and <code class="cmd">{avatar}</code>.</p>
               <h3>Welcome</h3>
               <p><code class="cmd">,welcome &lt;channel | message &lt;text&gt; | test | delete&gt;</code></p>
@@ -190,18 +250,42 @@
             </article>
 
             <article class="docs-guide" id="logging" data-search="logging logs log off channel">
-              <h2><img class="feature-icon-sm" src="assets/icon-logging.png" alt=""> Logging</h2>
+              <header class="docs-guide-head">
+              <div class="docs-module-art">
+                <picture>
+                  <source srcset="assets/modules/config.webp" type="image/webp">
+                  <img src="assets/modules/config.jpg" alt="" width="1200" height="675" loading="lazy" decoding="async">
+                </picture>
+              </div>
+                <h2><img class="feature-icon-sm" src="assets/icon-logging.png" alt=""> Logging</h2>
+              </header>
               <p>You need Manage Server. <code class="cmd">,log &lt;channel | off&gt;</code> sends server logs to a channel, or turns them off. Aliases: <code class="cmd">,logs</code>, <code class="cmd">,logging</code>.</p>
             </article>
 
             <article class="docs-guide" id="prefix" data-search="prefix setprefix reset mention default comma">
-              <h2>Prefix</h2>
+              <header class="docs-guide-head">
+              <div class="docs-module-art">
+                <picture>
+                  <source srcset="assets/modules/config.webp" type="image/webp">
+                  <img src="assets/modules/config.jpg" alt="" width="1200" height="675" loading="lazy" decoding="async">
+                </picture>
+              </div>
+                <h2>Prefix</h2>
+              </header>
               <p>The default prefix is <code class="cmd">,</code>. Mentioning the bot, as in <code class="cmd">@kyōki help</code>, always works.</p>
               <p><code class="cmd">,prefix</code> shows the current prefix. <code class="cmd">,prefix !</code> changes it (Manage Server). <code class="cmd">,prefix reset</code> puts it back to a comma. Alias: <code class="cmd">,setprefix</code>.</p>
             </article>
 
             <article class="docs-guide" id="embeds" data-search="embeds embed send json color hex timestamp content fences ce createembed welcome goodbye ticket autoresponder">
-              <h2>Embeds</h2>
+              <header class="docs-guide-head">
+              <div class="docs-module-art">
+                <picture>
+                  <source srcset="assets/modules/embeds.webp" type="image/webp">
+                  <img src="assets/modules/embeds.jpg" alt="" width="1200" height="675" loading="lazy" decoding="async">
+                </picture>
+              </div>
+                <h2>Embeds</h2>
+              </header>
               <p>You need Manage Messages. <code class="cmd">,embed &lt;json&gt;</code> sends a custom embed in the current channel. <code class="cmd">,embed send #channel &lt;json&gt;</code> sends it somewhere else. Aliases: <code class="cmd">,ce</code>, <code class="cmd">,createembed</code>.</p>
               <p>The JSON is Discord’s standard embed object. Color can be an integer or <code class="cmd">#hex</code>; if you leave color out, kyōki uses plain gray (<code class="cmd">#2B2D31</code>). <code class="cmd">timestamp</code> can be ISO-8601 or <code class="cmd">"now"</code>. Code fences around the JSON are stripped. Also accepted: <code class="cmd">{"embed":{…},"content":"…"}</code> and <code class="cmd">{"embeds":[{…}]}</code> (the first embed is used).</p>
               <p>The same format works in <code class="cmd">,welcome message</code>, <code class="cmd">,goodbye message</code>, <code class="cmd">,ticket setup</code>, and <code class="cmd">,autoresponder add</code>. Variables: <code class="cmd">{user}</code> <code class="cmd">{name}</code> <code class="cmd">{server}</code> <code class="cmd">{count}</code> <code class="cmd">{avatar}</code>.</p>
@@ -209,7 +293,15 @@
             </article>
 
             <article class="docs-guide" id="sticky" data-search="sticky stickymessage add clear edit every list remove view channel bottom embed">
-              <h2>Sticky messages</h2>
+              <header class="docs-guide-head">
+              <div class="docs-module-art">
+                <picture>
+                  <source srcset="assets/modules/sticky.webp" type="image/webp">
+                  <img src="assets/modules/sticky.jpg" alt="" width="1200" height="675" loading="lazy" decoding="async">
+                </picture>
+              </div>
+                <h2>Sticky messages</h2>
+              </header>
               <p>Keep a message at the bottom of a channel. You need Manage Messages, except <code class="cmd">,sticky clear</code>, which needs Manage Server and asks to confirm. Alias: <code class="cmd">,stickymessage</code>.</p>
               <ul>
                 <li><code class="cmd">,sticky add &lt;channel&gt; &lt;text or embed JSON&gt;</code> adds a sticky. <code class="cmd">,sticky edit &lt;channel&gt; &lt;text or embed JSON&gt;</code> changes it.</li>
@@ -219,8 +311,21 @@
             </article>
 
             <article class="docs-guide" id="tickets" data-search="tickets ticket setup support log claim close add remove rename transcript panel">
-              <h2><img class="feature-icon-sm" src="assets/icon-tickets.png" alt=""> Tickets</h2>
+              <header class="docs-guide-head">
+              <div class="docs-module-art">
+                <picture>
+                  <source srcset="assets/modules/tickets.webp" type="image/webp">
+                  <img src="assets/modules/tickets.jpg" alt="" width="1200" height="675" loading="lazy" decoding="async">
+                </picture>
+              </div>
+                <h2><img class="feature-icon-sm" src="assets/icon-tickets.png" alt=""> Tickets</h2>
+              </header>
               <p>Private support tickets with a button panel. Setup needs Manage Server; staff work uses the support role. Aliases: <code class="cmd">,tickets</code>, <code class="cmd">,t</code>.</p>
+              <figure class="docs-shot">
+                <img src="assets/mockups/ticket-panel.png" alt="Example ticket panel with an Open Ticket button" width="1200" height="520" loading="lazy" decoding="async">
+                <figcaption>Example panel</figcaption>
+              </figure>
+
               <ol>
                 <li><code class="cmd">,ticket setup #channel [text or embed JSON]</code> posts the Open Ticket panel. Alias: <code class="cmd">panel</code>.</li>
                 <li><code class="cmd">,ticket support @role</code> sets who can see and claim tickets. Aliases: <code class="cmd">role</code>, <code class="cmd">staff</code>.</li>
@@ -230,7 +335,15 @@
             </article>
 
             <article class="docs-guide" id="roles" data-search="button roles buttonrole post add clear list unique remove role give take all bots humans cancel color create delete hoist icon in info mentionable rename status nick decancer dehoist force forced resetall unforce br">
-              <h2><img class="feature-icon-sm" src="assets/icon-roles.png" alt=""> Roles</h2>
+              <header class="docs-guide-head">
+              <div class="docs-module-art">
+                <picture>
+                  <source srcset="assets/modules/roles.webp" type="image/webp">
+                  <img src="assets/modules/roles.jpg" alt="" width="1200" height="675" loading="lazy" decoding="async">
+                </picture>
+              </div>
+                <h2><img class="feature-icon-sm" src="assets/icon-roles.png" alt=""> Roles</h2>
+              </header>
               <h3>Button roles</h3>
               <p>You need Manage Roles. Aliases: <code class="cmd">,br</code>, <code class="cmd">,buttonroles</code>.</p>
               <ul>
@@ -254,7 +367,15 @@
             </article>
 
             <article class="docs-guide" id="reactionroles" data-search="reaction roles reactionrole rr emoji unique clear reset add remove list">
-              <h2><img class="feature-icon-sm" src="assets/icon-roles.png" alt=""> Reaction roles</h2>
+              <header class="docs-guide-head">
+              <div class="docs-module-art">
+                <picture>
+                  <source srcset="assets/modules/reactionroles.webp" type="image/webp">
+                  <img src="assets/modules/reactionroles.jpg" alt="" width="1200" height="675" loading="lazy" decoding="async">
+                </picture>
+              </div>
+                <h2><img class="feature-icon-sm" src="assets/icon-roles.png" alt=""> Reaction roles</h2>
+              </header>
               <p>Give roles when members react to a message. You need Manage Roles, except <code class="cmd">,reactionrole reset</code>, which needs Manage Server and asks to confirm. Aliases: <code class="cmd">,rr</code>, <code class="cmd">,reactionroles</code>.</p>
               <ul>
                 <li><code class="cmd">,reactionrole add &lt;message&gt; &lt;emoji&gt; &lt;role&gt;</code> links an emoji on a message to a role. <code class="cmd">,reactionrole remove &lt;message&gt; &lt;emoji&gt;</code> unlinks one.</li>
@@ -264,8 +385,20 @@
             </article>
 
             <article class="docs-guide" id="voicemaster" data-search="voicemaster voice vm setup reset interface name limit permit reject transfer join to create">
-              <h2>VoiceMaster</h2>
+              <header class="docs-guide-head">
+              <div class="docs-module-art">
+                <picture>
+                  <source srcset="assets/modules/voice.webp" type="image/webp">
+                  <img src="assets/modules/voice.jpg" alt="" width="1200" height="675" loading="lazy" decoding="async">
+                </picture>
+              </div>
+                <h2>VoiceMaster</h2>
+              </header>
               <p>Manage Server is required to set it up. Alias: <code class="cmd">,vm</code>.</p>
+              <figure class="docs-shot">
+                <img src="assets/mockups/voicemaster.png" alt="Example of ,voicemaster limit 5 and kyōki confirming the channel limit" width="1200" height="330" loading="lazy" decoding="async">
+              </figure>
+
               <ol>
                 <li><code class="cmd">,voicemaster setup</code> creates Join to Create and the interface panel.</li>
                 <li>Temporary voice channels are yours to control with the panel, or with <code class="cmd">,voicemaster name</code>, <code class="cmd">limit</code> (0–99), <code class="cmd">permit</code>, <code class="cmd">reject</code>, and <code class="cmd">transfer</code>.</li>
@@ -274,7 +407,15 @@
             </article>
 
             <article class="docs-guide" id="giveaways" data-search="giveaways giveaway start end reroll list gw prize winners duration">
-              <h2>Giveaways</h2>
+              <header class="docs-guide-head">
+              <div class="docs-module-art">
+                <picture>
+                  <source srcset="assets/modules/giveaways.webp" type="image/webp">
+                  <img src="assets/modules/giveaways.jpg" alt="" width="1200" height="675" loading="lazy" decoding="async">
+                </picture>
+              </div>
+                <h2>Giveaways</h2>
+              </header>
               <p>You need Manage Server. Alias: <code class="cmd">,gw</code>. People enter with a button.</p>
               <ul>
                 <li><code class="cmd">,giveaway start &lt;duration&gt; &lt;winners&gt; &lt;prize&gt;</code> — alias <code class="cmd">create</code></li>
@@ -285,12 +426,28 @@
             </article>
 
             <article class="docs-guide" id="starboard" data-search="starboard star sb threshold emoji channel off">
-              <h2>Starboard</h2>
+              <header class="docs-guide-head">
+              <div class="docs-module-art">
+                <picture>
+                  <source srcset="assets/modules/starboard.webp" type="image/webp">
+                  <img src="assets/modules/starboard.jpg" alt="" width="1200" height="675" loading="lazy" decoding="async">
+                </picture>
+              </div>
+                <h2>Starboard</h2>
+              </header>
               <p>You need Manage Server. <code class="cmd">,starboard #channel [threshold] [emoji]</code> reposts popular messages there. <code class="cmd">,starboard off</code> turns it off. Aliases: <code class="cmd">,sb</code>, <code class="cmd">,star</code>.</p>
             </article>
 
             <article class="docs-guide" id="autoresponder" data-search="autoresponder autoresponse autoreply trigger response embed json add remove list">
-              <h2>Autoresponder</h2>
+              <header class="docs-guide-head">
+              <div class="docs-module-art">
+                <picture>
+                  <source srcset="assets/modules/autoresponder.webp" type="image/webp">
+                  <img src="assets/modules/autoresponder.jpg" alt="" width="1200" height="675" loading="lazy" decoding="async">
+                </picture>
+              </div>
+                <h2>Autoresponder</h2>
+              </header>
               <p>You need Manage Server. Aliases: <code class="cmd">,autoresponse</code>, <code class="cmd">,autoreply</code>.</p>
               <ul>
                 <li><code class="cmd">,autoresponder add &lt;trigger&gt;, &lt;response or embed JSON&gt;</code></li>
@@ -300,7 +457,15 @@
             </article>
 
             <article class="docs-guide" id="utility" data-search="utility userinfo serverinfo avatar banner roleinfo snipe editsnipe clearsnipe afk remind ping help slash info">
-              <h2>Utility</h2>
+              <header class="docs-guide-head">
+              <div class="docs-module-art">
+                <picture>
+                  <source srcset="assets/modules/utility.webp" type="image/webp">
+                  <img src="assets/modules/utility.jpg" alt="" width="1200" height="675" loading="lazy" decoding="async">
+                </picture>
+              </div>
+                <h2>Utility</h2>
+              </header>
               <ul>
                 <li><code class="cmd">,userinfo</code>, <code class="cmd">,serverinfo</code>, <code class="cmd">,avatar</code>, <code class="cmd">,banner</code>, and <code class="cmd">,roleinfo</code> look up a member, the server, an avatar, a banner, or a role. Nickname commands now live under <a href="#roles">Roles</a>.</li>
                 <li><code class="cmd">,snipe</code> / <code class="cmd">,editsnipe</code> show recently deleted or pre-edit messages. <code class="cmd">,clearsnipe</code> (Manage Messages) clears snipes in the channel.</li>
@@ -335,12 +500,14 @@
             <h3>Resources</h3>
             <a href="docs.html">Docs</a>
             <a href="changelog.html">Changelog</a>
+            <a href="press.html">Press</a>
             <span class="soon">Support <small>coming soon</small></span>
-            <a href="https://discord.com/oauth2/authorize?client_id=1573348245726298224&amp;scope=bot+applications.commands&amp;permissions=1099798015063" target="_blank" rel="noopener">Invite</a>
+            <a href="invite/">Invite</a>
           </div>
         </div>
         <div class="footer-legal">
           <p>kyōki is not affiliated with Discord.</p>
+          <p class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="press.html">Press</a></p>
           <p>© 2026 kyōki</p>
         </div>
       </div>

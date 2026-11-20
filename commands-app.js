@@ -44,6 +44,42 @@
       if (cmd.slash_note) badge.title = cmd.slash_note;
       name.appendChild(badge);
     }
+    var copyBtn = document.createElement("button");
+    copyBtn.type = "button";
+    copyBtn.className = "cmd-copy";
+    copyBtn.textContent = "Copy";
+    copyBtn.setAttribute("aria-label", "Copy " + (cmd.syntax || cmd.name));
+    copyBtn.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      ev.stopPropagation();
+      var text = cmd.syntax || cmd.name;
+      function done() {
+        copyBtn.textContent = "Copied";
+        copyBtn.classList.add("is-copied");
+        setTimeout(function () {
+          copyBtn.textContent = "Copy";
+          copyBtn.classList.remove("is-copied");
+        }, 1200);
+      }
+      function fallback() {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.left = "-9999px";
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand("copy"); } catch (e) {}
+        document.body.removeChild(ta);
+        done();
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(fallback);
+      } else {
+        fallback();
+      }
+    });
+    name.appendChild(copyBtn);
     li.appendChild(name);
 
     var desc = document.createElement("p");
@@ -114,6 +150,15 @@
   }
 
   if (search) search.addEventListener("input", scheduleApply);
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key !== "/" || event.ctrlKey || event.metaKey || event.altKey) return;
+    var tag = (event.target && event.target.tagName) || "";
+    if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || (event.target && event.target.isContentEditable)) return;
+    if (!search) return;
+    event.preventDefault();
+    search.focus();
+  });
 
   tabs.forEach(function (tab) {
     tab.addEventListener("click", function () {

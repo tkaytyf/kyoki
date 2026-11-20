@@ -2559,3 +2559,321 @@ p code.cmd {
   .commands-page .command-name { font-size: 0.98rem; }
   .commands-toolbar { margin-left: -0.15rem; margin-right: -0.15rem; padding-left: 0.15rem; padding-right: 0.15rem; }
 }
+
+/* ---------- Footer legal links ---------- */
+
+.footer-legal .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.15rem;
+  margin: 0;
+}
+.footer-legal a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+.footer-legal a:hover { color: var(--text); }
+
+/* ---------- Legal / long-form pages ---------- */
+
+.legal-page .page-head,
+.press-page .page-head { max-width: 46rem; }
+.legal-body {
+  max-width: 46rem;
+  color: var(--text-soft);
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+.legal-body h2 {
+  margin: 2.1rem 0 0.7rem;
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+.legal-body h3 {
+  margin: 1.4rem 0 0.45rem;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+.legal-body p, .legal-body li { margin: 0 0 0.85rem; }
+.legal-body ul { margin: 0 0 1rem; padding-left: 1.2rem; }
+.legal-body .legal-date,
+.legal-note {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+.legal-note { margin-top: 2.5rem; padding-top: 1.1rem; border-top: 1px solid var(--line); }
+
+/* ---------- Press kit ---------- */
+
+.press-page .section-lead { max-width: 42rem; }
+.press-block { margin: 0 0 3rem; }
+.press-block h2 {
+  margin: 0 0 1rem;
+  font-size: 1.45rem;
+  letter-spacing: -0.03em;
+}
+.logo-downloads, .banner-downloads {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+}
+.dl-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 0.9rem;
+  border-radius: 1.15rem;
+  background: var(--bg-card);
+  box-shadow: inset 0 0 0 1px var(--line);
+  color: inherit;
+  text-decoration: none;
+  min-width: 0;
+}
+.dl-card img, .dl-card video {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  background: #11131c;
+}
+.dl-card .dl-meta { margin: 0; color: var(--text-muted); font-size: 0.88rem; }
+.dl-card .dl-meta strong { display: block; color: var(--text); font-weight: 650; }
+.color-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr));
+  gap: 0.85rem;
+}
+.color-swatch {
+  padding: 0.9rem 1rem 1rem;
+  border-radius: 1.1rem;
+  box-shadow: inset 0 0 0 1px var(--line);
+  background: var(--bg-card);
+}
+.color-swatch .chip {
+  display: block;
+  height: 3.25rem;
+  border-radius: 0.7rem;
+  margin-bottom: 0.7rem;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+}
+.color-swatch dt { font-weight: 650; color: var(--text); }
+.color-swatch dd { margin: 0.15rem 0 0; color: var(--text-muted); font-family: var(--font-mono); font-size: 0.88rem; }
+.emoji-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.15rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.emoji-row li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 4.5rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+.emoji-row img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  image-rendering: auto;
+}
+.module-press-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 1rem;
+}
+.module-press-card {
+  margin: 0;
+  border-radius: 1.15rem;
+  overflow: hidden;
+  background: var(--bg-card);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+.module-press-card img { display: block; width: 100%; height: auto; }
+.module-press-card figcaption {
+  padding: 0.7rem 0.9rem 0.85rem;
+  font-weight: 650;
+  font-size: 0.92rem;
+}
+.press-video {
+  display: grid;
+  gap: 1.25rem;
+}
+@media (min-width: 800px) {
+  .press-video { grid-template-columns: minmax(0, 16rem) 1fr; align-items: start; }
+}
+.press-video-frame {
+  margin: 0;
+  max-width: 16rem;
+  border-radius: 1.15rem;
+  overflow: hidden;
+  background: #05060a;
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+.press-video-frame video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.press-pitch { max-width: 42rem; font-size: 1.05rem; line-height: 1.65; color: var(--text-soft); }
+
+/* ---------- 404 ---------- */
+
+.error-page {
+  text-align: center;
+  padding-bottom: 5rem;
+}
+.error-art {
+  position: relative;
+  display: block;
+  max-width: 40rem;
+  margin: 1.5rem auto 1.5rem;
+}
+.glitch-logo {
+  position: relative;
+  display: block;
+}
+.glitch-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1.25rem;
+}
+.glitch-logo .glitch-slice {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0.7;
+  border-radius: 1.25rem;
+}
+.glitch-logo .glitch-r {
+  filter: url("#none") drop-shadow(-3px 0 #4A68D6);
+  clip-path: inset(12% 0 58% 0);
+  animation: glitch-a 4.5s steps(2, end) infinite;
+}
+.glitch-logo .glitch-c {
+  filter: drop-shadow(3px 0 #c44);
+  clip-path: inset(62% 0 8% 0);
+  animation: glitch-b 3.6s steps(2, end) infinite;
+}
+@keyframes glitch-a {
+  0%, 86%, 100% { transform: translate(0); opacity: 0.15; }
+  88% { transform: translate(-6px, 1px); opacity: 0.8; }
+  90% { transform: translate(4px, -1px); opacity: 0.55; }
+  92% { transform: translate(0); opacity: 0.15; }
+}
+@keyframes glitch-b {
+  0%, 80%, 100% { transform: translate(0); opacity: 0.12; }
+  82% { transform: translate(5px, 0); opacity: 0.75; }
+  85% { transform: translate(-3px, 1px); opacity: 0.4; }
+  87% { transform: translate(0); opacity: 0.12; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .glitch-logo .glitch-slice { display: none; }
+  .glitch-logo img { animation: none; }
+}
+.error-page h1 {
+  margin: 0.4rem 0 0.6rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -0.04em;
+}
+.error-page .error-lead { color: var(--text-muted); margin: 0 auto 1.4rem; max-width: 28rem; }
+.error-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; justify-content: center; }
+
+/* ---------- Invite fallback ---------- */
+
+.invite-page { text-align: center; padding: 4rem 0 6rem; }
+.invite-page p { color: var(--text-muted); }
+
+/* ---------- Docs module art + mockups ---------- */
+
+.docs-guide-head { margin: 0 0 1rem; }
+.docs-module-art {
+  margin: 0 0 0.9rem;
+  border-radius: 1.1rem;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px var(--line);
+  background: var(--bg-card);
+  max-width: 36rem;
+}
+.docs-module-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1200 / 675;
+  object-fit: cover;
+}
+.docs-guide-head h2 { margin: 0; }
+.feature-shot, .docs-shot {
+  margin: 1rem 0 0;
+  border-radius: 1.1rem;
+  overflow: hidden;
+  background: #1a1c20;
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+.feature-shot img, .docs-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.feature-shot figcaption, .docs-shot figcaption {
+  margin: 0;
+  padding: 0.5rem 0.8rem 0.65rem;
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.bento-card .feature-shot { margin-top: 0; }
+.bento-media { display: grid; gap: 0.75rem; min-width: 0; }
+.module-thumb {
+  width: 3.25rem;
+  height: 1.85rem;
+  border-radius: 0.4rem;
+  object-fit: cover;
+  box-shadow: inset 0 0 0 1px var(--line);
+  flex-shrink: 0;
+}
+
+/* ---------- Command copy button ---------- */
+
+.command-name { justify-content: flex-start; gap: 0.35rem 0.45rem; }
+.cmd-copy {
+  margin-left: auto;
+  height: 1.85rem;
+  padding: 0 0.65rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  box-shadow: inset 0 0 0 1px var(--line);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 650;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.cmd-copy:hover, .cmd-copy:focus-visible { color: var(--text); }
+.cmd-copy.is-copied { color: var(--text); background: rgba(74,104,214,0.18); }
+@media (max-width: 700px) {
+  .cmd-copy { margin-left: 0; }
+}
+.bento-copy > .feature-icon,
+.bento-copy > picture {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0.55rem 0.85rem 0;
+}
+.bento-copy > picture .module-thumb { margin: 0; display: block; }
+.bento-card > .feature-shot {
+  margin: 0.85rem 0.95rem 1rem;
+}
+.docs-guide .docs-shot + .docs-shot { margin-top: 0.75rem; }
