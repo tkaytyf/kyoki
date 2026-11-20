@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>kyōki — an all-in-one Discord bot</title>
+  <meta name="description" content="kyōki (狂気) is an all-in-one Discord bot for moderation, welcome messages, button roles, and logging. Commands use a comma prefix.">
+  <meta name="theme-color" content="#0B0C0E">
+  <meta property="og:title" content="kyōki">
+  <meta property="og:description" content="kyōki (狂気) is an all-in-one Discord bot for moderation, welcome messages, button roles, and logging. Commands use a comma prefix.">
+  <meta property="og:image" content="https://tkaytyf.github.io/kyoki/assets/og-image.png">
+  <meta property="og:url" content="https://tkaytyf.github.io/kyoki/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="kyōki">
+  <meta name="twitter:description" content="kyōki (狂気) is an all-in-one Discord bot for moderation, welcome messages, button roles, and logging. Commands use a comma prefix.">
+  <meta name="twitter:image" content="https://tkaytyf.github.io/kyoki/assets/og-image.png">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800&family=Yuji+Boku&family=Zen+Antique&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site">
+    <header class="site-header">
+      <div class="nav-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" role="img" aria-label="kyōki logo"><img class="logo-static" src="assets/logo.png" alt="" width="40" height="40"><picture class="logo-anim"><source srcset="assets/logo.png" media="(prefers-reduced-motion: reduce)"><source srcset="assets/kyoki-logo-animated.webp" type="image/webp"><img src="assets/kyoki-logo-animated.gif" alt="" width="40" height="40"></picture></span>
+          <span class="brand-name">kyōki</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+          <span class="menu-bars" aria-hidden="true"></span>
+        </button>
+        <nav id="site-menu" class="site-nav" aria-label="Primary">
+          <ul class="nav-links">
+            <li><a href="#features">Features</a></li><li><a href="commands.html">Commands</a></li><li><a href="status.html">Status</a></li><li><a href="docs.html">Docs</a></li><li><a href="embed.html">Embed</a></li><li><a href="changelog.html">Changelog</a></li><li><a href="dashboard.html">Dashboard</a></li><li><a href="#support">Support</a></li>
+          </ul>
+          <a class="btn btn-discord" href="https://discord.com/oauth2/authorize?client_id=1573348245726298224&amp;scope=bot+applications.commands&amp;permissions=1099798015063" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.11.11 0 0 0-.12.06c-.17.3-.37.7-.5 1.01a14.7 14.7 0 0 0-4.76 0c-.14-.32-.34-.71-.51-1.01A.12.12 0 0 0 9 4c-1.5.26-2.94.71-4.27 1.33A.1.1 0 0 0 4.64 5.4C1.87 9.54 1.1 13.56 1.48 17.53a.12.12 0 0 0 .05.08c1.8 1.32 3.54 2.12 5.25 2.65a.12.12 0 0 0 .13-.04c.4-.55.76-1.13 1.07-1.74a.11.11 0 0 0-.06-.16 10.1 10.1 0 0 1-1.45-.7.11.11 0 0 1-.01-.18c.1-.07.19-.15.28-.23a.11.11 0 0 1 .11-.02c3.05 1.39 6.36 1.39 9.37 0a.11.11 0 0 1 .12.02c.09.08.18.16.28.23a.11.11 0 0 1 0 .18 9.5 9.5 0 0 1-1.45.7.11.11 0 0 0-.06.16c.32.61.68 1.19 1.07 1.74a.12.12 0 0 0 .13.04c1.72-.53 3.46-1.33 5.26-2.65a.12.12 0 0 0 .05-.08c.44-4.58-.74-8.57-3.13-12.13a.1.1 0 0 0-.05-.07ZM8.52 14.85c-.92 0-1.67-.85-1.67-1.89s.74-1.89 1.67-1.89 1.69.85 1.67 1.89-.74 1.89-1.67 1.89Zm6.97 0c-.92 0-1.67-.85-1.67-1.89s.74-1.89 1.67-1.89 1.69.85 1.67 1.89-.75 1.89-1.67 1.89Z"/></svg>Add kyōki</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-backdrop" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-a" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-b" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="hero-kicker">kyōki <span lang="ja">狂気</span> · madness</p>
+            <h1 class="hero-title" id="hero-title">kyōki is an <span class="sheen">all-in-one</span><br>bot for Discord</h1>
+            <p class="hero-lead">Moderation, welcome messages, button roles, logging, and voice channels — called with a comma prefix. Built to be used, not to pad a page with fake numbers.</p>
+            <div class="hero-actions">
+              <a class="btn btn-discord" href="https://discord.com/oauth2/authorize?client_id=1573348245726298224&amp;scope=bot+applications.commands&amp;permissions=1099798015063" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.11.11 0 0 0-.12.06c-.17.3-.37.7-.5 1.01a14.7 14.7 0 0 0-4.76 0c-.14-.32-.34-.71-.51-1.01A.12.12 0 0 0 9 4c-1.5.26-2.94.71-4.27 1.33A.1.1 0 0 0 4.64 5.4C1.87 9.54 1.1 13.56 1.48 17.53a.12.12 0 0 0 .05.08c1.8 1.32 3.54 2.12 5.25 2.65a.12.12 0 0 0 .13-.04c.4-.55.76-1.13 1.07-1.74a.11.11 0 0 0-.06-.16 10.1 10.1 0 0 1-1.45-.7.11.11 0 0 1-.01-.18c.1-.07.19-.15.28-.23a.11.11 0 0 1 .11-.02c3.05 1.39 6.36 1.39 9.37 0a.11.11 0 0 1 .12.02c.09.08.18.16.28.23a.11.11 0 0 1 0 .18 9.5 9.5 0 0 1-1.45.7.11.11 0 0 0-.06.16c.32.61.68 1.19 1.07 1.74a.12.12 0 0 0 .13.04c1.72-.53 3.46-1.33 5.26-2.65a.12.12 0 0 0 .05-.08c.44-4.58-.74-8.57-3.13-12.13a.1.1 0 0 0-.05-.07ZM8.52 14.85c-.92 0-1.67-.85-1.67-1.89s.74-1.89 1.67-1.89 1.69.85 1.67 1.89-.74 1.89-1.67 1.89Zm6.97 0c-.92 0-1.67-.85-1.67-1.89s.74-1.89 1.67-1.89 1.69.85 1.67 1.89-.75 1.89-1.67 1.89Z"/></svg>Add kyōki</a>
+              <a class="btn btn-secondary" href="commands.html">Commands</a>
+            </div>
+            <p class="hero-note">The prefix is a comma, as in <code class="cmd">,ban</code>. <a href="status.html">Check live status</a> — figures there come from the bot itself.</p>
+          </div>
+
+          <div class="hero-visual">
+            <div class="illust illust-hero" aria-label="kyōki logo with connected features">
+              <div class="illust-bg" aria-hidden="true"></div>
+              <div class="hero-core-glow" aria-hidden="true"></div>
+              <svg class="illust-lines" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+                <path d="M200 200 V78" />
+                <path d="M200 200 L78 176" />
+                <path d="M200 200 L330 146" />
+                <path d="M200 200 L214 324" />
+              </svg>
+              <div class="glow-tile glow-tile-logo">
+                <span class="crop-marks" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+                <span class="brand-mark hero-mark" role="img" aria-label="kyōki logo"><img class="logo-static" src="assets/logo.png" alt="" width="160" height="160"><picture class="logo-anim"><source srcset="assets/logo.png" media="(prefers-reduced-motion: reduce)"><source srcset="assets/kyoki-logo-animated.webp" type="image/webp"><img src="assets/kyoki-logo-animated.gif" alt="" width="160" height="160"></picture></span>
+              </div>
+              <div class="hero-chip hc-ban"><span class="glass-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="5.5"/><path d="m4.2 11.8 7.6-7.6"/></svg><span>,ban</span></span></div>
+              <div class="hero-chip hc-welcome"><span class="glass-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 13V6.5L8 3.5 12.5 6.5V13"/><path d="M6.5 13v-3.5h3V13"/></svg><span>welcome</span></span></div>
+              <div class="hero-chip hc-roles"><span class="glass-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="3.5" width="5" height="3.2" rx="1"/><rect x="8.5" y="3.5" width="5" height="3.2" rx="1"/><rect x="4.5" y="9.3" width="7" height="3.2" rx="1"/></svg><span>button roles</span></span></div>
+              <div class="hero-chip hc-logs"><span class="glass-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h8M4 8h8M4 12h5"/></svg><span>logs</span></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="features" aria-labelledby="features-title">
+        <div class="container">
+          <div class="section-intro" data-reveal>
+            <div class="icon-tile" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3 4.5 6.2v6.2c0 5.1 3.3 8.6 7.5 9.8 4.2-1.2 7.5-4.7 7.5-9.8V6.2L12 3z"/>
+              </svg>
+            </div>
+            <h2 class="section-title" id="features-title"><span class="sheen">Moderation</span>, welcomes, roles, logs, voice, and more</h2>
+            <p class="section-lead">The tools kyōki actually ships — drawn out the way they connect. Antinuke and antiraid stay off until you turn them on.</p>
+          </div>
+
+          <div class="bento">
+            <article class="bento-card mod" data-reveal>
+              <div class="bento-copy">
+                <img class="feature-icon" src="assets/icon-moderation.png" alt="" width="56" height="56">
+                <h3>Moderation</h3>
+                <p>Kick, ban, timeout, warns, purge, locks, and slowmode — each command checks the right permission.</p>
+              </div>
+                            <div class="bento-mock">
+                <div class="illust illust-mod" aria-hidden="true">
+                  <div class="illust-bg"></div>
+                  <div class="floor-glow"></div>
+                  <svg class="illust-lines" viewBox="0 0 400 260" fill="none">
+                    <path d="M80 48 H200 V130" />
+                    <path d="M320 44 H200 V130" />
+                    <path d="M64 130 H146" />
+                    <path d="M336 126 H254" />
+                    <path d="M88 214 H200 V130" />
+                    <path d="M312 216 H200 V130" />
+                  </svg>
+                  <div class="node-chip nc-ban"><span class="glass-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="5.5"/><path d="m4.2 11.8 7.6-7.6"/></svg><span>Ban</span></span></div>
+                  <div class="node-chip nc-kick"><span class="glass-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h7"/><path d="M7.5 5.2 10.5 8 7.5 10.8"/><path d="M11.5 3.5V12.5"/></svg><span>Kick</span></span></div>
+                  <div class="node-chip nc-timeout"><span class="glass-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="5.5"/><path d="M8 5.2V8l2 1.6"/></svg><span>Timeout</span></span></div>
+                  <div class="node-chip nc-warn"><span class="glass-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 2.8 5.4 9.6H2.6L8 2.8z"/><path d="M8 7v2.4"/><path d="M8 11.4h.01"/></svg><span>Warn</span></span></div>
+                  <div class="node-chip nc-purge"><span class="glass-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 5h9"/><path d="M6 5V3.6h4V5"/><path d="M5 5.5l.6 7h4.8l.6-7"/></svg><span>Purge</span></span></div>
+                  <div class="node-chip nc-lock"><span class="glass-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="7" width="9" height="6.2" rx="1.2"/><path d="M5.5 7V5.4a2.5 2.5 0 0 1 5 0V7"/></svg><span>Lock</span></span></div>
+                  <div class="glow-tile tile-shield">
+                    <span class="crop-marks"><i></i><i></i><i></i><i></i></span>
+                    <svg class="shield-body" viewBox="0 0 80 92" aria-hidden="true">
+                      <defs>
+                        <linearGradient id="ky-shield" x1="0" y1="0" x2="1" y2="1">
+                          <stop offset="0%" stop-color="#9aaddf"/>
+                          <stop offset="45%" stop-color="#4A68D6"/>
+                          <stop offset="100%" stop-color="#14215C"/>
+                        </linearGradient>
+                        <linearGradient id="ky-sheen" x1="0" y1="0" x2="1" y2="1">
+                          <stop offset="0%" stop-color="rgba(255,255,255,0.35)"/>
+                          <stop offset="42%" stop-color="rgba(255,255,255,0)"/>
+                        </linearGradient>
+                      </defs>
+                      <path d="M40 4.5 73 19v32.5c0 21-16.5 32-33 36-16.5-4-33-15-33-36V19L40 4.5z" fill="url(#ky-shield)" stroke="rgba(255,255,255,0.28)" stroke-width="1"/>
+                      <path d="M40 4.5 73 19v10C60 22 48 18 40 18 32 18 20 22 7 29V19L40 4.5z" fill="url(#ky-sheen)"/>
+                      <g fill="none" stroke="rgba(236,240,252,0.92)" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="36.5" y="28" width="7" height="22" rx="1.2" transform="rotate(35 40 39)"/>
+                        <rect x="29" y="30" width="22" height="8" rx="1.4" transform="rotate(35 40 34)"/>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="bento-card welcome" data-reveal style="--reveal-delay: 80ms">
+              <div class="bento-copy">
+                <img class="feature-icon" src="assets/icon-welcome.png" alt="" width="56" height="56">
+                <h3>Welcome messages</h3>
+                <p>Greet people when they join — and say goodbye when they leave — in a channel you choose. Use {user}, {server}, {name}, and {count} in the message.</p>
+              </div>
+                            <div class="bento-mock">
+                <div class="illust illust-welcome" aria-hidden="true">
+                  <div class="illust-bg"></div>
+                  <div class="floor-glow"></div>
+                  <svg class="illust-lines" viewBox="0 0 400 260" fill="none">
+                    <path d="M92 110 H160" />
+                    <path d="M240 110 H308" />
+                    <path d="M200 128 V168" />
+                    <path d="M200 188 H132" />
+                    <path d="M200 188 H268" />
+                  </svg>
+                  <div class="glow-tile tile-sq tile-join">
+                    <span class="crop-marks"><i></i><i></i><i></i><i></i></span>
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6.4" cy="5.6" r="2"/><path d="M2.5 12.6c.6-1.9 2.1-2.9 3.9-2.9 1.3 0 2.4.5 3.1 1.3"/><path d="M12 7.2v5"/><path d="M9.5 9.7H14.5"/></svg>
+                  </div>
+                  <div class="node-chip nc-channel"><span class="glass-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 4.5 13M11.5 3 10 13M3 6.5h10.5M2.5 10h10.5"/></svg><span>channel</span></span></div>
+                  <div class="glow-tile tile-sq tile-greet">
+                    <span class="crop-marks"><i></i><i></i><i></i><i></i></span>
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 13.2V3.8h6.2v9.4"/><path d="M9.4 13.2h3.4V6.4L9.4 4.2"/><path d="M7.2 8.6h.02"/></svg>
+                  </div>
+                  <div class="node-chip nc-user"><span class="glass-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="5.5" r="2.2"/><path d="M3.4 13c.7-2.2 2.5-3.3 4.6-3.3s3.9 1.1 4.6 3.3"/></svg><span>{user}</span></span></div>
+                  <div class="node-chip nc-server"><span class="glass-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 13V6.5L8 3.5 12.5 6.5V13"/><path d="M6.5 13v-3.5h3V13"/></svg><span>{server}</span></span></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="bento-card roles" data-reveal style="--reveal-delay: 120ms">
+              <div class="bento-copy">
+                <img class="feature-icon" src="assets/icon-roles.png" alt="" width="56" height="56">
+                <h3>Button roles</h3>
+                <p>Post a button message so members can pick their own roles.</p>
+              </div>
+                            <div class="bento-mock">
+                <div class="illust illust-roles" aria-hidden="true">
+                  <div class="illust-bg"></div>
+                  <div class="floor-glow"></div>
+                  <svg class="illust-lines" viewBox="0 0 400 260" fill="none">
+                    <path d="M90 78 V150 H200" />
+                    <path d="M200 78 V150" />
+                    <path d="M310 78 V150 H200" />
+                    <path d="M200 150 V203" />
+                  </svg>
+                  <div class="node-chip nc-member"><span class="glass-chip"><span class="role-dot" style="background:#8fa3e8"></span><span>Member</span></span></div>
+                  <div class="node-chip nc-updates"><span class="glass-chip"><span class="role-dot" style="background:#c5d0f5"></span><span>Updates</span></span></div>
+                  <div class="node-chip nc-events"><span class="glass-chip"><span class="role-dot" style="background:#9aa3b5"></span><span>Events</span></span></div>
+                  <div class="cursor-pointer" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 2.8 12.5 10l-3.3.2 1.6 3.6-1.8.8-1.6-3.6-2.9 2.2z"/></svg></div>
+                  <div class="node-chip nc-role"><span class="glass-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5V4.2h4.3L13 9.9 9.9 13 3 6.1V8.5"/><circle cx="5.2" cy="6.2" r="0.7"/></svg><span>role</span></span></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="bento-card logging" data-reveal style="--reveal-delay: 160ms">
+              <div class="bento-copy">
+                <img class="feature-icon" src="assets/icon-logging.png" alt="" width="56" height="56">
+                <h3>Logging</h3>
+                <p>Send server logs to a channel you choose.</p>
+              </div>
+                            <div class="bento-mock">
+                <div class="illust illust-logs" aria-hidden="true">
+                  <div class="illust-bg"></div>
+                  <div class="floor-glow"></div>
+                  <svg class="illust-lines" viewBox="0 0 400 260" fill="none">
+                    <path class="solid" d="M70 24 V236" />
+                    <circle cx="70" cy="40" r="3.2" />
+                    <circle cx="70" cy="84" r="3.2" />
+                    <circle cx="70" cy="128" r="3.2" />
+                    <circle cx="70" cy="172" r="3.2" />
+                    <circle cx="70" cy="216" r="3.2" />
+                    <path d="M70 40 H108" />
+                    <path d="M70 84 H108" />
+                    <path d="M70 128 H108" />
+                    <path d="M70 172 H108" />
+                    <path d="M70 216 H108" />
+                  </svg>
+                  <div class="log-row lr-1"><span class="glass-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 5h9"/><path d="M6 5V3.6h4V5"/><path d="M5 5.5l.6 7h4.8l.6-7"/></svg><span>delete</span></span></div>
+                  <div class="log-row lr-2"><span class="glass-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12.5H6l7-7-2.5-2.5-7 7v2.5z"/><path d="m9.2 4.2 2.5 2.5"/></svg><span>edit</span></span></div>
+                  <div class="log-row lr-3"><span class="glass-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3.5h4.5v9H7"/><path d="M8.5 8H2.5"/><path d="M5 5.5 8.5 8 5 10.5"/></svg><span>join</span></span></div>
+                  <div class="log-row lr-4"><span class="glass-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3.5H4.5v9H9"/><path d="M7.5 8h6"/><path d="M11 5.5 13.5 8 11 10.5"/></svg><span>leave</span></span></div>
+                  <div class="log-row lr-5"><span class="glass-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="5.5"/><path d="m4.2 11.8 7.6-7.6"/></svg><span>ban</span></span></div>
+                </div>
+              </div>
+            </article>
+
+
+            <article class="bento-card security" data-reveal style="--reveal-delay: 180ms">
+              <div class="bento-copy">
+                <img class="feature-icon" src="assets/icon-antinuke.png" alt="" width="56" height="56">
+                <h3>Security</h3>
+                <p>Antinuke stops rogue admins from tearing the server down. Antiraid can kick or ban mass joins and brand-new accounts. Both are off by default — antinuke is owner-only, antiraid needs Manage Server.</p>
+              </div>
+              <div class="bento-mock">
+                <div class="illust" aria-hidden="true">
+                  <div class="illust-bg"></div>
+                  <div class="floor-glow"></div>
+                  <div class="glow-tile tile-sq" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:7.5rem;height:7.5rem;display:grid;place-items:center;background:transparent;box-shadow:none;">
+                    <img src="assets/icon-antinuke.png" alt="" width="96" height="96" style="width:5.5rem;height:5.5rem;border-radius:1.25rem;">
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="bento-card tickets" data-reveal style="--reveal-delay: 200ms">
+              <div class="bento-copy">
+                <img class="feature-icon" src="assets/icon-tickets.png" alt="" width="56" height="56">
+                <h3>Tickets</h3>
+                <p>Post an Open Ticket panel, set a support role, and let staff claim or close tickets. Closing a ticket saves a .txt transcript.</p>
+              </div>
+              <div class="bento-mock">
+                <div class="illust" aria-hidden="true">
+                  <div class="illust-bg"></div>
+                  <div class="floor-glow"></div>
+                  <div class="glow-tile tile-sq" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:7.5rem;height:7.5rem;display:grid;place-items:center;background:transparent;box-shadow:none;">
+                    <img src="assets/icon-tickets.png" alt="" width="96" height="96" style="width:5.5rem;height:5.5rem;border-radius:1.25rem;">
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="bento-card voice" data-reveal style="--reveal-delay: 220ms">
+              <div class="bento-copy">
+                <h3>Voice channels</h3>
+                <p>Set up Join-to-Create channels with <code class="cmd">,voicemaster setup</code>. The VoiceMaster panel lets channel owners lock, ghost, claim, and more. Temporary channels delete themselves when empty.</p>
+              </div>
+              <div class="bento-mock">
+                <div class="illust illust-voice" aria-hidden="true">
+                  <div class="illust-bg"></div>
+                  <div class="floor-glow"></div>
+                  <div class="vm-stage">
+                    <div class="vm-path">
+                      <span class="glass-chip">
+                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5V6.2C3 4.4 5.2 3 8 3s5 1.4 5 3.2v4.3"/><path d="M3 10.5a2 2 0 0 0 2 2h.5"/><path d="M13 10.5a2 2 0 0 1-2 2H10"/><path d="M8 8v4"/></svg>
+                        <span>Join to Create</span>
+                      </span>
+                      <svg class="vm-arrow" viewBox="0 0 48 12" fill="none" aria-hidden="true"><path d="M1 6h40M36 2l6 4-6 4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1.6 3.4"/></svg>
+                      <span class="glass-chip">
+                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 6.5a3 3 0 0 1 6 0v2a3 3 0 0 1-6 0v-2z"/><path d="M3.2 8.2a4.8 4.8 0 0 0 9.6 0"/><path d="M8 13v-2"/></svg>
+                        <span>temp channel</span>
+                      </span>
+                      <span class="glass-chip vm-empty">
+                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 5h9"/><path d="M6 5V3.6h4V5"/><path d="M5 5.5l.6 7h4.8l.6-7"/></svg>
+                        <span>deletes when empty</span>
+                      </span>
+                    </div>
+                    <div class="vm-panel">
+                      <p class="vm-title">VoiceMaster Interface</p>
+                      <div class="vm-grid">
+                      <span class="vm-btn"><img src="assets/vm/lock.png" alt="" width="24" height="24"><span>Lock</span></span>
+                      <span class="vm-btn"><img src="assets/vm/unlock.png" alt="" width="24" height="24"><span>Unlock</span></span>
+                      <span class="vm-btn"><img src="assets/vm/ghost.png" alt="" width="24" height="24"><span>Ghost</span></span>
+                      <span class="vm-btn"><img src="assets/vm/reveal.png" alt="" width="24" height="24"><span>Reveal</span></span>
+                      <span class="vm-btn"><img src="assets/vm/claim.png" alt="" width="24" height="24"><span>Claim</span></span>
+                      <span class="vm-btn"><img src="assets/vm/disconnect.png" alt="" width="24" height="24"><span>Disconnect</span></span>
+                      <span class="vm-btn"><img src="assets/vm/activity.png" alt="" width="24" height="24"><span>Start activity</span></span>
+                      <span class="vm-btn"><img src="assets/vm/view.png" alt="" width="24" height="24"><span>View info</span></span>
+                      <span class="vm-btn"><img src="assets/vm/increase.png" alt="" width="24" height="24"><span>Increase limit</span></span>
+                      <span class="vm-btn"><img src="assets/vm/decrease.png" alt="" width="24" height="24"><span>Decrease limit</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="how" aria-labelledby="how-title">
+        <div class="container">
+          <div class="section-intro" data-reveal>
+            <div class="icon-tile" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+              </svg>
+            </div>
+            <h2 class="section-title" id="how-title">Add, set up, done</h2>
+            <p class="section-lead">Three short steps. No dashboard walkthrough required to get started.</p>
+          </div>
+          <div class="steps">
+            <article class="step" data-reveal>
+              <span class="step-num">1</span>
+              <h3>Add kyōki</h3>
+              <p>Use the invite button and review the permissions Discord shows you before you approve.</p>
+            </article>
+            <article class="step" data-reveal style="--reveal-delay: 80ms">
+              <span class="step-num">2</span>
+              <h3>Set it up</h3>
+              <p>Point welcomes, logs, role buttons, and voice at the right channels with commands like <code class="cmd">,welcome</code>, <code class="cmd">,log</code>, <code class="cmd">,buttonrole post</code>, and <code class="cmd">,voicemaster setup</code>.</p>
+            </article>
+            <article class="step" data-reveal style="--reveal-delay: 160ms">
+              <span class="step-num">3</span>
+              <h3>Done</h3>
+              <p>The prefix is a comma. Type <code class="cmd">,help</code> in your server when you need the list.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="support" aria-labelledby="faq-title">
+        <div class="container">
+          <div class="section-intro" data-reveal>
+            <div class="icon-tile" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/><path d="M9.2 9.2a3 3 0 0 1 5.3 1.4c0 1.8-2.6 2.2-2.6 4"/><path d="M12 17.2h.01"/>
+              </svg>
+            </div>
+            <h2 class="section-title" id="faq-title">Questions, answered honestly</h2>
+            <p class="section-lead">A support Discord is on the way. Until then, here is what we can tell you now.</p>
+          </div>
+          <div class="faq" data-reveal>
+            <details>
+              <summary>What is the command prefix?</summary>
+              <p>The prefix is a comma, as in <code>,ban</code>. Use <code>,help</code> for the full list, or <code>,help ban</code> for details on one command. More commands are coming.</p>
+            </details>
+            <details>
+              <summary>Is kyōki free?</summary>
+              <p>Yes. There is no paid plan on this site, and we do not sell a premium tier here.</p>
+            </details>
+            <details>
+              <summary>Which permissions does it need?</summary>
+              <p>The Add kyōki button requests the permissions the bot needs. Review the exact list on Discord’s invite screen before you approve.</p>
+            </details>
+            <details>
+              <summary>How do I get support?</summary>
+              <p>A support server is coming soon. The invite will be added to this page when it exists — nothing is hidden behind a placeholder link.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <section class="cta-band" aria-labelledby="cta-title" data-reveal>
+          <div class="cta-stars" aria-hidden="true"></div>
+          <h2 id="cta-title">Add kyōki to your server today.</h2>
+          <p>Review the permissions, approve the invite, then start with <code class="cmd">,help</code>.</p>
+          <a class="btn btn-discord" href="https://discord.com/oauth2/authorize?client_id=1573348245726298224&amp;scope=bot+applications.commands&amp;permissions=1099798015063" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.11.11 0 0 0-.12.06c-.17.3-.37.7-.5 1.01a14.7 14.7 0 0 0-4.76 0c-.14-.32-.34-.71-.51-1.01A.12.12 0 0 0 9 4c-1.5.26-2.94.71-4.27 1.33A.1.1 0 0 0 4.64 5.4C1.87 9.54 1.1 13.56 1.48 17.53a.12.12 0 0 0 .05.08c1.8 1.32 3.54 2.12 5.25 2.65a.12.12 0 0 0 .13-.04c.4-.55.76-1.13 1.07-1.74a.11.11 0 0 0-.06-.16 10.1 10.1 0 0 1-1.45-.7.11.11 0 0 1-.01-.18c.1-.07.19-.15.28-.23a.11.11 0 0 1 .11-.02c3.05 1.39 6.36 1.39 9.37 0a.11.11 0 0 1 .12.02c.09.08.18.16.28.23a.11.11 0 0 1 0 .18 9.5 9.5 0 0 1-1.45.7.11.11 0 0 0-.06.16c.32.61.68 1.19 1.07 1.74a.12.12 0 0 0 .13.04c1.72-.53 3.46-1.33 5.26-2.65a.12.12 0 0 0 .05-.08c.44-4.58-.74-8.57-3.13-12.13a.1.1 0 0 0-.05-.07ZM8.52 14.85c-.92 0-1.67-.85-1.67-1.89s.74-1.89 1.67-1.89 1.69.85 1.67 1.89-.74 1.89-1.67 1.89Zm6.97 0c-.92 0-1.67-.85-1.67-1.89s.74-1.89 1.67-1.89 1.69.85 1.67 1.89-.75 1.89-1.67 1.89Z"/></svg>Add kyōki</a>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="index.html">
+              <span class="brand-mark is-static" role="img" aria-label="kyōki logo"><img class="logo-static" src="assets/logo.png" alt="" width="40" height="40"></span>
+              <span class="brand-name">kyōki</span>
+            </a>
+            <p>An all-in-one Discord bot for moderation, welcomes, button roles, logging, and voice.</p>
+          </div>
+          <div class="footer-col">
+            <h3>Product</h3>
+            <a href="commands.html">Commands</a>
+            <a href="status.html">Status</a>
+            <a href="embed.html">Embed builder</a>
+            <a href="dashboard.html">Dashboard</a>
+          </div>
+          <div class="footer-col">
+            <h3>Resources</h3>
+            <a href="docs.html">Docs</a>
+            <a href="changelog.html">Changelog</a>
+            <span class="soon">Support <small>coming soon</small></span>
+            <a href="https://discord.com/oauth2/authorize?client_id=1573348245726298224&amp;scope=bot+applications.commands&amp;permissions=1099798015063" target="_blank" rel="noopener">Invite</a>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>kyōki is not affiliated with Discord.</p>
+          <p>© 2026 kyōki</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

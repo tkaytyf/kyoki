@@ -1,0 +1,20 @@
+{
+ "updated": "2026-11-20T16:57:11Z",
+ "online": true,
+ "servers": 1,
+ "members": 35,
+ "latency_ms": 29,
+ "started": "2026-11-20T16:57:07Z",
+ "shards": [
+  {
+   "id": 0,
+   "online": true,
+   "latency_ms": 29,
+   "servers": 1,
+   "members": 35
+  }
+ ],
+ "guild_hashes": [
+  "4efdf1fbbc58f980c3a143258fcb990d33936a58d85ac571b99a99ad57598ed7"
+ ]
+}

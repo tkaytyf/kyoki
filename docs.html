@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Docs — kyōki</title>
+  <meta name="description" content="Set up kyōki’s real commands: moderation, security, tickets, embeds, voice, and the rest of the list.">
+  <meta name="theme-color" content="#0B0C0E">
+  <meta property="og:title" content="Docs — kyōki">
+  <meta property="og:description" content="Set up kyōki’s real commands: moderation, security, tickets, embeds, voice, and the rest of the list.">
+  <meta property="og:image" content="https://tkaytyf.github.io/kyoki/assets/og-image.png">
+  <meta property="og:url" content="https://tkaytyf.github.io/kyoki/docs.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Docs — kyōki">
+  <meta name="twitter:description" content="Set up kyōki’s real commands: moderation, security, tickets, embeds, voice, and the rest of the list.">
+  <meta name="twitter:image" content="https://tkaytyf.github.io/kyoki/assets/og-image.png">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800&family=Yuji+Boku&family=Zen+Antique&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site">
+    <header class="site-header">
+      <div class="nav-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" role="img" aria-label="kyōki logo"><img class="logo-static" src="assets/logo.png" alt="" width="40" height="40"><picture class="logo-anim"><source srcset="assets/logo.png" media="(prefers-reduced-motion: reduce)"><source srcset="assets/kyoki-logo-animated.webp" type="image/webp"><img src="assets/kyoki-logo-animated.gif" alt="" width="40" height="40"></picture></span>
+          <span class="brand-name">kyōki</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+          <span class="menu-bars" aria-hidden="true"></span>
+        </button>
+        <nav id="site-menu" class="site-nav" aria-label="Primary">
+          <ul class="nav-links">
+            <li><a href="index.html#features">Features</a></li><li><a href="commands.html">Commands</a></li><li><a href="status.html">Status</a></li><li><a href="docs.html" aria-current="page">Docs</a></li><li><a href="embed.html">Embed</a></li><li><a href="changelog.html">Changelog</a></li><li><a href="dashboard.html">Dashboard</a></li><li><a href="index.html#support">Support</a></li>
+          </ul>
+          <a class="btn btn-discord" href="https://discord.com/oauth2/authorize?client_id=1573348245726298224&amp;scope=bot+applications.commands&amp;permissions=1099798015063" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.11.11 0 0 0-.12.06c-.17.3-.37.7-.5 1.01a14.7 14.7 0 0 0-4.76 0c-.14-.32-.34-.71-.51-1.01A.12.12 0 0 0 9 4c-1.5.26-2.94.71-4.27 1.33A.1.1 0 0 0 4.64 5.4C1.87 9.54 1.1 13.56 1.48 17.53a.12.12 0 0 0 .05.08c1.8 1.32 3.54 2.12 5.25 2.65a.12.12 0 0 0 .13-.04c.4-.55.76-1.13 1.07-1.74a.11.11 0 0 0-.06-.16 10.1 10.1 0 0 1-1.45-.7.11.11 0 0 1-.01-.18c.1-.07.19-.15.28-.23a.11.11 0 0 1 .11-.02c3.05 1.39 6.36 1.39 9.37 0a.11.11 0 0 1 .12.02c.09.08.18.16.28.23a.11.11 0 0 1 0 .18 9.5 9.5 0 0 1-1.45.7.11.11 0 0 0-.06.16c.32.61.68 1.19 1.07 1.74a.12.12 0 0 0 .13.04c1.72-.53 3.46-1.33 5.26-2.65a.12.12 0 0 0 .05-.08c.44-4.58-.74-8.57-3.13-12.13a.1.1 0 0 0-.05-.07ZM8.52 14.85c-.92 0-1.67-.85-1.67-1.89s.74-1.89 1.67-1.89 1.69.85 1.67 1.89-.74 1.89-1.67 1.89Zm6.97 0c-.92 0-1.67-.85-1.67-1.89s.74-1.89 1.67-1.89 1.69.85 1.67 1.89-.75 1.89-1.67 1.89Z"/></svg>Add kyōki</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="page-main">
+      <div class="container">
+        <div class="page-head">
+          <div>
+            <h1 class="section-title">Docs</h1>
+            <p class="section-lead">Setup guides for the commands kyōki actually has. The default prefix is a comma, as in <code class="cmd">,ban</code>. Change it with <code class="cmd">,prefix</code>. Mentioning the bot always works.</p>
+          </div>
+        </div>
+        <div class="docs-layout">
+          <aside class="docs-sidebar">
+            <form class="search" role="search" action="#" method="get" onsubmit="return false">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="7" cy="7" r="4.2"/><path d="M10.2 10.2 14 14"/></svg>
+              <label class="sr-only" for="docs-search">Search the docs</label>
+              <input id="docs-search" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false">
+            </form>
+            <nav class="docs-side-nav" aria-label="Guides">
+              <a href="#moderation"><img class="feature-icon-sm" src="assets/icon-moderation.png" alt=""> Moderation</a>
+              <a href="#jail"><img class="feature-icon-sm" src="assets/icon-moderation.png" alt=""> Jail</a>
+              <a href="#security"><img class="feature-icon-sm" src="assets/icon-antinuke.png" alt=""> Security</a>
+              <a href="#welcome"><img class="feature-icon-sm" src="assets/icon-welcome.png" alt=""> Welcome &amp; Goodbye</a>
+              <a href="#logging"><img class="feature-icon-sm" src="assets/icon-logging.png" alt=""> Logging</a>
+              <a href="#prefix">Prefix</a>
+              <a href="#embeds">Embeds</a>
+              <a href="#tickets"><img class="feature-icon-sm" src="assets/icon-tickets.png" alt=""> Tickets</a>
+              <a href="#roles"><img class="feature-icon-sm" src="assets/icon-roles.png" alt=""> Roles</a>
+              <a href="#voicemaster">VoiceMaster</a>
+              <a href="#giveaways">Giveaways</a>
+              <a href="#starboard">Starboard</a>
+              <a href="#autoresponder">Autoresponder</a>
+              <a href="#utility">Utility</a>
+            </nav>
+          </aside>
+          <div class="docs-content">
+            <p class="docs-empty" hidden>No guides match that search.</p>
+
+            <article class="docs-guide" id="moderation" data-search="moderation kick ban unban timeout untimeout warn warnings clearwarns purge lock unlock slowmode slash /ban /kick /timeout /purge /warn">
+              <h2><img class="feature-icon-sm" src="assets/icon-moderation.png" alt=""> Moderation</h2>
+              <p>Each command checks a permission. Slash versions — <code class="cmd">/ban</code>, <code class="cmd">/kick</code>, <code class="cmd">/timeout</code>, <code class="cmd">/purge</code>, and <code class="cmd">/warn</code> — are synced globally and hidden from members who lack the permission, so moderation still works without the prefix.</p>
+              <ul>
+                <li><code class="cmd">,kick &lt;member&gt; [reason]</code> — Kick Members.</li>
+                <li><code class="cmd">,ban &lt;user&gt; [reason]</code> / <code class="cmd">,unban &lt;user id&gt; [reason]</code> — Ban Members. The slash ban can also set <code class="cmd">delete_days</code> (0–7).</li>
+                <li><code class="cmd">,timeout &lt;member&gt; &lt;duration&gt; [reason]</code> / <code class="cmd">,untimeout &lt;member&gt;</code> — Moderate Members. Aliases: <code class="cmd">,to</code>, <code class="cmd">,mute</code>, <code class="cmd">,unmute</code>. On slash timeout, a duration of 0 removes it.</li>
+                <li><code class="cmd">,warn</code>, <code class="cmd">,warnings</code>, <code class="cmd">,clearwarns</code> — Moderate Members. Warn DMs the member the reason. <code class="cmd">,warns</code> is an alias for warnings.</li>
+                <li><code class="cmd">,purge &lt;amount&gt; [member]</code> — Manage Messages, optionally one member only. Aliases: <code class="cmd">,clear</code>, <code class="cmd">,c</code>. Slash amount is 1–500.</li>
+                <li><code class="cmd">,lock</code> / <code class="cmd">,unlock</code> — Manage Channels, current channel.</li>
+                <li><code class="cmd">,slowmode [seconds]</code> — Manage Channels. Alias: <code class="cmd">,sm</code>.</li>
+              </ul>
+            </article>
+
+            <article class="docs-guide" id="jail" data-search="jail unjail roles lock channel moderate members">
+              <h2><img class="feature-icon-sm" src="assets/icon-moderation.png" alt=""> Jail</h2>
+              <p>You need Moderate Members.</p>
+              <ul>
+                <li><code class="cmd">,jail &lt;member&gt; [reason]</code> locks the member in a jail channel and saves their roles.</li>
+                <li><code class="cmd">,unjail &lt;member&gt;</code> frees them and gives those roles back.</li>
+              </ul>
+            </article>
+
+            <article class="docs-guide" id="security" data-search="security antinuke antiraid an raid whitelist threshold punish joins age action off by default server owner">
+              <h2><img class="feature-icon-sm" src="assets/icon-antinuke.png" alt=""> Security</h2>
+              <p>Antinuke and antiraid are <strong>off by default</strong>. Nothing in this module runs until you turn it on.</p>
+              <h3>Antinuke</h3>
+              <p>Server owner only. Alias: <code class="cmd">,an</code>. Stops rogue admins from nuking the server.</p>
+              <ul>
+                <li><code class="cmd">,antinuke on</code> / <code class="cmd">,antinuke off</code></li>
+                <li><code class="cmd">,antinuke punish &lt;ban | kick | strip&gt;</code> — alias <code class="cmd">punishment</code></li>
+                <li><code class="cmd">,antinuke threshold &lt;actions&gt; [seconds=10]</code> — default is 3 actions in 10s. Alias: <code class="cmd">limit</code></li>
+                <li><code class="cmd">,antinuke whitelist [user]</code> toggles a trusted user or bot. Aliases: <code class="cmd">wl</code>, <code class="cmd">trust</code></li>
+              </ul>
+              <h3>Antiraid</h3>
+              <p>Manage Server. Aliases: <code class="cmd">,raid</code>. Stops mass-join raids and brand-new accounts.</p>
+              <ul>
+                <li><code class="cmd">,antiraid on</code> / <code class="cmd">,antiraid off</code></li>
+                <li><code class="cmd">,antiraid joins &lt;count&gt; [seconds=10]</code> starts raid mode. Alias: <code class="cmd">massjoin</code></li>
+                <li><code class="cmd">,antiraid age &lt;days | off&gt;</code> sets a minimum account age. Alias: <code class="cmd">accountage</code></li>
+                <li><code class="cmd">,antiraid action &lt;kick | ban&gt;</code> — alias <code class="cmd">punish</code></li>
+                <li><code class="cmd">,antiraid end</code> ends raid mode early. Alias: <code class="cmd">stop</code></li>
+              </ul>
+            </article>
+
+            <article class="docs-guide" id="welcome" data-search="welcome goodbye join leave message test delete {user} {name} {server} {count} {avatar}">
+              <h2><img class="feature-icon-sm" src="assets/icon-welcome.png" alt=""> Welcome &amp; Goodbye</h2>
+              <p>You need Manage Server. Text (and embed JSON) can use <code class="cmd">{user}</code>, <code class="cmd">{name}</code>, <code class="cmd">{server}</code>, <code class="cmd">{count}</code>, and <code class="cmd">{avatar}</code>.</p>
+              <h3>Welcome</h3>
+              <p><code class="cmd">,welcome &lt;channel | message &lt;text&gt; | test | delete&gt;</code></p>
+              <ul>
+                <li><code class="cmd">,welcome #channel</code> sets where join messages go.</li>
+                <li><code class="cmd">,welcome message &lt;text or JSON&gt;</code> sets the text or an embed (see Embeds).</li>
+                <li><code class="cmd">,welcome test</code> sends a preview. <code class="cmd">,welcome delete</code> removes the join message.</li>
+              </ul>
+              <h3>Goodbye</h3>
+              <p><code class="cmd">,goodbye</code> works the same way. <code class="cmd">,leave</code> is an alias.</p>
+            </article>
+
+            <article class="docs-guide" id="logging" data-search="logging logs log off channel">
+              <h2><img class="feature-icon-sm" src="assets/icon-logging.png" alt=""> Logging</h2>
+              <p>You need Manage Server. <code class="cmd">,log &lt;channel | off&gt;</code> sends server logs to a channel, or turns them off. Aliases: <code class="cmd">,logs</code>, <code class="cmd">,logging</code>.</p>
+            </article>
+
+            <article class="docs-guide" id="prefix" data-search="prefix setprefix reset mention default comma">
+              <h2>Prefix</h2>
+              <p>The default prefix is <code class="cmd">,</code>. Mentioning the bot, as in <code class="cmd">@kyōki help</code>, always works.</p>
+              <p><code class="cmd">,prefix</code> shows the current prefix. <code class="cmd">,prefix !</code> changes it (Manage Server). <code class="cmd">,prefix reset</code> puts it back to a comma. Alias: <code class="cmd">,setprefix</code>.</p>
+            </article>
+
+            <article class="docs-guide" id="embeds" data-search="embeds embed send json color hex timestamp content fences ce createembed welcome goodbye ticket autoresponder">
+              <h2>Embeds</h2>
+              <p>You need Manage Messages. <code class="cmd">,embed &lt;json&gt;</code> sends a custom embed in the current channel. <code class="cmd">,embed send #channel &lt;json&gt;</code> sends it somewhere else. Aliases: <code class="cmd">,ce</code>, <code class="cmd">,createembed</code>.</p>
+              <p>The JSON is Discord’s standard embed object. Color can be an integer or <code class="cmd">#hex</code>; if you leave color out, kyōki uses plain gray (<code class="cmd">#2B2D31</code>). <code class="cmd">timestamp</code> can be ISO-8601 or <code class="cmd">"now"</code>. Code fences around the JSON are stripped. Also accepted: <code class="cmd">{"embed":{…},"content":"…"}</code> and <code class="cmd">{"embeds":[{…}]}</code> (the first embed is used).</p>
+              <p>The same format works in <code class="cmd">,welcome message</code>, <code class="cmd">,goodbye message</code>, <code class="cmd">,ticket setup</code>, and <code class="cmd">,autoresponder add</code>. Variables: <code class="cmd">{user}</code> <code class="cmd">{name}</code> <code class="cmd">{server}</code> <code class="cmd">{count}</code> <code class="cmd">{avatar}</code>.</p>
+              <p>The <a href="embed.html">embed builder</a> copies this JSON, or a ready <code class="cmd">,embed send</code> command.</p>
+            </article>
+
+            <article class="docs-guide" id="tickets" data-search="tickets ticket setup support log claim close add remove rename transcript panel">
+              <h2><img class="feature-icon-sm" src="assets/icon-tickets.png" alt=""> Tickets</h2>
+              <p>Private support tickets with a button panel. Setup needs Manage Server; staff work uses the support role. Aliases: <code class="cmd">,tickets</code>, <code class="cmd">,t</code>.</p>
+              <ol>
+                <li><code class="cmd">,ticket setup #channel [text or embed JSON]</code> posts the Open Ticket panel. Alias: <code class="cmd">panel</code>.</li>
+                <li><code class="cmd">,ticket support @role</code> sets who can see and claim tickets. Aliases: <code class="cmd">role</code>, <code class="cmd">staff</code>.</li>
+                <li><code class="cmd">,ticket log #channel</code> is where transcripts go (it defaults to the <code class="cmd">,log</code> channel). Aliases: <code class="cmd">logs</code>, <code class="cmd">transcripts</code>.</li>
+              </ol>
+              <p>Inside a ticket, staff can <code class="cmd">,ticket claim</code>, <code class="cmd">,ticket close</code> (close saves a .txt transcript), <code class="cmd">,ticket add @user</code>, <code class="cmd">,ticket remove @user</code>, and <code class="cmd">,ticket rename &lt;name&gt;</code>.</p>
+            </article>
+
+            <article class="docs-guide" id="roles" data-search="button roles buttonrole post add clear role give take br">
+              <h2><img class="feature-icon-sm" src="assets/icon-roles.png" alt=""> Roles</h2>
+              <p>You need Manage Roles.</p>
+              <ul>
+                <li><code class="cmd">,buttonrole post #channel &lt;text&gt;</code> posts a panel. Then <code class="cmd">,buttonrole add &lt;message&gt; @role [emoji] [label]</code> adds a button, and <code class="cmd">,buttonrole clear &lt;message&gt;</code> removes every button. Aliases: <code class="cmd">,br</code>, <code class="cmd">,buttonroles</code>.</li>
+                <li><code class="cmd">,role &lt;member&gt; &lt;role&gt;</code> gives or takes a role. Alias: <code class="cmd">,r</code>.</li>
+              </ul>
+            </article>
+
+            <article class="docs-guide" id="voicemaster" data-search="voicemaster voice vm setup reset interface name limit permit reject transfer join to create">
+              <h2>VoiceMaster</h2>
+              <p>Manage Server is required to set it up. Alias: <code class="cmd">,vm</code>.</p>
+              <ol>
+                <li><code class="cmd">,voicemaster setup</code> creates Join to Create and the interface panel.</li>
+                <li>Temporary voice channels are yours to control with the panel, or with <code class="cmd">,voicemaster name</code>, <code class="cmd">limit</code> (0–99), <code class="cmd">permit</code>, <code class="cmd">reject</code>, and <code class="cmd">transfer</code>.</li>
+                <li><code class="cmd">,voicemaster interface [channel]</code> reposts the control panel. <code class="cmd">,voicemaster reset</code> removes VoiceMaster.</li>
+              </ol>
+            </article>
+
+            <article class="docs-guide" id="giveaways" data-search="giveaways giveaway start end reroll list gw prize winners duration">
+              <h2>Giveaways</h2>
+              <p>You need Manage Server. Alias: <code class="cmd">,gw</code>. People enter with a button.</p>
+              <ul>
+                <li><code class="cmd">,giveaway start &lt;duration&gt; &lt;winners&gt; &lt;prize&gt;</code> — alias <code class="cmd">create</code></li>
+                <li><code class="cmd">,giveaway end [message id]</code> ends it now. Alias: <code class="cmd">stop</code></li>
+                <li><code class="cmd">,giveaway reroll [message id] [winners]</code> picks new winners.</li>
+                <li><code class="cmd">,giveaway list</code> shows running giveaways.</li>
+              </ul>
+            </article>
+
+            <article class="docs-guide" id="starboard" data-search="starboard star sb threshold emoji channel off">
+              <h2>Starboard</h2>
+              <p>You need Manage Server. <code class="cmd">,starboard #channel [threshold] [emoji]</code> reposts popular messages there. <code class="cmd">,starboard off</code> turns it off. Aliases: <code class="cmd">,sb</code>, <code class="cmd">,star</code>.</p>
+            </article>
+
+            <article class="docs-guide" id="autoresponder" data-search="autoresponder autoresponse autoreply trigger response embed json add remove list">
+              <h2>Autoresponder</h2>
+              <p>You need Manage Server. Aliases: <code class="cmd">,autoresponse</code>, <code class="cmd">,autoreply</code>.</p>
+              <ul>
+                <li><code class="cmd">,autoresponder add &lt;trigger&gt;, &lt;response or embed JSON&gt;</code></li>
+                <li><code class="cmd">,autoresponder list</code></li>
+                <li><code class="cmd">,autoresponder remove &lt;trigger&gt;</code> — aliases <code class="cmd">delete</code>, <code class="cmd">del</code></li>
+              </ul>
+            </article>
+
+            <article class="docs-guide" id="utility" data-search="utility userinfo serverinfo avatar banner roleinfo nick snipe editsnipe clearsnipe afk remind ping help slash">
+              <h2>Utility</h2>
+              <ul>
+                <li><code class="cmd">,userinfo</code>, <code class="cmd">,serverinfo</code>, <code class="cmd">,avatar</code>, <code class="cmd">,banner</code>, <code class="cmd">,roleinfo</code> — look up a member, the server, an avatar, a banner, or a role.</li>
+                <li><code class="cmd">,nick &lt;member&gt; [nickname]</code> — Manage Nicknames.</li>
+                <li><code class="cmd">,snipe</code> / <code class="cmd">,editsnipe</code> show recently deleted or pre-edit messages. <code class="cmd">,clearsnipe</code> (Manage Messages) clears snipes in the channel.</li>
+                <li><code class="cmd">,afk [reason]</code> sets a status that replies when you’re pinged.</li>
+                <li><code class="cmd">,remind &lt;duration&gt; &lt;text&gt;</code>, <code class="cmd">,remind list</code>, and <code class="cmd">,remind delete &lt;n&gt;</code>.</li>
+                <li><code class="cmd">,ping</code> checks latency. <code class="cmd">,help [command | section]</code> lists commands or details on one. <code class="cmd">/help</code> is the slash version, with autocomplete.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="index.html">
+              <span class="brand-mark is-static" role="img" aria-label="kyōki logo"><img class="logo-static" src="assets/logo.png" alt="" width="40" height="40"></span>
+              <span class="brand-name">kyōki</span>
+            </a>
+            <p>An all-in-one Discord bot for moderation, welcomes, button roles, logging, and voice.</p>
+          </div>
+          <div class="footer-col">
+            <h3>Product</h3>
+            <a href="commands.html">Commands</a>
+            <a href="status.html">Status</a>
+            <a href="embed.html">Embed builder</a>
+            <a href="dashboard.html">Dashboard</a>
+          </div>
+          <div class="footer-col">
+            <h3>Resources</h3>
+            <a href="docs.html">Docs</a>
+            <a href="changelog.html">Changelog</a>
+            <span class="soon">Support <small>coming soon</small></span>
+            <a href="https://discord.com/oauth2/authorize?client_id=1573348245726298224&amp;scope=bot+applications.commands&amp;permissions=1099798015063" target="_blank" rel="noopener">Invite</a>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>kyōki is not affiliated with Discord.</p>
+          <p>© 2026 kyōki</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+  <script src="docs.js"></script>
+
+</body>
+</html>
