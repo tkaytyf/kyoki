@@ -2504,3 +2504,58 @@ p code.cmd {
 .d-field-value a:hover,
 .d-footer a:hover { text-decoration: underline; }
 .d-md-underline { text-decoration: underline; }
+
+/* ---------- Wave 1 command list (225, JSON-rendered) ---------- */
+
+.commands-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  margin: 0 0 0.85rem;
+  padding: 0.2rem 0 0.7rem;
+  background: var(--bg);
+  box-shadow: 0 0.6rem 0.8rem -0.35rem var(--bg);
+}
+@media (min-width: 1280px) {
+  .commands-toolbar { top: var(--header-h); }
+}
+.commands-toolbar .search { margin: 0 0 0.7rem; }
+.cmd-filters {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  margin: 0;
+  padding: 0.05rem 0 0.5rem;
+  overscroll-behavior-x: contain;
+}
+.cmd-filters .tab { flex: 0 0 auto; }
+.cmd-count {
+  margin: 0.2rem 0 0;
+  color: var(--text-dim);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+.commands-page .command-list { gap: 0.5rem; }
+.commands-page .command {
+  padding: 0.85rem 1rem 0.95rem;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 9rem;
+}
+.commands-page .command-fields {
+  margin-top: 0.7rem;
+  padding-top: 0.7rem;
+}
+@media (min-width: 800px) {
+  .commands-page .command-fields {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.9fr) minmax(0, 0.9fr);
+  }
+}
+.commands-page .command-desc { font-size: 0.9rem; }
+.commands-page .page-head .section-lead { max-width: 46rem; }
+@media (max-width: 700px) {
+  .commands-page .command { padding: 0.75rem 0.85rem 0.8rem; border-radius: 1rem; }
+  .commands-page .command-name { font-size: 0.98rem; }
+  .commands-toolbar { margin-left: -0.15rem; margin-right: -0.15rem; padding-left: 0.15rem; padding-right: 0.15rem; }
+}

@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Docs — kyōki</title>
-  <meta name="description" content="Set up kyōki’s real commands: moderation, security, tickets, embeds, voice, and the rest of the list.">
+  <meta name="description" content="Set up kyōki’s real commands: moderation, automod, cases, roles, sticky messages, reaction roles, security, tickets, embeds, voice, and the rest of the list.">
   <meta name="theme-color" content="#0B0C0E">
   <meta property="og:title" content="Docs — kyōki">
-  <meta property="og:description" content="Set up kyōki’s real commands: moderation, security, tickets, embeds, voice, and the rest of the list.">
+  <meta property="og:description" content="Set up kyōki’s real commands: moderation, automod, cases, roles, sticky messages, reaction roles, security, tickets, embeds, voice, and the rest of the list.">
   <meta property="og:image" content="https://tkaytyf.github.io/kyoki/assets/og-image.png">
   <meta property="og:url" content="https://tkaytyf.github.io/kyoki/docs.html">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Docs — kyōki">
-  <meta name="twitter:description" content="Set up kyōki’s real commands: moderation, security, tickets, embeds, voice, and the rest of the list.">
+  <meta name="twitter:description" content="Set up kyōki’s real commands: moderation, automod, cases, roles, sticky messages, reaction roles, security, tickets, embeds, voice, and the rest of the list.">
   <meta name="twitter:image" content="https://tkaytyf.github.io/kyoki/assets/og-image.png">
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
@@ -63,13 +63,17 @@
             <nav class="docs-side-nav" aria-label="Guides">
               <a href="#moderation"><img class="feature-icon-sm" src="assets/icon-moderation.png" alt=""> Moderation</a>
               <a href="#jail"><img class="feature-icon-sm" src="assets/icon-moderation.png" alt=""> Jail</a>
+              <a href="#cases"><img class="feature-icon-sm" src="assets/icon-moderation.png" alt=""> Cases</a>
+              <a href="#automod">Automod</a>
               <a href="#security"><img class="feature-icon-sm" src="assets/icon-antinuke.png" alt=""> Security</a>
               <a href="#welcome"><img class="feature-icon-sm" src="assets/icon-welcome.png" alt=""> Welcome &amp; Goodbye</a>
               <a href="#logging"><img class="feature-icon-sm" src="assets/icon-logging.png" alt=""> Logging</a>
               <a href="#prefix">Prefix</a>
               <a href="#embeds">Embeds</a>
+              <a href="#sticky">Sticky messages</a>
               <a href="#tickets"><img class="feature-icon-sm" src="assets/icon-tickets.png" alt=""> Tickets</a>
               <a href="#roles"><img class="feature-icon-sm" src="assets/icon-roles.png" alt=""> Roles</a>
+              <a href="#reactionroles"><img class="feature-icon-sm" src="assets/icon-roles.png" alt=""> Reaction roles</a>
               <a href="#voicemaster">VoiceMaster</a>
               <a href="#giveaways">Giveaways</a>
               <a href="#starboard">Starboard</a>
@@ -80,18 +84,40 @@
           <div class="docs-content">
             <p class="docs-empty" hidden>No guides match that search.</p>
 
-            <article class="docs-guide" id="moderation" data-search="moderation kick ban unban timeout untimeout warn warnings clearwarns purge lock unlock slowmode slash /ban /kick /timeout /purge /warn">
+            <article class="docs-guide" id="moderation" data-search="moderation kick ban unban baninfo banlist hardban massban tempban timeout untimeout timeouts warn warnings clearwarns delwarn purge lock unlock lockdown hide unhide slowmode topic nuke mute muterole rolemute imute iunmute rmute strip restore softban vcdeafen vckick vcmove vcmute slash /ban /kick /timeout /purge /warn">
               <h2><img class="feature-icon-sm" src="assets/icon-moderation.png" alt=""> Moderation</h2>
-              <p>Each command checks a permission. Slash versions — <code class="cmd">/ban</code>, <code class="cmd">/kick</code>, <code class="cmd">/timeout</code>, <code class="cmd">/purge</code>, and <code class="cmd">/warn</code> — are synced globally and hidden from members who lack the permission, so moderation still works without the prefix.</p>
+              <p>Each command checks a permission. Slash versions — <code class="cmd">/ban</code>, <code class="cmd">/kick</code>, <code class="cmd">/timeout</code>, <code class="cmd">/purge</code>, and <code class="cmd">/warn</code> — exist alongside the prefix commands. On slash timeout, a duration of 0 removes a timeout.</p>
+              <h3>Bans, kicks, and timeouts</h3>
               <ul>
                 <li><code class="cmd">,kick &lt;member&gt; [reason]</code> — Kick Members.</li>
-                <li><code class="cmd">,ban &lt;user&gt; [reason]</code> / <code class="cmd">,unban &lt;user id&gt; [reason]</code> — Ban Members. The slash ban can also set <code class="cmd">delete_days</code> (0–7).</li>
-                <li><code class="cmd">,timeout &lt;member&gt; &lt;duration&gt; [reason]</code> / <code class="cmd">,untimeout &lt;member&gt;</code> — Moderate Members. Aliases: <code class="cmd">,to</code>, <code class="cmd">,mute</code>, <code class="cmd">,unmute</code>. On slash timeout, a duration of 0 removes it.</li>
-                <li><code class="cmd">,warn</code>, <code class="cmd">,warnings</code>, <code class="cmd">,clearwarns</code> — Moderate Members. Warn DMs the member the reason. <code class="cmd">,warns</code> is an alias for warnings.</li>
-                <li><code class="cmd">,purge &lt;amount&gt; [member]</code> — Manage Messages, optionally one member only. Aliases: <code class="cmd">,clear</code>, <code class="cmd">,c</code>. Slash amount is 1–500.</li>
-                <li><code class="cmd">,lock</code> / <code class="cmd">,unlock</code> — Manage Channels, current channel.</li>
-                <li><code class="cmd">,slowmode [seconds]</code> — Manage Channels. Alias: <code class="cmd">,sm</code>.</li>
+                <li><code class="cmd">,ban &lt;user&gt; [reason]</code> / <code class="cmd">,unban &lt;user id&gt; [reason]</code> — Ban Members. <code class="cmd">,baninfo</code> shows why a user is banned and by whom; <code class="cmd">,banlist</code> lists every banned user.</li>
+                <li><code class="cmd">,tempban &lt;user&gt; &lt;duration&gt; [reason]</code> — Ban Members. <code class="cmd">,tempban list</code> shows running tempbans; <code class="cmd">,tempban cancel &lt;user&gt;</code> ends one early and unbans.</li>
+                <li><code class="cmd">,hardban &lt;user&gt; [reason]</code> — Administrator. Bans someone and re-bans them if anyone unbans them. <code class="cmd">,hardban list</code> lists them; <code class="cmd">,hardban remove</code> lifts a hardban and unbans (Administrator).</li>
+                <li><code class="cmd">,massban &lt;ids or mentions...&gt;</code> — Administrator. Bans up to 200 users by ID at once (asks to confirm).</li>
+                <li><code class="cmd">,softban &lt;member&gt; [reason]</code> — Ban Members. Bans and unbans to wipe 7 days of messages.</li>
+                <li><code class="cmd">,timeout &lt;member&gt; &lt;duration&gt; [reason]</code> / <code class="cmd">,untimeout &lt;member&gt;</code> — Moderate Members. Aliases: <code class="cmd">,to</code>, <code class="cmd">,mute</code>, <code class="cmd">,unmute</code>. <code class="cmd">,timeouts</code> lists everyone who is timed out.</li>
               </ul>
+              <h3>Warnings</h3>
+              <ul>
+                <li><code class="cmd">,warn &lt;member&gt; [reason]</code> DMs the member the reason. <code class="cmd">,warnings</code> (alias <code class="cmd">,warns</code>) views them; <code class="cmd">,clearwarns &lt;member&gt;</code> clears all. Moderate Members. To remove one warning, use <code class="cmd">,delwarn</code> in Cases.</li>
+              </ul>
+              <h3>Purge</h3>
+              <p>Manage Messages. Aliases: <code class="cmd">,clear</code>, <code class="cmd">,c</code>. <code class="cmd">,purge &lt;amount&gt; [member]</code> bulk-deletes messages, optionally from one member. Filters include <code class="cmd">after</code>, <code class="cmd">before</code>, <code class="cmd">between</code>, <code class="cmd">bots</code>, <code class="cmd">commands</code>, <code class="cmd">contains</code>, <code class="cmd">embeds</code>, <code class="cmd">emojis</code>, <code class="cmd">endswith</code>, <code class="cmd">files</code>, <code class="cmd">humans</code>, <code class="cmd">images</code>, <code class="cmd">invites</code>, <code class="cmd">links</code>, <code class="cmd">mentions</code>, <code class="cmd">reactions</code>, <code class="cmd">startswith</code>, <code class="cmd">stickers</code>, <code class="cmd">user</code> (even if they left), and <code class="cmd">webhooks</code>. Syntax for each is on the <a href="commands.html#moderation">commands page</a>.</p>
+              <h3>Channels</h3>
+              <ul>
+                <li><code class="cmd">,lock</code> / <code class="cmd">,unlock</code> — stop or allow talking in this channel. <code class="cmd">,hide [channel]</code> / <code class="cmd">,unhide</code> hide or show a channel from everyone. <code class="cmd">,slowmode [seconds]</code> (alias <code class="cmd">,sm</code>). <code class="cmd">,topic &lt;text | clear&gt;</code> sets or clears this channel’s topic. Manage Channels.</li>
+                <li><code class="cmd">,lockdown all [reason]</code> locks every text channel at once (background job). <code class="cmd">,lockdown end</code> unlocks the channels it locked. <code class="cmd">,lockdown ignore &lt;channel&gt;</code> toggles a channel lockdown skips; <code class="cmd">,lockdown ignored</code> lists them.</li>
+                <li><code class="cmd">,nuke</code> — Administrator. Deletes and recreates this channel empty (asks to confirm).</li>
+              </ul>
+              <h3>Mutes and role actions</h3>
+              <ul>
+                <li><code class="cmd">,muterole create</code> makes (or reuses) a muted role and blocks it in every channel. <code class="cmd">,muterole set</code> / <code class="cmd">,muterole unset</code> use or stop using a mute role. Manage Roles.</li>
+                <li><code class="cmd">,rolemute &lt;member&gt; [duration] [reason]</code> mutes with the mute role, optionally for a time; <code class="cmd">,unrolemute</code> removes it. Moderate Members.</li>
+                <li><code class="cmd">,imute</code> / <code class="cmd">,iunmute</code> stop or allow images and embeds. <code class="cmd">,rmute</code> / <code class="cmd">,runmute</code> stop or allow reactions. Manage Messages; optional channel.</li>
+                <li><code class="cmd">,strip &lt;member&gt; [reason]</code> — Administrator. Removes all of a member’s roles (saved for restore). <code class="cmd">,restore &lt;member&gt;</code> — Manage Roles. Gives back roles saved when someone left or was stripped.</li>
+              </ul>
+              <h3>Voice</h3>
+              <p><code class="cmd">,vcmute</code> / <code class="cmd">,vcunmute</code> (Mute Members), <code class="cmd">,vcdeafen</code> / <code class="cmd">,vcundeafen</code> (Deafen Members), <code class="cmd">,vckick</code>, <code class="cmd">,vcmove &lt;member&gt; &lt;channel&gt;</code>, and <code class="cmd">,vcmoveall &lt;from&gt; &lt;to&gt;</code> (Move Members).</p>
             </article>
 
             <article class="docs-guide" id="jail" data-search="jail unjail roles lock channel moderate members">
@@ -100,6 +126,30 @@
               <ul>
                 <li><code class="cmd">,jail &lt;member&gt; [reason]</code> locks the member in a jail channel and saves their roles.</li>
                 <li><code class="cmd">,unjail &lt;member&gt;</code> frees them and gives those roles back.</li>
+              </ul>
+            </article>
+
+            <article class="docs-guide" id="cases" data-search="cases case delete export list reason cases clear mod delwarn history modstats notes add remove staff">
+              <h2><img class="feature-icon-sm" src="assets/icon-moderation.png" alt=""> Cases</h2>
+              <p>Moderation cases, history, and private staff notes. Most commands need Moderate Members; deleting or clearing cases and notes needs Manage Server. Changing a case’s reason needs Moderate Members for your own cases, or Manage Server.</p>
+              <ul>
+                <li><code class="cmd">,case &lt;number&gt;</code> views a case. <code class="cmd">,case list</code> shows every case, newest first. <code class="cmd">,case reason &lt;number&gt; &lt;reason&gt;</code> changes a reason. <code class="cmd">,case delete &lt;number&gt;</code> deletes one. <code class="cmd">,case export</code> downloads every case as a spreadsheet file.</li>
+                <li><code class="cmd">,cases &lt;user&gt;</code> shows a user’s cases. <code class="cmd">,cases mod &lt;moderator&gt;</code> shows cases made by a moderator. <code class="cmd">,cases clear &lt;user&gt;</code> deletes all of a user’s cases (asks to confirm).</li>
+                <li><code class="cmd">,history &lt;user&gt;</code> shows a user’s status, warnings, and cases in one place. <code class="cmd">,modstats [moderator]</code> shows how many actions a moderator took.</li>
+                <li><code class="cmd">,delwarn &lt;user&gt; &lt;number&gt;</code> removes one warning from a member.</li>
+                <li><code class="cmd">,notes &lt;user&gt;</code> shows private staff notes. <code class="cmd">,notes add &lt;user&gt; &lt;text&gt;</code> adds one; <code class="cmd">,notes remove &lt;user&gt; &lt;number&gt;</code> removes one; <code class="cmd">,notes clear &lt;user&gt;</code> clears them (Manage Server).</li>
+              </ul>
+            </article>
+
+            <article class="docs-guide" id="automod" data-search="automod filter action caps emoji exempt invites links log massmention newlines repeat reset spam status test timeout whitelist words zalgo am">
+              <h2>Automod</h2>
+              <p>Auto-moderation filters. You need Manage Server. Alias: <code class="cmd">,automod</code> or <code class="cmd">,am</code>. A filter always deletes a matching message; <code class="cmd">,filter action</code> also sets whether offenders are warned, timed out, or kicked.</p>
+              <ul>
+                <li>Turn a filter on or off: <code class="cmd">,filter caps</code> (optional percent and min letters), <code class="cmd">emoji</code> (limit), <code class="cmd">invites</code>, <code class="cmd">links</code>, <code class="cmd">massmention</code> (limit), <code class="cmd">newlines</code> (max lines), <code class="cmd">repeat</code> (times), <code class="cmd">spam</code> (messages and seconds), and <code class="cmd">zalgo</code>.</li>
+                <li><code class="cmd">,filter words add &lt;words&gt;</code> blocks words (comma separated; your message is deleted). <code class="cmd">list</code> shows blocked words (spoilered); <code class="cmd">remove</code> unblocks; <code class="cmd">clear</code> unblocks every word (asks to confirm).</li>
+                <li><code class="cmd">,filter whitelist add &lt;domain&gt;</code> allows links to a domain and its subdomains when the link filter is on. <code class="cmd">list</code> and <code class="cmd">remove</code> manage that list.</li>
+                <li><code class="cmd">,filter exempt add &lt;role | channel&gt;</code> makes a role, channel, or category skip the filters. <code class="cmd">list</code> and <code class="cmd">remove</code> manage exemptions.</li>
+                <li><code class="cmd">,filter log &lt;channel | off&gt;</code> sets where filter hits are logged. <code class="cmd">,filter timeout &lt;duration&gt;</code> sets how long the timeout action lasts. <code class="cmd">,filter status</code> shows every filter’s settings. <code class="cmd">,filter test &lt;text&gt;</code> checks which text filters a message would trip. <code class="cmd">,filter reset</code> turns everything off and clears lists (asks to confirm).</li>
               </ul>
             </article>
 
@@ -155,7 +205,17 @@
               <p>You need Manage Messages. <code class="cmd">,embed &lt;json&gt;</code> sends a custom embed in the current channel. <code class="cmd">,embed send #channel &lt;json&gt;</code> sends it somewhere else. Aliases: <code class="cmd">,ce</code>, <code class="cmd">,createembed</code>.</p>
               <p>The JSON is Discord’s standard embed object. Color can be an integer or <code class="cmd">#hex</code>; if you leave color out, kyōki uses plain gray (<code class="cmd">#2B2D31</code>). <code class="cmd">timestamp</code> can be ISO-8601 or <code class="cmd">"now"</code>. Code fences around the JSON are stripped. Also accepted: <code class="cmd">{"embed":{…},"content":"…"}</code> and <code class="cmd">{"embeds":[{…}]}</code> (the first embed is used).</p>
               <p>The same format works in <code class="cmd">,welcome message</code>, <code class="cmd">,goodbye message</code>, <code class="cmd">,ticket setup</code>, and <code class="cmd">,autoresponder add</code>. Variables: <code class="cmd">{user}</code> <code class="cmd">{name}</code> <code class="cmd">{server}</code> <code class="cmd">{count}</code> <code class="cmd">{avatar}</code>.</p>
-              <p>The <a href="embed.html">embed builder</a> copies this JSON, or a ready <code class="cmd">,embed send</code> command.</p>
+              <p>The <a href="embed.html">embed builder</a> copies this JSON, or a ready <code class="cmd">,embed send</code> command. The same format is also accepted by <code class="cmd">,sticky add</code>.</p>
+            </article>
+
+            <article class="docs-guide" id="sticky" data-search="sticky stickymessage add clear edit every list remove view channel bottom embed">
+              <h2>Sticky messages</h2>
+              <p>Keep a message at the bottom of a channel. You need Manage Messages, except <code class="cmd">,sticky clear</code>, which needs Manage Server and asks to confirm. Alias: <code class="cmd">,stickymessage</code>.</p>
+              <ul>
+                <li><code class="cmd">,sticky add &lt;channel&gt; &lt;text or embed JSON&gt;</code> adds a sticky. <code class="cmd">,sticky edit &lt;channel&gt; &lt;text or embed JSON&gt;</code> changes it.</li>
+                <li><code class="cmd">,sticky every &lt;channel&gt; &lt;messages&gt;</code> reposts after this many messages (1–100).</li>
+                <li><code class="cmd">,sticky list</code> shows every sticky. <code class="cmd">,sticky view &lt;channel&gt;</code> shows a sticky’s raw text. <code class="cmd">,sticky remove &lt;channel&gt;</code> removes one. <code class="cmd">,sticky clear</code> removes every sticky.</li>
+              </ul>
             </article>
 
             <article class="docs-guide" id="tickets" data-search="tickets ticket setup support log claim close add remove rename transcript panel">
@@ -169,12 +229,37 @@
               <p>Inside a ticket, staff can <code class="cmd">,ticket claim</code>, <code class="cmd">,ticket close</code> (close saves a .txt transcript), <code class="cmd">,ticket add @user</code>, <code class="cmd">,ticket remove @user</code>, and <code class="cmd">,ticket rename &lt;name&gt;</code>.</p>
             </article>
 
-            <article class="docs-guide" id="roles" data-search="button roles buttonrole post add clear role give take br">
+            <article class="docs-guide" id="roles" data-search="button roles buttonrole post add clear list unique remove role give take all bots humans cancel color create delete hoist icon in info mentionable rename status nick decancer dehoist force forced resetall unforce br">
               <h2><img class="feature-icon-sm" src="assets/icon-roles.png" alt=""> Roles</h2>
-              <p>You need Manage Roles.</p>
+              <h3>Button roles</h3>
+              <p>You need Manage Roles. Aliases: <code class="cmd">,br</code>, <code class="cmd">,buttonroles</code>.</p>
               <ul>
-                <li><code class="cmd">,buttonrole post #channel &lt;text&gt;</code> posts a panel. Then <code class="cmd">,buttonrole add &lt;message&gt; @role [emoji] [label]</code> adds a button, and <code class="cmd">,buttonrole clear &lt;message&gt;</code> removes every button. Aliases: <code class="cmd">,br</code>, <code class="cmd">,buttonroles</code>.</li>
-                <li><code class="cmd">,role &lt;member&gt; &lt;role&gt;</code> gives or takes a role. Alias: <code class="cmd">,r</code>.</li>
+                <li><code class="cmd">,buttonrole post &lt;channel&gt; &lt;text&gt;</code> posts an embed to add role buttons to.</li>
+                <li><code class="cmd">,buttonrole add &lt;message&gt; &lt;role&gt; [emoji] [label]</code> adds a role button to kyōki’s message. <code class="cmd">,buttonrole remove &lt;message&gt; &lt;role&gt;</code> removes one; <code class="cmd">,buttonrole list</code> shows roles on a message’s buttons; <code class="cmd">,buttonrole clear &lt;message&gt;</code> removes every button.</li>
+                <li><code class="cmd">,buttonrole unique &lt;message&gt; &lt;on | off&gt;</code> lets members pick only one role from a message.</li>
+              </ul>
+              <h3>Role management</h3>
+              <p><code class="cmd">,role &lt;member&gt; &lt;role&gt;</code> toggles a role on a member. <code class="cmd">,role add</code> / <code class="cmd">,role remove</code> give or take a role. Manage Roles, except <code class="cmd">,role info</code>, which needs no extra permission and shows a role’s full permissions and members.</p>
+              <ul>
+                <li>Create and edit: <code class="cmd">,role create &lt;name&gt; [#hex]</code>, <code class="cmd">,role delete</code> (asks to confirm), <code class="cmd">,role rename</code>, <code class="cmd">,role color</code>, <code class="cmd">,role hoist</code>, <code class="cmd">,role mentionable</code>, and <code class="cmd">,role icon</code> (boost level 2; emoji, url, attachment, or remove).</li>
+                <li>Mass jobs (background): <code class="cmd">,role all [add | remove] &lt;role&gt;</code> for every member, <code class="cmd">,role humans</code> for humans, <code class="cmd">,role bots</code> for bots, and <code class="cmd">,role in [add | remove] &lt;has role&gt; &lt;role&gt;</code> for everyone in another role. <code class="cmd">,role status</code> shows progress; <code class="cmd">,role cancel</code> stops the running job.</li>
+              </ul>
+              <h3>Nicknames</h3>
+              <p>Manage Nicknames, except <code class="cmd">,nick resetall</code>, which needs Manage Server, asks to confirm, and runs as a background job.</p>
+              <ul>
+                <li><code class="cmd">,nick &lt;member&gt; [nickname]</code> changes or resets a nickname.</li>
+                <li><code class="cmd">,nick decancer &lt;member&gt;</code> turns fancy unicode names into plain text. <code class="cmd">,nick dehoist</code> strips leading symbols like ! from names (background job).</li>
+                <li><code class="cmd">,nick force &lt;member&gt; &lt;nickname&gt;</code> locks a nickname so it changes back. <code class="cmd">,nick forced</code> lists forced nicknames; <code class="cmd">,nick unforce</code> unlocks one.</li>
+              </ul>
+            </article>
+
+            <article class="docs-guide" id="reactionroles" data-search="reaction roles reactionrole rr emoji unique clear reset add remove list">
+              <h2><img class="feature-icon-sm" src="assets/icon-roles.png" alt=""> Reaction roles</h2>
+              <p>Give roles when members react to a message. You need Manage Roles, except <code class="cmd">,reactionrole reset</code>, which needs Manage Server and asks to confirm. Aliases: <code class="cmd">,rr</code>, <code class="cmd">,reactionroles</code>.</p>
+              <ul>
+                <li><code class="cmd">,reactionrole add &lt;message&gt; &lt;emoji&gt; &lt;role&gt;</code> links an emoji on a message to a role. <code class="cmd">,reactionrole remove &lt;message&gt; &lt;emoji&gt;</code> unlinks one.</li>
+                <li><code class="cmd">,reactionrole list</code> shows every reaction role. <code class="cmd">,reactionrole clear &lt;message&gt;</code> removes every reaction role from a message. <code class="cmd">,reactionrole reset</code> deletes every reaction role in the server.</li>
+                <li><code class="cmd">,reactionrole unique &lt;message&gt; &lt;on | off&gt;</code> lets members pick only one role from a message.</li>
               </ul>
             </article>
 
@@ -214,15 +299,14 @@
               </ul>
             </article>
 
-            <article class="docs-guide" id="utility" data-search="utility userinfo serverinfo avatar banner roleinfo nick snipe editsnipe clearsnipe afk remind ping help slash">
+            <article class="docs-guide" id="utility" data-search="utility userinfo serverinfo avatar banner roleinfo snipe editsnipe clearsnipe afk remind ping help slash info">
               <h2>Utility</h2>
               <ul>
-                <li><code class="cmd">,userinfo</code>, <code class="cmd">,serverinfo</code>, <code class="cmd">,avatar</code>, <code class="cmd">,banner</code>, <code class="cmd">,roleinfo</code> — look up a member, the server, an avatar, a banner, or a role.</li>
-                <li><code class="cmd">,nick &lt;member&gt; [nickname]</code> — Manage Nicknames.</li>
+                <li><code class="cmd">,userinfo</code>, <code class="cmd">,serverinfo</code>, <code class="cmd">,avatar</code>, <code class="cmd">,banner</code>, and <code class="cmd">,roleinfo</code> look up a member, the server, an avatar, a banner, or a role. Nickname commands now live under <a href="#roles">Roles</a>.</li>
                 <li><code class="cmd">,snipe</code> / <code class="cmd">,editsnipe</code> show recently deleted or pre-edit messages. <code class="cmd">,clearsnipe</code> (Manage Messages) clears snipes in the channel.</li>
                 <li><code class="cmd">,afk [reason]</code> sets a status that replies when you’re pinged.</li>
                 <li><code class="cmd">,remind &lt;duration&gt; &lt;text&gt;</code>, <code class="cmd">,remind list</code>, and <code class="cmd">,remind delete &lt;n&gt;</code>.</li>
-                <li><code class="cmd">,ping</code> checks latency. <code class="cmd">,help [command | section]</code> lists commands or details on one. <code class="cmd">/help</code> is the slash version, with autocomplete.</li>
+                <li><code class="cmd">,ping</code> checks latency. <code class="cmd">,help [command | section]</code> lists commands or details on one. <code class="cmd">/help</code> is the slash version. Both are also listed under Info on the commands page.</li>
               </ul>
             </article>
           </div>
