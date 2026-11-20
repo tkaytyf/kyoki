@@ -1,15 +1,15 @@
 {
- "updated": "2026-11-20T17:32:29Z",
+ "updated": "2026-11-20T18:14:20Z",
  "online": true,
  "servers": 1,
  "members": 35,
- "latency_ms": 26,
+ "latency_ms": null,
  "started": "2026-11-20T17:21:26Z",
  "shards": [
   {
    "id": 0,
    "online": true,
-   "latency_ms": 26,
+   "latency_ms": null,
    "servers": 1,
    "members": 35
   }
