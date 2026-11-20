@@ -92,6 +92,10 @@
               <a href="#giveaways">Giveaways</a>
               <a href="#starboard">Starboard</a>
               <a href="#autoresponder">Autoresponder</a>
+              <a href="#levels">Levels</a>
+              <a href="#economy">Economy</a>
+              <a href="#roblox">Roblox</a>
+              <a href="#backups">Backups</a>
               <a href="#utility">Utility</a>
             </nav>
           </aside>
@@ -236,7 +240,7 @@
               </ul>
             </article>
 
-            <article class="docs-guide" id="welcome" data-search="welcome goodbye join leave message test delete {user} {name} {server} {count} {avatar}">
+            <article class="docs-guide" id="welcome" data-search="welcome goodbye join leave message test delete card image pillow {user} {name} {server} {count} {avatar}">
               <header class="docs-guide-head">
               <div class="docs-module-art">
                 <picture>
@@ -256,6 +260,8 @@
               </ul>
               <h3>Goodbye</h3>
               <p><code class="cmd">,goodbye</code> works the same way. <code class="cmd">,leave</code> is an alias.</p>
+              <h3>Welcome card</h3>
+              <p><code class="cmd">,welcome card on</code> adds a Pillow image card to welcome messages. <code class="cmd">,welcome card off</code> turns it off. <code class="cmd">,welcome card test [member]</code> previews the card here. Alias: <code class="cmd">,welcome card image</code> on the parent command.</p>
             </article>
 
             <article class="docs-guide" id="logging" data-search="logging logs log off channel">
@@ -271,7 +277,7 @@
               <p>You need Manage Server. <code class="cmd">,log &lt;channel | off&gt;</code> sends server logs to a channel, or turns them off. Aliases: <code class="cmd">,logs</code>, <code class="cmd">,logging</code>.</p>
             </article>
 
-            <article class="docs-guide" id="prefix" data-search="prefix setprefix reset mention default comma">
+            <article class="docs-guide" id="prefix" data-search="prefix setprefix reset mention default comma setup wizard quicksetup">
               <header class="docs-guide-head">
               <div class="docs-module-art">
                 <picture>
@@ -283,6 +289,8 @@
               </header>
               <p>The default prefix is <code class="cmd">,</code>. Mentioning the bot, as in <code class="cmd">@kyōki help</code>, always works.</p>
               <p><code class="cmd">,prefix</code> shows the current prefix. <code class="cmd">,prefix !</code> changes it (Manage Server). <code class="cmd">,prefix reset</code> puts it back to a comma. Alias: <code class="cmd">,setprefix</code>.</p>
+              <h3>Setup wizard</h3>
+              <p>Administrators can run <code class="cmd">,setup</code> for a 5-step button wizard that covers logs, welcome, VoiceMaster, tickets and automod. It shows a summary first. Aliases: <code class="cmd">,wizard</code>, <code class="cmd">,quicksetup</code>.</p>
             </article>
 
             <article class="docs-guide" id="embeds" data-search="embeds embed send json color hex timestamp content fences ce createembed welcome goodbye ticket autoresponder">
@@ -463,6 +471,56 @@
                 <li><code class="cmd">,autoresponder list</code></li>
                 <li><code class="cmd">,autoresponder remove &lt;trigger&gt;</code> — aliases <code class="cmd">delete</code>, <code class="cmd">del</code></li>
               </ul>
+            </article>
+
+
+            <article class="docs-guide" id="levels" data-search="levels leveling xp rank card background navy crimson jade gold reward multiplier ignore voice cooldown enable disable">
+              <header class="docs-guide-head">
+                <h2>Levels</h2>
+              </header>
+              <p>Levels start off. An admin turns them on with <code class="cmd">,levels enable</code> (Manage Server). XP already earned is kept if you later run <code class="cmd">,levels disable</code>.</p>
+              <p>The default level-up message is <code class="cmd">GG {user}, you reached **level {level}**</code>. Message XP defaults to 15–25 every 60 seconds. Voice XP is on by default (2+ people in the channel, not deafened).</p>
+              <ul>
+                <li><code class="cmd">,rank [member]</code> shows a rank card (level, XP, and server rank). <code class="cmd">,rank background [navy | crimson | jade | gold]</code> picks a background; the shop can unlock more.</li>
+                <li><code class="cmd">,levels channel &lt;channel | current | dm | off&gt;</code> sets where level-up messages go. <code class="cmd">,levels message &lt;text | reset&gt;</code> changes the text. <code class="cmd">,levels test</code> previews it.</li>
+                <li><code class="cmd">,levels rate</code>, <code class="cmd">,levels cooldown</code>, <code class="cmd">,levels voice</code>, <code class="cmd">,levels ignore</code>, <code class="cmd">,levels multiplier</code>, and <code class="cmd">,levels reward</code> control XP and role rewards. <code class="cmd">,levels stack</code> keeps every reward role or only the highest.</li>
+                <li><code class="cmd">,levels settings</code> lists every setting. <code class="cmd">,levels export</code> / <code class="cmd">,levels import</code> move XP as JSON. <code class="cmd">,xp</code> edits one member’s XP.</li>
+              </ul>
+              <p>Full syntax is on the <a href="commands.html#levels">commands page</a>.</p>
+            </article>
+
+            <article class="docs-guide" id="economy" data-search="economy eco shop buy sell inventory gift pay daily weekly work beg crime rob gamble blackjack">
+              <header class="docs-guide-head">
+                <h2>Economy</h2>
+              </header>
+              <p>Virtual currency only. Members can earn, bank, shop, and (if the server leaves them on) gamble or rob. Admins configure it with <code class="cmd">,economy</code> (Manage Server). <code class="cmd">,economy settings</code> shows every setting.</p>
+              <ul>
+                <li>Earn: <code class="cmd">,daily</code>, <code class="cmd">,weekly</code>, <code class="cmd">,work</code>, <code class="cmd">,beg</code>, <code class="cmd">,crime</code>, and <code class="cmd">,rob &lt;member&gt;</code>. <code class="cmd">,cooldowns</code> shows when those are available again.</li>
+                <li><code class="cmd">,balance</code>, <code class="cmd">,deposit</code>, <code class="cmd">,withdraw</code>, <code class="cmd">,pay</code>, <code class="cmd">,ecotop</code>, and <code class="cmd">,transactions</code>.</li>
+                <li><code class="cmd">,shop</code>, <code class="cmd">,buy</code>, <code class="cmd">,sell</code>, <code class="cmd">,inventory</code>, <code class="cmd">,gift</code>, and <code class="cmd">,use</code>. Admins add or edit items with <code class="cmd">,shop add</code> and <code class="cmd">,shop edit</code>.</li>
+                <li>Games: <code class="cmd">,blackjack</code>, <code class="cmd">,coinflip</code>, <code class="cmd">,dice</code>, <code class="cmd">,highlow</code>, <code class="cmd">,roulette</code>, <code class="cmd">,rps</code>, and <code class="cmd">,slots</code>. <code class="cmd">,economy gambling</code> and <code class="cmd">,economy rob</code> turn those on or off.</li>
+              </ul>
+              <p>Full syntax is on the <a href="commands.html#economy">commands page</a>.</p>
+            </article>
+
+            <article class="docs-guide" id="roblox" data-search="roblox rbx rblx verify unverify link bind group nickname role update avatar games">
+              <header class="docs-guide-head">
+                <h2>Roblox</h2>
+              </header>
+              <p><code class="cmd">,verify &lt;roblox username&gt;</code> links a Roblox account with a one-time code in the profile. <code class="cmd">,unverify</code> unlinks it. <code class="cmd">,userinfo roblox</code> shows someone’s linked account.</p>
+              <ul>
+                <li>Lookups: <code class="cmd">,roblox user</code>, <code class="cmd">,roblox avatar</code>, <code class="cmd">,roblox group</code>, and <code class="cmd">,roblox games</code>.</li>
+                <li>Server setup (Manage Server): <code class="cmd">,roblox role &lt;role | off&gt;</code> for the verified role, <code class="cmd">,roblox nickname &lt;format | off&gt;</code>, and <code class="cmd">,roblox bind</code> / <code class="cmd">,roblox unbind</code> for group ranks. <code class="cmd">,roblox binds</code> shows the settings. <code class="cmd">,roblox update</code> re-checks roles and nickname.</li>
+              </ul>
+              <p>Full syntax is on the <a href="commands.html#roblox">commands page</a>.</p>
+            </article>
+
+            <article class="docs-guide" id="backups" data-search="backup backups template templates gaming community anime layout restore">
+              <header class="docs-guide-head">
+                <h2>Backups &amp; templates</h2>
+              </header>
+              <p><code class="cmd">,backup create [name]</code> saves roles, categories, channels, overwrites and settings (max 10). <code class="cmd">,backup list</code>, <code class="cmd">,backup info &lt;id&gt;</code>, and <code class="cmd">,backup delete &lt;id&gt;</code> manage those files. <code class="cmd">,backup load &lt;id&gt;</code> is Server Owner only: it adds everything missing from a backup, never deletes, and asks to confirm.</p>
+              <p>Built-in layouts are <code class="cmd">gaming</code>, <code class="cmd">community</code>, and <code class="cmd">anime</code>. <code class="cmd">,template list</code> shows them. <code class="cmd">,template preview &lt;gaming | community | anime&gt;</code> shows what a layout would add. <code class="cmd">,template apply &lt;gaming | community | anime&gt;</code> (Server Owner) adds missing roles and channels, asks to confirm, and does not delete existing ones. Details of each layout are on the <a href="setup.html#templates">setup page</a>.</p>
             </article>
 
             <article class="docs-guide" id="utility" data-search="utility userinfo serverinfo avatar banner roleinfo snipe editsnipe clearsnipe afk remind ping help slash info">

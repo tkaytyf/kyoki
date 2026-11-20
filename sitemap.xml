@@ -86,6 +86,87 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/vcunmute.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/warn.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/warnings.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/balance.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/beg.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/blackjack.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/buy.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/coinflip.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/cooldowns.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/crime.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/daily.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/deposit.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/dice.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/economy.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/economy-cooldown.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/economy-currency.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/economy-emoji.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/economy-gambling.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/economy-give.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/economy-maxbet.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/economy-payout.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/economy-reset.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/economy-rob.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/economy-settings.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/economy-start.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/economy-take.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/ecotop.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/gift.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/highlow.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/inventory.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/pay.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/rob.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/roulette.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/rps.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/sell.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/shop.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/shop-add.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/shop-edit.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/shop-info.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/shop-remove.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/slots.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/transactions.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/use.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/weekly.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/withdraw.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/work.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/leaderboard.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/leaderboard-voice.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/leaderboard-weekly.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-channel.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-cooldown.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-disable.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-enable.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-export.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-ignore.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-ignore-add.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-ignore-list.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-ignore-remove.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-import.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-message.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-multiplier.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-multiplier-add.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-multiplier-list.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-multiplier-remove.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-rate.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-reset.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-reward.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-reward-add.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-reward-list.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-reward-remove.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-settings.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-stack.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-sync.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-test.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/levels-voice.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/rank.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/rank-background.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/xp.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/xp-add.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/xp-remove.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/xp-reset.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/xp-set.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/xp-setlevel.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/buttonrole.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/buttonrole-add.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/buttonrole-clear.html</loc></url>
@@ -161,6 +242,20 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/notes-add.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/notes-clear.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/notes-remove.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/roblox.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/roblox-avatar.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/roblox-bind.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/roblox-binds.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/roblox-games.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/roblox-group.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/roblox-nickname.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/roblox-role.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/roblox-unbind.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/roblox-update.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/roblox-user.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/unverify.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/userinfo-roblox.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/verify.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke-off.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/antinuke-on.html</loc></url>
@@ -186,6 +281,25 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/serverinfo.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/snipe.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/userinfo.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/backup.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/backup-create.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/backup-delete.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/backup-info.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/backup-list.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/backup-load.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/template.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/template-apply.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/template-list.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/template-preview.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/goodbye.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/log.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/prefix.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/setup.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/welcome.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/welcome-card.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/welcome-card-off.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/welcome-card-on.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/welcome-card-test.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-add.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/ticket-claim.html</loc></url>
@@ -228,10 +342,6 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/autoresponder-add.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/autoresponder-list.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/autoresponder-remove.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/goodbye.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/log.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/prefix.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/welcome.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/embed.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/embed-send.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/help.html</loc></url>

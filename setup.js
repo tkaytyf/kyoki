@@ -8,7 +8,7 @@
   var BLOCKS = {
     prefix: [",prefix"],
     logs: [",log <channel>"],
-    welcome: [",welcome <channel>", ",welcome message welcome {user} to **{server}**, you're member #{count}", ",goodbye <channel>"],
+    welcome: [",welcome <channel>", ",welcome message welcome {user} to **{server}**, you're member #{count}", ",welcome card on", ",goodbye <channel>"],
     moderation: [",muterole create"],
     automod: [",filter invites on", ",filter links on", ",filter spam on", ",filter log <channel>"],
     tickets: [",ticket setup <channel>", ",ticket support <role>", ",ticket log <channel>"],
@@ -17,9 +17,12 @@
     sticky: [",sticky add <channel> <text or embed JSON>"],
     roles: [",buttonrole post <channel> <text>"],
     reactionroles: [",reactionrole add <message> <emoji> <role>"],
-    security: [",antinuke on", ",antiraid on"]
+    security: [",antinuke on", ",antiraid on"],
+    wizard: [",setup"],
+    levels: [",levels enable", ",levels channel <channel | current | dm | off>"],
+    roblox: [",roblox role <role>"]
   };
-  var ORDER = ["prefix", "logs", "welcome", "moderation", "automod", "tickets", "voice", "starboard", "sticky", "roles", "reactionroles", "security"];
+  var ORDER = ["prefix", "logs", "welcome", "moderation", "automod", "tickets", "voice", "starboard", "sticky", "roles", "reactionroles", "security", "wizard", "levels", "roblox"];
 
   function render() {
     var lines = [];

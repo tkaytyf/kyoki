@@ -65,7 +65,7 @@
         <div class="page-head">
           <div>
             <h1 class="section-title">Setup</h1>
-            <p class="section-lead">Check what you want to set up. The list is real kyōki commands, in a sensible order, ready to paste and fill in.</p>
+            <p class="section-lead">The bot has <code class="cmd">,setup</code> — a 5-step button wizard for logs, welcome, VoiceMaster, tickets and automod (it shows a summary first). The checklist below outputs individual commands, including things the wizard doesn’t cover, in a sensible order, ready to paste and fill in.</p>
           </div>
         </div>
         <form class="setup-options" id="setup-form">
@@ -81,14 +81,38 @@
           <label><input type="checkbox" name="setup" value="roles"> Button roles</label>
           <label><input type="checkbox" name="setup" value="reactionroles"> Reaction roles</label>
           <label><input type="checkbox" name="setup" value="security"> Security</label>
+          <label><input type="checkbox" name="setup" value="wizard"> In-bot wizard</label>
+          <label><input type="checkbox" name="setup" value="levels"> Levels</label>
+          <label><input type="checkbox" name="setup" value="roblox"> Roblox verified role</label>
         </form>
         <p><button type="button" class="btn btn-secondary" id="setup-copy">Copy all</button></p>
         <label class="sr-only" for="setup-out">Commands to paste</label>
         <textarea id="setup-out" class="setup-out" readonly></textarea>
-        <aside class="wave2-card" aria-labelledby="templates-title">
+        <section class="wave2-card templates-section" id="templates" aria-labelledby="templates-title">
           <h2 id="templates-title">Server templates</h2>
-          <p>Coming in wave 2.</p>
-        </aside>
+          <p><code class="cmd">,template list</code> shows the built-in layouts. <code class="cmd">,template preview &lt;gaming | community | anime&gt;</code> shows what a layout would add. <code class="cmd">,template apply &lt;gaming | community | anime&gt;</code> is Server Owner only: it adds missing roles and channels, asks to confirm, and does not delete existing ones.</p>
+          <div class="template-grid">
+            <article>
+              <h3>gaming</h3>
+              <p>Squads, LFG, clips and game voice channels</p>
+              <p><strong>Roles:</strong> Admin, Moderator, Gamer, LFG</p>
+              <p><strong>Channels:</strong> INFO — rules, announcements, roles (read-only); COMMUNITY — general, looking-for-group, clips, memes; GAMES — minecraft, valorant, fortnite; VOICE — Lobby, Squad 1, Squad 2, AFK.</p>
+            </article>
+            <article>
+              <h3>community</h3>
+              <p>A general hangout with events and support</p>
+              <p><strong>Roles:</strong> Admin, Moderator, Member, Events</p>
+              <p><strong>Channels:</strong> WELCOME — welcome, rules, announcements (read-only); CHAT — general, introductions, media, off-topic; EVENTS — events (read-only), suggestions; SUPPORT — help, tickets (read-only); VOICE — Hangout, Music.</p>
+            </article>
+            <article>
+              <h3>anime</h3>
+              <p>Seasonal anime, manga, art and watch parties</p>
+              <p><strong>Roles:</strong> Admin, Moderator, Otaku, Artist</p>
+              <p><strong>Channels:</strong> INFO — rules, announcements (read-only); LOUNGE — general, anime-discussion, manga, recommendations; CREATIVE — fan-art, cosplay, memes; VOICE — Watch Party, Karaoke, Chill.</p>
+            </article>
+          </div>
+          <p>Backups are separate: <code class="cmd">,backup create [name]</code> saves the current layout (max 10). <code class="cmd">,backup load &lt;id&gt;</code> (Server Owner) adds whatever is missing and never deletes.</p>
+        </section>
       </div>
     </main>
 
