@@ -10,7 +10,7 @@
   var countEl = document.getElementById("command-count");
   var items = [];
   var category = "all";
-  var total = 722;
+  var total = 861;
   var rafPending = 0;
   var moduleIds = {};
 

@@ -119,6 +119,9 @@
               <a href="#automation">Automation</a>
               <a href="#channels">Channels</a>
               <a href="#webhooks">Webhooks</a>
+              <a href="#games">Games</a>
+              <a href="#applications">Applications</a>
+              <a href="#social">Social</a>
             </nav>
           </aside>
           <div class="docs-content">
@@ -222,12 +225,13 @@
               </div>
                 <h2>Automod</h2>
               </header>
-              <p>Auto-moderation filters. You need Manage Server. Alias: <code class="cmd">,automod</code> or <code class="cmd">,am</code>. A filter always deletes a matching message; <code class="cmd">,filter action</code> also sets whether offenders are warned, timed out, or kicked.</p>
+              <p>Auto-moderation filters. You need Manage Server. Alias: <code class="cmd">,automod</code> or <code class="cmd">,am</code>. A filter always deletes a matching message. <code class="cmd">,filter action</code> (alias <code class="cmd">,filter punish</code>) also sets whether offenders are warned, timed out, or kicked — delete, warn, timeout, or kick.</p>
               <ul>
-                <li>Turn a filter on or off: <code class="cmd">,filter caps</code> (optional percent and min letters), <code class="cmd">emoji</code> (limit), <code class="cmd">invites</code>, <code class="cmd">links</code>, <code class="cmd">massmention</code> (limit), <code class="cmd">newlines</code> (max lines), <code class="cmd">repeat</code> (times), <code class="cmd">spam</code> (messages and seconds), and <code class="cmd">zalgo</code>.</li>
+                <li>Turn a filter on or off: <code class="cmd">,filter caps</code> (optional percent and min letters), <code class="cmd">emoji</code> (limit), <code class="cmd">invites</code>, <code class="cmd">links</code>, <code class="cmd">massmention</code> (limit), <code class="cmd">newlines</code> (max lines), <code class="cmd">repeat</code> (times), <code class="cmd">spam</code> (messages and seconds), <code class="cmd">zalgo</code>, <code class="cmd">attachments</code> (max files), <code class="cmd">chars</code> (max characters), <code class="cmd">everyone</code> (fake @everyone/@here), <code class="cmd">spoilers</code>, and <code class="cmd">stickers</code>.</li>
                 <li><code class="cmd">,filter words add &lt;words&gt;</code> blocks words (comma separated; your message is deleted). <code class="cmd">list</code> shows blocked words (spoilered); <code class="cmd">remove</code> unblocks; <code class="cmd">clear</code> unblocks every word (asks to confirm).</li>
                 <li><code class="cmd">,filter whitelist add &lt;domain&gt;</code> allows links to a domain and its subdomains when the link filter is on. <code class="cmd">list</code> and <code class="cmd">remove</code> manage that list.</li>
                 <li><code class="cmd">,filter exempt add &lt;role | channel&gt;</code> makes a role, channel, or category skip the filters. <code class="cmd">list</code> and <code class="cmd">remove</code> manage exemptions.</li>
+                <li><code class="cmd">,filter regex add &lt;pattern&gt;</code> blocks messages matching a custom pattern (safe patterns only; advanced). <code class="cmd">list</code> and <code class="cmd">remove</code> manage those patterns.</li>
                 <li><code class="cmd">,filter log &lt;channel | off&gt;</code> sets where filter hits are logged. <code class="cmd">,filter timeout &lt;duration&gt;</code> sets how long the timeout action lasts. <code class="cmd">,filter status</code> shows every filter’s settings. <code class="cmd">,filter test &lt;text&gt;</code> checks which text filters a message would trip. <code class="cmd">,filter reset</code> turns everything off and clears lists (asks to confirm).</li>
               </ul>
             </article>
@@ -332,7 +336,9 @@
                 <h2>Embeds</h2>
               </header>
               <p>You need Manage Messages. <code class="cmd">,embed &lt;json&gt;</code> sends a custom embed in the current channel. <code class="cmd">,embed send #channel &lt;json&gt;</code> sends it somewhere else. Aliases: <code class="cmd">,ce</code>, <code class="cmd">,createembed</code>.</p>
-              <p><code class="cmd">,embed preview &lt;json&gt;</code> DMs you a preview. <code class="cmd">,embed raw &lt;message link&gt;</code> gives a message’s embed as JSON you can edit and reuse. <code class="cmd">,embed edit &lt;message link&gt; &lt;json&gt;</code> replaces one of kyōki’s messages with new embed JSON.</p>
+              <p><code class="cmd">,embed builder [saved name]</code> builds an embed with buttons and forms, then send or save it. Aliases: <code class="cmd">build</code>, <code class="cmd">create</code>, <code class="cmd">new</code>.</p>
+              <p><code class="cmd">,embed preview &lt;json&gt;</code> DMs you a preview. <code class="cmd">,embed raw &lt;message link&gt;</code> gives a message’s embed as JSON you can edit and reuse. <code class="cmd">,embed edit &lt;message link&gt; &lt;json&gt;</code> replaces one of kyōki’s messages with new embed JSON. <code class="cmd">,embed linkbutton &lt;message link&gt; &lt;label | clear&gt; [url]</code> adds a link button to one of kyōki’s embed messages (clear removes them).</p>
+              <p><code class="cmd">,embed save &lt;name&gt; &lt;json&gt;</code> saves embed JSON under a name. <code class="cmd">,embed load &lt;name&gt; [channel]</code> sends a saved embed. <code class="cmd">,embed saved</code> lists them, and <code class="cmd">,embed unsave &lt;name&gt;</code> deletes one.</p>
               <p>The JSON is Discord’s standard embed object. Color can be an integer or <code class="cmd">#hex</code>; if you leave color out, kyōki uses plain gray (<code class="cmd">#2B2D31</code>). <code class="cmd">timestamp</code> can be ISO-8601 or <code class="cmd">"now"</code>. Code fences around the JSON are stripped. Also accepted: <code class="cmd">{"embed":{…},"content":"…"}</code> and <code class="cmd">{"embeds":[{…}]}</code> (the first embed is used).</p>
               <p>The same format works in <code class="cmd">,welcome message</code>, <code class="cmd">,goodbye message</code>, <code class="cmd">,ticket setup</code>, and <code class="cmd">,autoresponder add</code>. Variables: <code class="cmd">{user}</code> <code class="cmd">{name}</code> <code class="cmd">{server}</code> <code class="cmd">{count}</code> <code class="cmd">{avatar}</code>.</p>
               <p>The <a href="embed.html">embed builder</a> copies this JSON, or a ready <code class="cmd">,embed send</code> command. The same format is also accepted by <code class="cmd">,sticky add</code>.</p>
@@ -382,7 +388,7 @@
               <p>You can ask up to five questions before a ticket opens. <code class="cmd">,ticket form add [long:] [optional:] &lt;question&gt; [| hint]</code> adds one (45 characters). <code class="cmd">,ticket form remove</code>, <code class="cmd">,ticket form clear</code>, <code class="cmd">,ticket form title</code>, and <code class="cmd">,ticket form preview</code> manage the form. Alias: <code class="cmd">,ticket forms</code>.</p>
             </article>
 
-            <article class="docs-guide" id="roles" data-search="button roles buttonrole post add clear list unique remove role give take all bots humans cancel color create delete hoist icon in info mentionable rename status nick decancer dehoist force forced resetall unforce br">
+            <article class="docs-guide" id="roles" data-search="button roles buttonrole post add clear list unique remove role give take all bots humans cancel color create delete hoist icon in info mentionable rename status nick decancer dehoist force forced resetall unforce br rolemenu dropdown selectroles">
               <header class="docs-guide-head">
               <div class="docs-module-art">
                 <picture>
@@ -411,6 +417,13 @@
                 <li><code class="cmd">,nick &lt;member&gt; [nickname]</code> changes or resets a nickname.</li>
                 <li><code class="cmd">,nick decancer &lt;member&gt;</code> turns fancy unicode names into plain text. <code class="cmd">,nick dehoist</code> strips leading symbols like ! from names (background job).</li>
                 <li><code class="cmd">,nick force &lt;member&gt; &lt;nickname&gt;</code> locks a nickname so it changes back. <code class="cmd">,nick forced</code> lists forced nicknames; <code class="cmd">,nick unforce</code> unlocks one.</li>
+              </ul>
+              <h3>Role menus</h3>
+              <p>Dropdown self-role menus. You need Manage Roles. Aliases: <code class="cmd">,rolemenus</code>, <code class="cmd">,selectroles</code>, <code class="cmd">,dropdownroles</code>.</p>
+              <ul>
+                <li><code class="cmd">,rolemenu create &lt;name&gt; [placeholder]</code> makes a menu. <code class="cmd">,rolemenu add &lt;name&gt; &lt;role&gt; [emoji] [description]</code> adds a role (posted menus update). <code class="cmd">,rolemenu remove</code> takes a role off, and <code class="cmd">,rolemenu delete</code> deletes a menu (asks to confirm).</li>
+                <li><code class="cmd">,rolemenu post &lt;name&gt; [channel] [text]</code> posts a menu. <code class="cmd">,rolemenu limit &lt;name&gt; &lt;min&gt; [max]</code> sets how many roles people must and can pick. <code class="cmd">,rolemenu required &lt;name&gt; &lt;role | off&gt;</code> limits who can use it.</li>
+                <li><code class="cmd">,rolemenu list</code> lists every menu. <code class="cmd">,rolemenu info &lt;name&gt;</code> shows a menu’s roles, limits and posts.</li>
               </ul>
             </article>
 
@@ -485,7 +498,7 @@
                 <li><code class="cmd">,giveaway start &lt;duration&gt; &lt;winners&gt; &lt;prize&gt;</code> — alias <code class="cmd">create</code></li>
                 <li><code class="cmd">,giveaway end [message id]</code> ends it now. Alias: <code class="cmd">stop</code></li>
                 <li><code class="cmd">,giveaway reroll [message id] [winners]</code> picks new winners.</li>
-                <li><code class="cmd">,giveaway list</code> shows running giveaways.</li>
+                <li><code class="cmd">,giveaway list</code> shows running giveaways. <code class="cmd">,giveaway entries</code> lists everyone who entered. <code class="cmd">,giveaway require</code> limits entry to a role. <code class="cmd">,giveaway cancel</code> stops a giveaway without picking winners (asks to confirm).</li>
               </ul>
             </article>
 
@@ -540,7 +553,7 @@
               <p>Full syntax is on the <a href="commands.html#levels">commands page</a>.</p>
             </article>
 
-            <article class="docs-guide" id="economy" data-search="economy eco shop buy sell inventory gift pay daily weekly work beg crime rob gamble blackjack">
+            <article class="docs-guide" id="economy" data-search="economy eco shop buy sell inventory gift pay daily weekly work beg crime rob gamble blackjack fish mine hunt dig chop craft job pet heist lottery">
               <header class="docs-guide-head">
                 <h2>Economy</h2>
               </header>
@@ -548,8 +561,12 @@
               <ul>
                 <li>Earn: <code class="cmd">,daily</code>, <code class="cmd">,weekly</code>, <code class="cmd">,work</code>, <code class="cmd">,beg</code>, <code class="cmd">,crime</code>, and <code class="cmd">,rob &lt;member&gt;</code>. <code class="cmd">,cooldowns</code> shows when those are available again.</li>
                 <li><code class="cmd">,balance</code>, <code class="cmd">,deposit</code>, <code class="cmd">,withdraw</code>, <code class="cmd">,pay</code>, <code class="cmd">,ecotop</code>, and <code class="cmd">,transactions</code>.</li>
-                <li><code class="cmd">,shop</code>, <code class="cmd">,buy</code>, <code class="cmd">,sell</code>, <code class="cmd">,inventory</code>, <code class="cmd">,gift</code>, and <code class="cmd">,use</code>. Admins add or edit items with <code class="cmd">,shop add</code> and <code class="cmd">,shop edit</code>.</li>
-                <li>Games: <code class="cmd">,blackjack</code>, <code class="cmd">,coinflip</code>, <code class="cmd">,dice</code>, <code class="cmd">,highlow</code>, <code class="cmd">,roulette</code>, <code class="cmd">,rps</code>, and <code class="cmd">,slots</code>. <code class="cmd">,economy gambling</code> and <code class="cmd">,economy rob</code> turn those on or off.</li>
+                <li><code class="cmd">,shop</code>, <code class="cmd">,buy</code>, <code class="cmd">,sell</code>, <code class="cmd">,sellall</code>, <code class="cmd">,inventory</code>, <code class="cmd">,gift</code>, <code class="cmd">,trade</code>, and <code class="cmd">,use</code>. Admins add or edit items with <code class="cmd">,shop add</code> and <code class="cmd">,shop edit</code>.</li>
+                <li>Gather and craft (tools come from the shop): <code class="cmd">,fish</code> (Fishing Rod), <code class="cmd">,mine</code> (Pickaxe), <code class="cmd">,hunt</code> (Hunting Rifle), <code class="cmd">,dig</code> (Shovel), <code class="cmd">,chop</code> (Axe), <code class="cmd">,craft</code>, and <code class="cmd">,recipes</code>.</li>
+                <li>Jobs: <code class="cmd">,job list</code>, <code class="cmd">,job apply</code>, <code class="cmd">,shift</code> (hourly, a quick button task), and <code class="cmd">,job quit</code> (total shifts are kept).</li>
+                <li>Pets: <code class="cmd">,pet adopt</code>, <code class="cmd">feed</code>, <code class="cmd">play</code>, <code class="cmd">walk</code>, <code class="cmd">rename</code>, <code class="cmd">battle</code>, and <code class="cmd">release</code> (asks to confirm). <code class="cmd">,pet list</code> shows pets you can adopt.</li>
+                <li><code class="cmd">,heist &lt;member&gt;</code> plans a crew heist on someone’s bank. <code class="cmd">,lottery</code>, <code class="cmd">,lottery buy</code>, and <code class="cmd">,lottery draw</code> (Manage Server) run a server lottery (tickets cost 100, draws 24h after the first).</li>
+                <li>Games: <code class="cmd">,blackjack</code>, <code class="cmd">,coinflip</code>, <code class="cmd">,cfduel</code>, <code class="cmd">,crash</code>, <code class="cmd">,dice</code>, <code class="cmd">,highlow</code>, <code class="cmd">,horserace</code>, <code class="cmd">,roulette</code>, <code class="cmd">,rps</code>, <code class="cmd">,scratch</code>, and <code class="cmd">,slots</code>. <code class="cmd">,economy gambling</code> and <code class="cmd">,economy rob</code> turn those on or off.</li>
               </ul>
               <p>Full syntax is on the <a href="commands.html#economy">commands page</a>.</p>
             </article>
@@ -571,7 +588,7 @@
                 <h2>Backups &amp; templates</h2>
               </header>
               <p><code class="cmd">,backup create [name]</code> saves roles, categories, channels, overwrites and settings (max 10). <code class="cmd">,backup list</code>, <code class="cmd">,backup info &lt;id&gt;</code>, and <code class="cmd">,backup delete &lt;id&gt;</code> manage those files. <code class="cmd">,backup load &lt;id&gt;</code> is Server Owner only: it adds everything missing from a backup, never deletes, and asks to confirm.</p>
-              <p>Built-in layouts are <code class="cmd">gaming</code>, <code class="cmd">community</code>, and <code class="cmd">anime</code>. <code class="cmd">,template list</code> shows them. <code class="cmd">,template preview &lt;gaming | community | anime&gt;</code> shows what a layout would add. <code class="cmd">,template apply &lt;gaming | community | anime&gt;</code> (Server Owner) adds missing roles and channels, asks to confirm, and does not delete existing ones. Details of each layout are on the <a href="setup.html#templates">setup page</a>.</p>
+              <p>Built-in layouts are <code class="cmd">gaming</code>, <code class="cmd">community</code>, and <code class="cmd">anime</code>. <code class="cmd">,template list</code> shows them. <code class="cmd">,template preview &lt;gaming | community | anime&gt;</code> shows what a layout would add. <code class="cmd">,template apply &lt;gaming | community | anime&gt;</code> (Server Owner) adds missing roles and channels, asks to confirm, and does not delete existing ones. Details of each layout are on the <a href="setup.html#templates">setup page</a>. <code class="cmd">,template export</code> downloads this server’s layout as a file (no settings or members). <code class="cmd">,template import</code> adds a layout file’s missing roles and channels (attach the file, asks to confirm).</p>
             </article>
 
 
@@ -715,6 +732,41 @@
               </ul>
             </article>
 
+
+            <article class="docs-guide" id="games" data-search="games 2048 connect4 flags hangman memory minesweeper trivia wordle tictactoe typerace riddle scramble">
+              <header class="docs-guide-head">
+                <h2>Games</h2>
+              </header>
+              <p>No special permission, except <code class="cmd">,games reset</code>, which needs Manage Server and asks to confirm. <code class="cmd">,games</code> lists every game. <code class="cmd">,games stats</code> and <code class="cmd">,games leaderboard</code> show wins.</p>
+              <ul>
+                <li>Versus a member (or kyōki, for tic tac toe): <code class="cmd">,tictactoe</code>, <code class="cmd">,connect4</code>, and <code class="cmd">,rpsduel</code> (picks stay secret).</li>
+                <li>Solo or first-to-win in the channel: <code class="cmd">,2048</code>, <code class="cmd">,hangman</code>, <code class="cmd">,memory</code>, <code class="cmd">,minesweeper</code>, <code class="cmd">,guessnumber</code>, <code class="cmd">,quickmath</code>, <code class="cmd">,reaction</code>, <code class="cmd">,riddle</code>, <code class="cmd">,scramble</code>, <code class="cmd">,trivia</code>, <code class="cmd">,typerace</code> (no copy-paste), <code class="cmd">,flags</code>, and <code class="cmd">,wordle</code> (6 tries, a 5-letter word).</li>
+              </ul>
+              <p>Full syntax is on the <a href="commands.html#games">commands page</a>.</p>
+            </article>
+
+            <article class="docs-guide" id="applications" data-search="application applications apply form staff partners questions accept deny pending">
+              <header class="docs-guide-head">
+                <h2>Applications</h2>
+              </header>
+              <p>Application forms members fill in (staff apps, partners, and the like). Managing forms needs Manage Server. Members use <code class="cmd">,apply</code> or an Apply button.</p>
+              <ul>
+                <li><code class="cmd">,application create</code> makes a form. <code class="cmd">,application question add</code> adds a question (up to 5). <code class="cmd">,application question list</code> and <code class="cmd">remove</code> manage questions.</li>
+                <li><code class="cmd">,application channel</code> is where new applications go for review. <code class="cmd">,application role</code> sets a role accepted applicants get. <code class="cmd">,application post</code> posts an Apply button. <code class="cmd">,application open</code> and <code class="cmd">,application close</code> start or stop taking applications.</li>
+                <li><code class="cmd">,application pending</code> lists applications waiting for review. <code class="cmd">,application view</code> reads one application’s answers. <code class="cmd">,application accept</code> gives the role and DMs them; <code class="cmd">,application deny</code> DMs them the reason. <code class="cmd">,application delete</code> deletes a form (asks to confirm). <code class="cmd">,application list</code> shows every form and its settings.</li>
+              </ul>
+            </article>
+
+            <article class="docs-guide" id="social" data-search="social marry marriage divorce partner reputation rep leaderboard">
+              <header class="docs-guide-head">
+                <h2>Social</h2>
+              </header>
+              <ul>
+                <li><code class="cmd">,marry</code> proposes to someone (they accept with a button). <code class="cmd">,partner</code> shows who someone is married to. <code class="cmd">,divorce</code> ends a marriage (asks to confirm).</li>
+                <li><code class="cmd">,reputation</code> gives someone a reputation point (every 12 hours), or shows yours. <code class="cmd">,reputation leaderboard</code> shows who has the most rep here.</li>
+              </ul>
+            </article>
+
             <article class="docs-guide" id="utility" data-search="utility userinfo serverinfo avatar banner roleinfo snipe editsnipe clearsnipe afk remind ping help slash info">
               <header class="docs-guide-head">
               <div class="docs-module-art">
@@ -726,11 +778,14 @@
                 <h2>Utility</h2>
               </header>
               <ul>
-                <li><code class="cmd">,userinfo</code>, <code class="cmd">,serverinfo</code>, <code class="cmd">,avatar</code>, <code class="cmd">,banner</code>, and <code class="cmd">,roleinfo</code> look up a member, the server, an avatar, a banner, or a role. Nickname commands now live under <a href="#roles">Roles</a>.</li>
-                <li><code class="cmd">,snipe</code> / <code class="cmd">,editsnipe</code> show recently deleted or pre-edit messages. <code class="cmd">,clearsnipe</code> (Manage Messages) clears snipes in the channel.</li>
-                <li><code class="cmd">,afk [reason]</code> sets a status that replies when you’re pinged.</li>
-                <li><code class="cmd">,remind &lt;duration&gt; &lt;text&gt;</code>, <code class="cmd">,remind list</code>, and <code class="cmd">,remind delete &lt;n&gt;</code>.</li>
-                <li><code class="cmd">,ping</code> checks latency. <code class="cmd">,help [command | section]</code> lists commands or details on one. <code class="cmd">/help</code> is the slash version. Both are also listed under Info on the commands page.</li>
+                <li><code class="cmd">,userinfo</code>, <code class="cmd">,serverinfo</code>, <code class="cmd">,avatar</code>, <code class="cmd">,banner</code>, and <code class="cmd">,roleinfo</code> look up a member, the server, an avatar, a banner, or a role. Nickname commands now live under <a href="#roles">Roles</a>. <code class="cmd">,names</code> shows someone’s past usernames, display names and nicknames.</li>
+                <li><code class="cmd">,snipe</code> / <code class="cmd">,editsnipe</code> show recently deleted or pre-edit messages. <code class="cmd">,reactionsnipe</code> shows the last removed reaction. <code class="cmd">,clearsnipe</code> (Manage Messages) clears snipes in the channel.</li>
+                <li><code class="cmd">,afk [reason]</code> sets a status that replies when you’re pinged. <code class="cmd">,afk list</code> shows who’s AFK; <code class="cmd">,afk ignore</code> (Manage Server) toggles a channel where AFK is ignored.</li>
+                <li><code class="cmd">,remind &lt;duration&gt; &lt;text&gt;</code>, <code class="cmd">,remind list</code>, <code class="cmd">,remind edit</code>, <code class="cmd">,remind delete</code>, <code class="cmd">,remind clear</code>, and <code class="cmd">,remind every</code> (a reminder that repeats, 10m to 30d).</li>
+                <li><code class="cmd">,todo</code> is your to-do list: <code class="cmd">add</code>, <code class="cmd">done</code>, <code class="cmd">undo</code>, <code class="cmd">edit</code>, <code class="cmd">remove</code>, and <code class="cmd">clear</code>.</li>
+                <li><code class="cmd">,timestamp [when]</code> makes Discord timestamps that show in everyone’s own timezone. <code class="cmd">,countdown &lt;when&gt; [title]</code> (Manage Messages) posts a live countdown that announces when it ends.</li>
+                <li><code class="cmd">,highlight add &lt;word&gt;</code> DMs you when someone says a word (your message is deleted so it stays private). <code class="cmd">list</code>, <code class="cmd">remove</code>, <code class="cmd">clear</code>, and <code class="cmd">ignore</code> manage highlights.</li>
+                <li><code class="cmd">,ping</code> and <code class="cmd">,help</code> (including <code class="cmd">/help</code>) are listed under Info on the <a href="commands.html#info">commands page</a>.</li>
               </ul>
             </article>
           </div>
