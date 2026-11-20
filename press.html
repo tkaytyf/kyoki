@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("kyoki-theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+        else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) document.documentElement.setAttribute("data-theme", "light");
+      } catch (e) {}
+    })();
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Press kit — kyōki</title>
@@ -142,6 +151,68 @@
           </div>
         </section>
 
+
+        <section class="press-block" aria-labelledby="intro-title">
+          <h2 id="intro-title">Intro video</h2>
+          <div class="press-video">
+            <figure class="press-video-frame" style="max-width:28rem">
+              <video autoplay muted loop playsinline preload="metadata" poster="assets/promo/kyoki-intro-poster.jpg" aria-label="kyōki 15-second intro, muted">
+                <source src="assets/promo/kyoki-intro-1280.mp4" type="video/mp4">
+              </video>
+            </figure>
+            <div>
+              <p class="press-pitch">A 15-second landscape intro (1920×1080). The preview is muted and loops. Download the original file if you need to post it.</p>
+              <p><a class="btn btn-secondary" href="assets/promo/kyoki-intro-1920x1080.mp4" download>Download intro video</a></p>
+            </div>
+          </div>
+        </section>
+
+        <section class="press-block" aria-labelledby="mascot-title">
+          <h2 id="mascot-title">Mascot moods</h2>
+          <div class="press-mood-grid">
+            <a class="dl-card" href="assets/mascot/kyoki-happy.png" download><img src="assets/mascot/kyoki-happy.png" alt="kyōki happy" width="512" height="512"><p class="dl-meta"><strong>Happy</strong> 512×512 · PNG</p></a>
+            <a class="dl-card" href="assets/mascot/kyoki-cool.png" download><img src="assets/mascot/kyoki-cool.png" alt="kyōki cool" width="512" height="512"><p class="dl-meta"><strong>Cool</strong> 512×512 · PNG</p></a>
+            <a class="dl-card" href="assets/mascot/kyoki-love.png" download><img src="assets/mascot/kyoki-love.png" alt="kyōki love" width="512" height="512"><p class="dl-meta"><strong>Love</strong> 512×512 · PNG</p></a>
+            <a class="dl-card" href="assets/mascot/kyoki-angry.png" download><img src="assets/mascot/kyoki-angry.png" alt="kyōki angry" width="512" height="512"><p class="dl-meta"><strong>Angry</strong> 512×512 · PNG</p></a>
+            <a class="dl-card" href="assets/mascot/kyoki-shocked.png" download><img src="assets/mascot/kyoki-shocked.png" alt="kyōki shocked" width="512" height="512"><p class="dl-meta"><strong>Shocked</strong> 512×512 · PNG</p></a>
+            <a class="dl-card" href="assets/mascot/kyoki-sleepy.png" download><img src="assets/mascot/kyoki-sleepy.png" alt="kyōki sleepy" width="512" height="512"><p class="dl-meta"><strong>Sleepy</strong> 512×512 · PNG</p></a>
+          </div>
+        </section>
+
+        <section class="press-block" aria-labelledby="sticker-title">
+          <h2 id="sticker-title">Stickers</h2>
+          <div class="press-sticker-grid">
+            <a class="dl-card" href="assets/stickers/kyoki-happy-sticker.png" download><img src="assets/stickers/kyoki-happy-sticker.png" alt="Happy sticker" width="512" height="512"><p class="dl-meta"><strong>Happy</strong> PNG</p></a>
+            <a class="dl-card" href="assets/stickers/kyoki-cool-sticker.png" download><img src="assets/stickers/kyoki-cool-sticker.png" alt="Cool sticker" width="512" height="512"><p class="dl-meta"><strong>Cool</strong> PNG</p></a>
+            <a class="dl-card" href="assets/stickers/kyoki-love-sticker.png" download><img src="assets/stickers/kyoki-love-sticker.png" alt="Love sticker" width="512" height="512"><p class="dl-meta"><strong>Love</strong> PNG</p></a>
+            <a class="dl-card" href="assets/stickers/kyoki-angry-sticker.png" download><img src="assets/stickers/kyoki-angry-sticker.png" alt="Angry sticker" width="512" height="512"><p class="dl-meta"><strong>Angry</strong> PNG</p></a>
+            <a class="dl-card" href="assets/stickers/kyoki-shocked-sticker.png" download><img src="assets/stickers/kyoki-shocked-sticker.png" alt="Shocked sticker" width="512" height="512"><p class="dl-meta"><strong>Shocked</strong> PNG</p></a>
+            <a class="dl-card" href="assets/stickers/kyoki-sleepy-sticker.png" download><img src="assets/stickers/kyoki-sleepy-sticker.png" alt="Sleepy sticker" width="512" height="512"><p class="dl-meta"><strong>Sleepy</strong> PNG</p></a>
+          </div>
+        </section>
+
+        <section class="press-block" aria-labelledby="cards-title">
+          <h2 id="cards-title">Card backgrounds</h2>
+          <p class="press-pitch">Welcome and rank card backgrounds. Any name or level text in a preview is example data.</p>
+          <div class="press-card-grid">
+            <a class="dl-card" href="assets/cards/welcome-bg-1100x500.png" download><img src="assets/cards/welcome-bg-1100x500.png" alt="Welcome card background" width="1100" height="500" loading="lazy"><p class="dl-meta"><strong>Welcome</strong> 1100×500 · PNG</p></a>
+            <a class="dl-card" href="assets/cards/rank-bg-default-934x282.png" download><img src="assets/cards/rank-bg-default-934x282.png" alt="Default rank card background" width="934" height="282" loading="lazy"><p class="dl-meta"><strong>Rank · default</strong> 934×282 · PNG</p></a>
+            <a class="dl-card" href="assets/cards/rank-bg-gold-934x282.png" download><img src="assets/cards/rank-bg-gold-934x282.png" alt="Gold rank card background" width="934" height="282" loading="lazy"><p class="dl-meta"><strong>Rank · gold</strong> 934×282 · PNG</p></a>
+            <a class="dl-card" href="assets/cards/rank-bg-jade-934x282.png" download><img src="assets/cards/rank-bg-jade-934x282.png" alt="Jade rank card background" width="934" height="282" loading="lazy"><p class="dl-meta"><strong>Rank · jade</strong> 934×282 · PNG</p></a>
+            <a class="dl-card" href="assets/cards/rank-bg-crimson-934x282.png" download><img src="assets/cards/rank-bg-crimson-934x282.png" alt="Crimson rank card background" width="934" height="282" loading="lazy"><p class="dl-meta"><strong>Rank · crimson</strong> 934×282 · PNG</p></a>
+          </div>
+        </section>
+
+        <section class="press-block" aria-labelledby="fotw-title">
+          <h2 id="fotw-title">Feature of the week</h2>
+          <div class="fotw-grid">
+            <a class="dl-card" href="assets/promo/fotw/fotw-tickets-1080x1350.png" download><img src="assets/promo/fotw/fotw-tickets-1080x1350.png" alt="Feature of the week: Tickets" width="1080" height="1350" loading="lazy"><p class="dl-meta"><strong>Tickets</strong> 1080×1350 · PNG</p></a>
+            <a class="dl-card" href="assets/promo/fotw/fotw-voice-1080x1350.png" download><img src="assets/promo/fotw/fotw-voice-1080x1350.png" alt="Feature of the week: Voice" width="1080" height="1350" loading="lazy"><p class="dl-meta"><strong>Voice</strong> 1080×1350 · PNG</p></a>
+            <a class="dl-card" href="assets/promo/fotw/fotw-automod-1080x1350.png" download><img src="assets/promo/fotw/fotw-automod-1080x1350.png" alt="Feature of the week: Automod" width="1080" height="1350" loading="lazy"><p class="dl-meta"><strong>Automod</strong> 1080×1350 · PNG</p></a>
+            <a class="dl-card" href="assets/promo/fotw/fotw-giveaways-1080x1350.png" download><img src="assets/promo/fotw/fotw-giveaways-1080x1350.png" alt="Feature of the week: Giveaways" width="1080" height="1350" loading="lazy"><p class="dl-meta"><strong>Giveaways</strong> 1080×1350 · PNG</p></a>
+          </div>
+        </section>
+
         <section class="press-block" aria-labelledby="modules-title">
           <h2 id="modules-title">Module cards</h2>
           <div class="module-press-grid">
@@ -263,6 +334,8 @@
             <a href="status.html">Status</a>
             <a href="embed.html">Embed builder</a>
             <a href="dashboard.html">Dashboard</a>
+            <a href="demo.html">Demo</a>
+            <a href="setup.html">Setup</a>
           </div>
           <div class="footer-col">
             <h3>Resources</h3>

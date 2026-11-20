@@ -36,7 +36,11 @@
     name.className = "command-name";
     var code = document.createElement("code");
     code.textContent = cmd.name;
-    name.appendChild(code);
+    var slug = cmd.name.replace(/^[\/,]+/, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    var link = document.createElement("a");
+    link.href = "commands/" + slug + ".html";
+    link.appendChild(code);
+    name.appendChild(link);
     if (cmd.slash) {
       var badge = document.createElement("span");
       badge.className = "slash-badge";

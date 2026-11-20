@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("kyoki-theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+        else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) document.documentElement.setAttribute("data-theme", "light");
+      } catch (e) {}
+    })();
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>kyōki — an all-in-one Discord bot</title>
@@ -90,6 +99,17 @@
         </div>
       </section>
 
+      <section class="intro-band" aria-label="kyōki intro video">
+        <div class="container">
+          <div class="intro-frame">
+            <img class="intro-poster" src="assets/promo/kyoki-intro-poster.jpg" alt="" width="1280" height="720">
+            <video class="intro-video" muted loop playsinline preload="none" poster="assets/promo/kyoki-intro-poster.jpg" data-src="assets/promo/kyoki-intro-1280.mp4" width="1280" height="720">
+              Your browser can’t play this video.
+            </video>
+          </div>
+        </div>
+      </section>
+
       <section class="section" id="features" aria-labelledby="features-title">
         <div class="container">
           <div class="section-intro" data-reveal>
@@ -102,6 +122,10 @@
             <p class="section-lead">The tools kyōki actually ships — drawn out the way they connect. Antinuke and antiraid stay off until you turn them on.</p>
           </div>
 
+
+          <figure class="before-after" data-reveal>
+            <img src="assets/promo/before-after-1600x900.png" alt="Before: eight separate bots and prefixes. After: kyōki, one bot with a comma prefix." width="1600" height="900" loading="lazy" decoding="async">
+          </figure>
           <div class="bento">
             <article class="bento-card mod" data-reveal>
               <div class="bento-copy">
@@ -325,7 +349,18 @@
 
             </article>
           </div>
-        </div>
+        
+          <div class="home-teaser">
+            <a class="teaser-card" href="demo.html">
+              <h3>Try a live demo</h3>
+              <p>A VoiceMaster panel and an automod tester in the browser. Nothing is sent to Discord.</p>
+            </a>
+            <a class="teaser-card" href="setup.html">
+              <h3>Setup checklist</h3>
+              <p>Pick what you want to turn on and copy the real commands, in order.</p>
+            </a>
+          </div>
+</div>
       </section>
 
       <section class="section" id="how" aria-labelledby="how-title">

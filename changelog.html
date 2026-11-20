@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("kyoki-theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+        else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) document.documentElement.setAttribute("data-theme", "light");
+      } catch (e) {}
+    })();
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Changelog — kyōki</title>
@@ -63,7 +72,7 @@
             <time datetime="2026-11-20">20 November 2026</time>
             <h2>Website</h2>
             <ul>
-              <li>The site now has a privacy page, terms, a press kit, a short invite link, and a 404 page. The press kit includes official logos, banners, emojis, and a promo video.</li>
+              <li>The site now has a privacy page, terms, a press kit, a short invite link, and a 404 page. The press kit includes official logos, banners, emojis, and a promo video. It also has a live demo, a setup checklist, a page for each command, and a light mode. The homepage carries the intro video and a before/after graphic; the press kit adds mascot moods, stickers, card backgrounds, and feature-of-the-week posts.</li>
             </ul>
           </article>
           <article class="log-entry">
@@ -104,6 +113,8 @@
             <a href="status.html">Status</a>
             <a href="embed.html">Embed builder</a>
             <a href="dashboard.html">Dashboard</a>
+            <a href="demo.html">Demo</a>
+            <a href="setup.html">Setup</a>
           </div>
           <div class="footer-col">
             <h3>Resources</h3>
