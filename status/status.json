@@ -1,20 +1,21 @@
 {
- "updated": "2026-11-20T19:08:03Z",
+ "updated": "2026-11-20T19:13:15Z",
  "online": true,
- "servers": 1,
- "members": 35,
- "latency_ms": 22,
- "started": "2026-11-20T18:48:58Z",
+ "servers": 2,
+ "members": 37,
+ "latency_ms": 23,
+ "started": "2026-11-20T19:10:12Z",
  "shards": [
   {
    "id": 0,
    "online": true,
-   "latency_ms": 22,
-   "servers": 1,
-   "members": 35
+   "latency_ms": 23,
+   "servers": 2,
+   "members": 37
   }
  ],
  "guild_hashes": [
-  "4efdf1fbbc58f980c3a143258fcb990d33936a58d85ac571b99a99ad57598ed7"
+  "4efdf1fbbc58f980c3a143258fcb990d33936a58d85ac571b99a99ad57598ed7",
+  "a756ae7d763f4311caaa11470cae2fffbfdaf84011b42eea0f73f8df248be85c"
  ]
 }
