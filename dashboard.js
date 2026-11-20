@@ -1,10 +1,12 @@
 (function () {
   "use strict";
 
-  // TODO: set the hosted URL once the dashboard API is public.
-  var API = "http://localhost:8080";
+  // Set this to a hosted https URL once the dashboard API is public.
+  // For local API work you may use "http://localhost:8080"; that value is
+  // ignored on any host that is not localhost, so the live site never calls it.
+  var API = "";
 
-  var INVITE = "https://discord.com/oauth2/authorize?client_id=1573348245726298224&scope=bot+applications.commands&permissions=1099798015063";
+  var INVITE = "https://discord.com/oauth2/authorize?client_id=1573348245726298224&scope=bot+applications.commands&permissions=9914278866167";
 
   var root = document.getElementById("dash-root");
   if (!root) return;
@@ -24,7 +26,28 @@
     error: ""
   };
 
+  function pageIsLocal() {
+    var h = location.hostname;
+    return h === "localhost" || h === "127.0.0.1" || h === "::1" || h === "";
+  }
+
+  function apiIsUsable() {
+    if (!API) return false;
+    try {
+      var u = new URL(API, location.href);
+      var apiLocal = u.hostname === "localhost" || u.hostname === "127.0.0.1" || u.hostname === "::1";
+      if (apiLocal && !pageIsLocal()) return false;
+      if (u.protocol === "http:" && location.protocol === "https:" && !pageIsLocal()) return false;
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
   function api(path, opts) {
+    if (!apiIsUsable()) {
+      return Promise.reject(new Error("Dashboard API is not available"));
+    }
     opts = opts || {};
     var headers = opts.headers ? Object.assign({}, opts.headers) : {};
     if (opts.body && !headers["Content-Type"]) headers["Content-Type"] = "application/json";
@@ -554,6 +577,10 @@
   }
 
   function boot() {
+    if (!apiIsUsable()) {
+      renderComingSoon();
+      return;
+    }
     root.replaceChildren();
     root.appendChild(text("p", "page-note", "Loading…"));
     api("/api/me").then(function (res) {

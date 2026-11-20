@@ -5,7 +5,7 @@
   var STALE_MS = 3 * 60 * 1000;
   var POLL_MS = 30 * 1000;
   var INVITE =
-    "https://discord.com/oauth2/authorize?client_id=1573348245726298224&scope=bot+applications.commands&permissions=1099798015063";
+    "https://discord.com/oauth2/authorize?client_id=1573348245726298224&scope=bot+applications.commands&permissions=9914278866167";
 
   var lastPayload = null;
   var lastMode = "loading"; // fresh | stale | offline | unavailable

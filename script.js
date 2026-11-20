@@ -91,35 +91,35 @@
   applyTheme(currentTheme());
 
   /* Homepage intro: lazy-load, autoplay when in view, poster only if reduced motion */
-  var intro = document.querySelector("video.intro-video");
-  if (intro) {
-    var frame = intro.closest(".intro-frame");
-    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) {
-      if (frame) frame.classList.add("is-static");
+
+  /* Lazy videos: poster only when the user prefers reduced motion. */
+  document.querySelectorAll("video[data-src]").forEach(function (intro) {
+    var frame = intro.closest(".intro-frame, .press-video-frame, figure");
+    if (reduceMotion) {
+      if (frame && frame.classList.contains("intro-frame")) frame.classList.add("is-static");
       intro.removeAttribute("autoplay");
       intro.pause();
-    } else {
-      function loadAndPlay() {
-        var src = intro.getAttribute("data-src");
-        if (src && !intro.getAttribute("src")) {
-          intro.src = src;
-          intro.preload = "metadata";
-        }
-        var play = intro.play();
-        if (play && play.catch) play.catch(function () {});
-      }
-      if ("IntersectionObserver" in window) {
-        var io = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) {
-            if (e.isIntersecting) { loadAndPlay(); io.disconnect(); }
-          });
-        }, { rootMargin: "200px" });
-        io.observe(intro);
-      } else {
-        loadAndPlay();
-      }
+      return;
     }
-  }
+    function loadAndPlay() {
+      var src = intro.getAttribute("data-src");
+      if (src && !intro.getAttribute("src")) {
+        intro.src = src;
+        intro.preload = "metadata";
+      }
+      var play = intro.play();
+      if (play && play.catch) play.catch(function () {});
+    }
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { loadAndPlay(); io.disconnect(); }
+        });
+      }, { rootMargin: "200px" });
+      io.observe(intro);
+    } else {
+      loadAndPlay();
+    }
+  });
 
 })();
