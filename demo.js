@@ -2,31 +2,32 @@
   "use strict";
   var note = "Demo, nothing is sent to Discord";
 
-  /* VoiceMaster mock: lock icon, limit number, ghost */
-  var channel = document.getElementById("vm-channel");
-  if (channel) {
-    var state = { locked: false, ghost: false, limit: 5 };
-    var icon = document.getElementById("vm-lock-icon");
-    var limitEl = document.getElementById("vm-limit");
-    var lockImg = "assets/vm/lock.png";
-    var unlockImg = "assets/vm/unlock.png";
+  /* VoiceMaster mock: default panel buttons update a demo status line only */
+  var statusEl = document.getElementById("vm-status");
+  if (statusEl && document.querySelector("[data-vm]")) {
+    var state = { locked: false, ghost: false, limit: 5, note: "" };
     function render() {
-      channel.classList.toggle("is-ghost", state.ghost);
-      if (icon) {
-        icon.src = state.locked ? lockImg : unlockImg;
-        icon.alt = state.locked ? "Locked" : "Unlocked";
-      }
-      if (limitEl) limitEl.textContent = state.limit === 0 ? "no limit" : String(state.limit);
+      var lock = state.locked ? "locked" : "unlocked";
+      var vis = state.ghost ? "hidden" : "visible";
+      var lim = state.limit === 0 ? "no limit" : ("limit " + state.limit);
+      var line = "Demo channel: " + lock + ", " + vis + ", " + lim;
+      if (state.note) line += " — " + state.note;
+      statusEl.textContent = line;
     }
     document.querySelectorAll("[data-vm]").forEach(function (btn) {
       btn.addEventListener("click", function () {
         var act = btn.getAttribute("data-vm");
+        state.note = "";
         if (act === "lock") state.locked = true;
         else if (act === "unlock") state.locked = false;
         else if (act === "ghost") state.ghost = true;
         else if (act === "reveal") state.ghost = false;
-        else if (act === "inc") state.limit = Math.min(99, state.limit + 1);
-        else if (act === "dec") state.limit = Math.max(0, state.limit - 1);
+        else if (act === "increase") state.limit = Math.min(99, state.limit + 1);
+        else if (act === "decrease") state.limit = Math.max(0, state.limit - 1);
+        else if (act === "claim") state.note = "Claim is a demo only; nothing is sent to Discord";
+        else if (act === "disconnect") state.note = "Disconnect is a demo only; nothing is sent to Discord";
+        else if (act === "activity") state.note = "Start an activity is a demo only; nothing is sent to Discord";
+        else if (act === "view") state.note = "View channel information is a demo only; nothing is sent to Discord";
         render();
       });
     });

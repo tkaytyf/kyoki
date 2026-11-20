@@ -72,20 +72,24 @@
         <div class="demo-grid">
           <section class="demo-card" aria-labelledby="vm-title">
             <h2 id="vm-title">VoiceMaster</h2>
-            <p>Buttons change a mock channel’s lock, ghost, and user limit. They do not touch a real server.</p>
-            <div class="vm-demo-channel" id="vm-channel">
-              <img class="vm-demo-icon" id="vm-lock-icon" src="assets/vm/unlock.png" alt="Unlocked" width="24" height="24">
-              <span class="vm-demo-name">Your channel</span>
-              <span class="vm-demo-limit">limit <span id="vm-limit">5</span></span>
+            <p>This is a copy of the default VoiceMaster panel. Buttons change a mock channel’s lock, visibility, and user limit. They do not touch a real server.</p>
+            <div class="vm-panel-card" role="group" aria-label="Default VoiceMaster panel">
+              <p class="vm-panel-hint">Manage your channel with the buttons below.</p>
+              <div class="vm-panel-grid">
+                <button type="button" data-vm="lock" aria-label="Lock the voice channel"><img src="assets/vm/lock.png" alt="" width="24" height="24"></button>
+                <button type="button" data-vm="unlock" aria-label="Unlock the voice channel"><img src="assets/vm/unlock.png" alt="" width="24" height="24"></button>
+                <button type="button" data-vm="ghost" aria-label="Ghost the voice channel"><img src="assets/vm/ghost.png" alt="" width="24" height="24"></button>
+                <button type="button" data-vm="reveal" aria-label="Reveal the voice channel"><img src="assets/vm/reveal.png" alt="" width="24" height="24"></button>
+                <button type="button" data-vm="claim" aria-label="Claim the voice channel"><img src="assets/vm/claim.png" alt="" width="24" height="24"></button>
+                <button type="button" data-vm="disconnect" aria-label="Disconnect a member"><img src="assets/vm/disconnect.png" alt="" width="24" height="24"></button>
+                <button type="button" data-vm="activity" aria-label="Start an activity"><img src="assets/vm/activity.png" alt="" width="24" height="24"></button>
+                <button type="button" data-vm="view" aria-label="View channel information"><img src="assets/vm/view.png" alt="" width="24" height="24"></button>
+                <button type="button" data-vm="increase" aria-label="Increase the user limit"><img src="assets/vm/increase.png" alt="" width="24" height="24"></button>
+                <button type="button" data-vm="decrease" aria-label="Decrease the user limit"><img src="assets/vm/decrease.png" alt="" width="24" height="24"></button>
+              </div>
+              <p class="vm-panel-join">Join <strong>Join to Create</strong> to get your own channel.</p>
             </div>
-            <div class="vm-demo-grid">
-              <button type="button" data-vm="lock"><img src="assets/vm/lock.png" alt="" width="24" height="24">Lock</button>
-              <button type="button" data-vm="unlock"><img src="assets/vm/unlock.png" alt="" width="24" height="24">Unlock</button>
-              <button type="button" data-vm="ghost"><img src="assets/vm/ghost.png" alt="" width="24" height="24">Ghost</button>
-              <button type="button" data-vm="reveal"><img src="assets/vm/reveal.png" alt="" width="24" height="24">Reveal</button>
-              <button type="button" data-vm="inc"><img src="assets/vm/increase.png" alt="" width="24" height="24">Increase limit</button>
-              <button type="button" data-vm="dec"><img src="assets/vm/decrease.png" alt="" width="24" height="24">Decrease limit</button>
-            </div>
+            <p class="vm-demo-status" id="vm-status" aria-live="polite">Demo channel: unlocked, visible, limit 5</p>
           </section>
           <section class="demo-card" aria-labelledby="am-title">
             <h2 id="am-title">Automod tester</h2>

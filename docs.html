@@ -64,7 +64,7 @@
         <div class="page-head">
           <div>
             <h1 class="section-title">Docs</h1>
-            <p class="section-lead">Setup guides for the commands kyōki actually has. The default prefix is a comma, as in <code class="cmd">,ban</code>. Change it with <code class="cmd">,prefix</code>. Mentioning the bot always works. For help, join the <a href="https://discord.gg/j6WTTyKDeM" target="_blank" rel="noopener">kyōki support server</a>.</p>
+            <p class="section-lead">Setup guides for the commands kyōki actually has. The default prefix is a comma, as in <code class="cmd">,ban</code>. Change it with <code class="cmd">,prefix</code>. Mentioning the bot always works. kyōki’s replies now use Discord’s newer message layout, with no colored side bar. For help, join the <a href="https://discord.gg/j6WTTyKDeM" target="_blank" rel="noopener">kyōki support server</a>.</p>
           </div>
         </div>
         <div class="docs-layout">
@@ -115,6 +115,10 @@
               <a href="#reactions">Reactions</a>
               <a href="#topgg">Top.gg</a>
               <a href="#utility">Utility</a>
+              <a href="#boosts">Boosts</a>
+              <a href="#automation">Automation</a>
+              <a href="#channels">Channels</a>
+              <a href="#webhooks">Webhooks</a>
             </nav>
           </aside>
           <div class="docs-content">
@@ -292,7 +296,13 @@
               </div>
                 <h2><img class="feature-icon-sm" src="assets/icon-logging.png" alt=""> Logging</h2>
               </header>
-              <p>You need Manage Server. <code class="cmd">,log &lt;channel | off&gt;</code> sends server logs to a channel, or turns them off. Aliases: <code class="cmd">,logs</code>, <code class="cmd">,logging</code>.</p>
+              <p>You need Manage Server. Aliases: <code class="cmd">,logs</code>, <code class="cmd">,logging</code>.</p>
+              <ul>
+                <li><code class="cmd">,log [channel]</code> sends server logs to a channel. <code class="cmd">,log off [category | all]</code> stops one category, or all logging.</li>
+                <li><code class="cmd">,log set &lt;category | all&gt; &lt;channel&gt;</code> sends one category to its own channel. <code class="cmd">,log on &lt;category&gt;</code> turns a category back on.</li>
+                <li><code class="cmd">,log categories</code> lists what each category covers. <code class="cmd">,log status</code> shows where each category logs. <code class="cmd">,log test</code> sends a test to every log channel.</li>
+                <li><code class="cmd">,log ignore &lt;channel | member | role&gt;</code> toggles a skip for message logs. <code class="cmd">,log ignored</code> lists what message logs skip.</li>
+              </ul>
             </article>
 
             <article class="docs-guide" id="prefix" data-search="prefix setprefix reset mention default comma setup wizard quicksetup">
@@ -322,6 +332,7 @@
                 <h2>Embeds</h2>
               </header>
               <p>You need Manage Messages. <code class="cmd">,embed &lt;json&gt;</code> sends a custom embed in the current channel. <code class="cmd">,embed send #channel &lt;json&gt;</code> sends it somewhere else. Aliases: <code class="cmd">,ce</code>, <code class="cmd">,createembed</code>.</p>
+              <p><code class="cmd">,embed preview &lt;json&gt;</code> DMs you a preview. <code class="cmd">,embed raw &lt;message link&gt;</code> gives a message’s embed as JSON you can edit and reuse. <code class="cmd">,embed edit &lt;message link&gt; &lt;json&gt;</code> replaces one of kyōki’s messages with new embed JSON.</p>
               <p>The JSON is Discord’s standard embed object. Color can be an integer or <code class="cmd">#hex</code>; if you leave color out, kyōki uses plain gray (<code class="cmd">#2B2D31</code>). <code class="cmd">timestamp</code> can be ISO-8601 or <code class="cmd">"now"</code>. Code fences around the JSON are stripped. Also accepted: <code class="cmd">{"embed":{…},"content":"…"}</code> and <code class="cmd">{"embeds":[{…}]}</code> (the first embed is used).</p>
               <p>The same format works in <code class="cmd">,welcome message</code>, <code class="cmd">,goodbye message</code>, <code class="cmd">,ticket setup</code>, and <code class="cmd">,autoresponder add</code>. Variables: <code class="cmd">{user}</code> <code class="cmd">{name}</code> <code class="cmd">{server}</code> <code class="cmd">{count}</code> <code class="cmd">{avatar}</code>.</p>
               <p>The <a href="embed.html">embed builder</a> copies this JSON, or a ready <code class="cmd">,embed send</code> command. The same format is also accepted by <code class="cmd">,sticky add</code>.</p>
@@ -421,7 +432,7 @@
               </ul>
             </article>
 
-            <article class="docs-guide" id="voicemaster" data-search="voicemaster voice vm setup reset interface name limit permit reject transfer join to create">
+            <article class="docs-guide" id="voicemaster" data-search="voicemaster voice vm setup reset interface name rename limit permit reject transfer style classic minimal buttons join to create voice controls">
               <header class="docs-guide-head">
               <div class="docs-module-art">
                 <picture>
@@ -432,13 +443,29 @@
                 <h2>VoiceMaster</h2>
               </header>
               <p>Manage Server is required to set it up. Alias: <code class="cmd">,vm</code>.</p>
-              <figure class="docs-shot">
-                <img src="assets/mockups/voicemaster.png" alt="Example of ,voicemaster limit 5 and kyōki confirming the channel limit" width="1200" height="330" loading="lazy" decoding="async">
+              <figure class="docs-shot vm-docs-panel">
+                <div class="vm-panel-card" role="group" aria-label="Default VoiceMaster panel">
+                  <p class="vm-panel-hint">Manage your channel with the buttons below.</p>
+                  <div class="vm-panel-grid" aria-hidden="true">
+                    <span class="vm-panel-btn"><img src="assets/vm/lock.png" alt="" width="24" height="24"></span>
+                    <span class="vm-panel-btn"><img src="assets/vm/unlock.png" alt="" width="24" height="24"></span>
+                    <span class="vm-panel-btn"><img src="assets/vm/ghost.png" alt="" width="24" height="24"></span>
+                    <span class="vm-panel-btn"><img src="assets/vm/reveal.png" alt="" width="24" height="24"></span>
+                    <span class="vm-panel-btn"><img src="assets/vm/claim.png" alt="" width="24" height="24"></span>
+                    <span class="vm-panel-btn"><img src="assets/vm/disconnect.png" alt="" width="24" height="24"></span>
+                    <span class="vm-panel-btn"><img src="assets/vm/activity.png" alt="" width="24" height="24"></span>
+                    <span class="vm-panel-btn"><img src="assets/vm/view.png" alt="" width="24" height="24"></span>
+                    <span class="vm-panel-btn"><img src="assets/vm/increase.png" alt="" width="24" height="24"></span>
+                    <span class="vm-panel-btn"><img src="assets/vm/decrease.png" alt="" width="24" height="24"></span>
+                  </div>
+                  <p class="vm-panel-join">Join <strong>Join to Create</strong> to get your own channel.</p>
+                </div>
+                <figcaption>The default VoiceMaster panel: a one-line hint, the 10 original emoji buttons in two rows, and a line pointing to Join to Create. There is no title on the panel.</figcaption>
               </figure>
-
               <ol>
                 <li><code class="cmd">,voicemaster setup</code> creates Join to Create and the interface panel.</li>
-                <li>Temporary voice channels are yours to control with the panel, or with <code class="cmd">,voicemaster name</code>, <code class="cmd">limit</code> (0–99), <code class="cmd">permit</code>, <code class="cmd">reject</code>, and <code class="cmd">transfer</code>.</li>
+                <li>Temporary voice channels are yours to control with the panel, or with <code class="cmd">,voicemaster name</code> (alias <code class="cmd">,vm rename</code>), <code class="cmd">,voicemaster limit</code> (0–99), <code class="cmd">permit</code>, <code class="cmd">reject</code>, and <code class="cmd">transfer</code>.</li>
+                <li>The default panel style is <code class="cmd">minimal</code>. <code class="cmd">,vm style classic</code> (or <code class="cmd">,voicemaster style classic</code>) brings back the usage list. <code class="cmd">,vm style buttons</code> is the image buttons only. <code class="cmd">,vm style minimal</code> returns to the default card. This needs Manage Server, and reposts the panel in the interface channel when one is set.</li>
                 <li><code class="cmd">,voicemaster interface [channel]</code> reposts the control panel. <code class="cmd">,voicemaster reset</code> removes VoiceMaster.</li>
               </ol>
             </article>
@@ -473,6 +500,10 @@
                 <h2>Starboard</h2>
               </header>
               <p>You need Manage Server. <code class="cmd">,starboard #channel [threshold] [emoji]</code> reposts popular messages there. <code class="cmd">,starboard off</code> turns it off. Aliases: <code class="cmd">,sb</code>, <code class="cmd">,star</code>.</p>
+              <ul>
+                <li><code class="cmd">,starboard channel</code>, <code class="cmd">threshold</code> (1–100), and <code class="cmd">emoji</code> change those settings. <code class="cmd">,starboard settings</code> shows them.</li>
+                <li><code class="cmd">,starboard ignore &lt;channel&gt;</code> toggles a channel that can’t be starred. <code class="cmd">,starboard selfstar &lt;on | off&gt;</code> controls whether authors’ own stars count.</li>
+              </ul>
             </article>
 
             <article class="docs-guide" id="autoresponder" data-search="autoresponder autoresponse autoreply trigger response embed json add remove list">
@@ -634,6 +665,54 @@
             <article class="docs-guide" id="topgg" data-search="topgg vote voterewards coins streak listing">
               <header class="docs-guide-head"><h2>Top.gg</h2></header>
               <p><code class="cmd">,vote</code> is how members vote for kyōki on top.gg and check a streak. <code class="cmd">,voterewards</code> can thank voters with coins or a temporary role; that needs the top.gg listing, and rewards stay off until you turn them on. This page does not invent a vote link.</p>
+            </article>
+
+
+            <article class="docs-guide" id="boosts" data-search="boost boosts booster boosterrole vanity thank-you perk custom role">
+              <header class="docs-guide-head">
+                <h2>Boosts</h2>
+              </header>
+              <p>Manage Server is required for thank-yous, perk roles, and vanity rewards. Boosters manage their own custom role.</p>
+              <ul>
+                <li><code class="cmd">,boost channel</code>, <code class="cmd">,boost message</code>, and <code class="cmd">,boost test</code> set and preview boost thank-yous. <code class="cmd">,boost off</code> stops them. <code class="cmd">,boost role add | remove | list</code> are roles boosters get while boosting. <code class="cmd">,boosters</code> lists everyone boosting and since when.</li>
+                <li><code class="cmd">,boosterrole create</code> (optionally with a hex color), <code class="cmd">color</code>, <code class="cmd">rename</code>, <code class="cmd">icon</code> (boost level 2), <code class="cmd">share</code> (up to 3 friends; run again to take back), and <code class="cmd">delete</code> are the booster perk. <code class="cmd">,boosterrole base [role]</code> (Manage Server) puts new booster roles under that role. <code class="cmd">,boosterrole list</code> lists every custom booster role.</li>
+                <li><code class="cmd">,vanity set</code> chooses what to look for in statuses (default: the server’s vanity code). <code class="cmd">,vanity role</code>, <code class="cmd">channel</code>, and <code class="cmd">message</code> set the reward. <code class="cmd">,vanity check</code> re-scans now, <code class="cmd">,vanity list</code> shows who is repping, and <code class="cmd">,vanity off</code> turns it off.</li>
+              </ul>
+            </article>
+
+            <article class="docs-guide" id="automation" data-search="automation autorole autothread joindm mediaonly pingonjoin join role thread">
+              <header class="docs-guide-head">
+                <h2>Automation</h2>
+              </header>
+              <p>These need Manage Roles for autoroles, and the usual channel permissions for the rest, as listed on each command.</p>
+              <ul>
+                <li><code class="cmd">,autorole add &lt;role&gt; [humans | bots]</code> gives a role to new members automatically. <code class="cmd">,autorole delay</code> waits 0–600 seconds. <code class="cmd">list</code> and <code class="cmd">remove</code> manage the list.</li>
+                <li><code class="cmd">,autothread add &lt;channel&gt;</code> opens a thread on every new message. Name format tokens are <code class="cmd">{user}</code> <code class="cmd">{name}</code> <code class="cmd">{content}</code> <code class="cmd">{date}</code>. <code class="cmd">,autothread archive</code> sets when quiet threads archive (1h, 1d, 3d, or 1w).</li>
+                <li><code class="cmd">,joindm message</code> DMs new members (text or embed JSON). <code class="cmd">,joindm test</code> sends you a preview. <code class="cmd">,joindm off</code> turns it off.</li>
+                <li><code class="cmd">,mediaonly add &lt;channel&gt;</code> only allows images, videos, GIFs and stickers. <code class="cmd">,pingonjoin add &lt;channel&gt;</code> quick-pings new members so they see the channel (the ping is deleted after 2 seconds).</li>
+              </ul>
+            </article>
+
+            <article class="docs-guide" id="channels" data-search="channels channel create delete rename nsfw clone sync move pin unpin thread lock archive">
+              <header class="docs-guide-head">
+                <h2>Channels</h2>
+              </header>
+              <ul>
+                <li><code class="cmd">,channel [channel]</code> shows channel info. Subcommands: <code class="cmd">create</code> (text, voice, stage, forum, category, or announcement), <code class="cmd">delete</code> (asks to confirm), <code class="cmd">rename</code>, <code class="cmd">nsfw</code>, <code class="cmd">clone</code> (copy with permissions), <code class="cmd">sync</code> (permissions with the category), and <code class="cmd">move</code> into a category.</li>
+                <li><code class="cmd">,pin</code> and <code class="cmd">,unpin</code> pin or unpin a message (reply or link). You need Manage Messages.</li>
+                <li><code class="cmd">,thread</code> manages threads: <code class="cmd">lock</code>, <code class="cmd">unlock</code>, <code class="cmd">archive</code>, <code class="cmd">rename</code>, <code class="cmd">add</code>, <code class="cmd">remove</code>, and <code class="cmd">list</code> (active threads you can see).</li>
+              </ul>
+            </article>
+
+            <article class="docs-guide" id="webhooks" data-search="webhooks webhook create list delete say edit rename avatar info autopublish announcement">
+              <header class="docs-guide-head">
+                <h2>Webhooks</h2>
+              </header>
+              <ul>
+                <li><code class="cmd">,webhook create</code>, <code class="cmd">list</code>, <code class="cmd">delete</code>, <code class="cmd">rename</code>, <code class="cmd">avatar</code>, and <code class="cmd">info</code> manage this server’s webhooks. <code class="cmd">,webhook info</code> never shows the webhook URL.</li>
+                <li><code class="cmd">,webhook say</code> sends a message or embed JSON through a webhook. <code class="cmd">,webhook edit</code> edits a message a webhook sent.</li>
+                <li><code class="cmd">,autopublish add &lt;channel&gt;</code> auto-publishes posts in an announcement channel. <code class="cmd">list</code> and <code class="cmd">remove</code> manage that list.</li>
+              </ul>
             </article>
 
             <article class="docs-guide" id="utility" data-search="utility userinfo serverinfo avatar banner roleinfo snipe editsnipe clearsnipe afk remind ping help slash info">

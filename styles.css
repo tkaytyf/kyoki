@@ -3244,3 +3244,60 @@ p code.cmd,
 .page-main .section-lead {
   overflow-wrap: anywhere;
 }
+
+/* Default VoiceMaster panel (demo + docs): hint, 10 emoji buttons, Join to Create. No title. */
+.vm-panel-card {
+  background: #2B2D31;
+  color: #f2f1ee;
+  border-radius: 0.85rem;
+  padding: 0.85rem 0.9rem 0.9rem;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06);
+}
+.vm-panel-hint,
+.vm-panel-join {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: rgba(242, 241, 238, 0.72);
+}
+.vm-panel-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.4rem;
+  margin: 0.75rem 0;
+}
+.vm-panel-grid button,
+.vm-panel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0.55rem 0.2rem;
+  border: 0;
+  border-radius: 0.55rem;
+  background: #1e1f22;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+  cursor: pointer;
+  color: #f2f1ee;
+}
+.vm-panel-btn { cursor: default; }
+.vm-panel-grid button:hover { background: #35373c; }
+.vm-panel-grid button:focus-visible { outline: 2px solid #4A68D6; outline-offset: 2px; }
+.vm-panel-grid img { width: 1.5rem; height: 1.5rem; display: block; }
+.vm-demo-status {
+  margin: 0.85rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+.vm-docs-panel { margin: 1rem 0 1.25rem; }
+.vm-docs-panel figcaption {
+  margin-top: 0.6rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+@media (max-width: 420px) {
+  .vm-panel-grid { gap: 0.3rem; }
+  .vm-panel-grid button,
+  .vm-panel-btn { padding: 0.45rem 0.1rem; }
+  .vm-panel-grid img { width: 1.25rem; height: 1.25rem; }
+}
