@@ -451,6 +451,25 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/welcome-card-off.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/welcome-card-on.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/welcome-card-test.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-bitrate.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-deafenall.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-kickall.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-limit.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-muteall.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-region.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-rename.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-unmuteall.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-interface.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-limit.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-name.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-permit.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-reject.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-reset.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-setup.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-style.html</loc></url>
+  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-transfer.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/channel.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/channel-clone.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/channel-create.html</loc></url>
@@ -469,24 +488,6 @@
   <url><loc>https://tkaytyf.github.io/kyoki/commands/thread-rename.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/thread-unlock.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/unpin.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-bitrate.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-deafenall.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-kickall.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-limit.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-muteall.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-region.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-rename.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/vc-unmuteall.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-interface.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-limit.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-name.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-permit.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-reject.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-reset.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-setup.html</loc></url>
-  <url><loc>https://tkaytyf.github.io/kyoki/commands/voicemaster-transfer.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/case.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/case-delete.html</loc></url>
   <url><loc>https://tkaytyf.github.io/kyoki/commands/case-export.html</loc></url>
